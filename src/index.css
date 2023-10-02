@@ -1,3 +1,24 @@
+@font-face {
+  font-family: IRANSans;
+  src: url("./assets/font/IRANSans.ttf");
+}
+@font-face {
+  font-family: IRANSans_Bold;
+  src: url("./assets/font/IRANSans_Bold.ttf");
+}
+@font-face {
+  font-family: IRANSans_Light;
+  src: url("./assets/font/IRANSans_Light.ttf");
+}
+@font-face {
+  font-family: IRANSans_Medium;
+  src: url("./assets/font/IRANSans_Medium.ttf");
+}
+@font-face {
+  font-family: IRANSans_UltraLight;
+  src: url("./assets/font/IRANSans_UltraLight.ttf");
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

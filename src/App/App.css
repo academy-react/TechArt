@@ -3,10 +3,6 @@
   text-align: center;
   font-family: IRANSans;
 
-  primary-color: #4ecdc4;
-  secondary-color: #f94144;
-}
-
-.svg {
-  width: 500px;
+  --primary-color: #4ecdc4;
+  --secondary-color: #f94144;
 }

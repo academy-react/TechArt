@@ -1,53 +1,32 @@
 import React from "react";
-
-import { AiOutlineUser, AiOutlineMail, AiOutlineLock } from "react-icons/ai";
-
-import { CustomInput } from "../common/CustomInput";
+import { SignButton } from "../common/Sign/SignButton";
+import { SignInput } from "../common/Sign/SignInput";
+import { SignLink } from "../common/Sign/SignLink";
+import { SignHeader } from "../common/Sign/SignHeader";
+import { AiOutlineMail } from "react-icons/ai";
 
 const ForgetPass = ({ handlePageChange }) => {
   return (
     <>
-      <div className=" relative w-full h-full z-10 shadow-[0_0_30px_rgba(0,0,0,0.5)] flex place-items-center">
-        <div className=" w-full p-8">
-          <h2 className=" text-black text-2xl text-center mb-4">
-            Recover your password
-          </h2>
-          <form action="#">
-            <CustomInput name="email" type="email">
-              <AiOutlineMail />
-            </CustomInput>
+      <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
+        <SignHeader message={"بازیابی رمز عبور"} />
 
-            <button
-              className=" w-full h-11 bg-red-300 border-none outline-none rounded-md  cursor-pointer font-medium"
-              type="submit"
-            >
-              ارسال کد
-            </button>
-            <div className="text-xs font-medium text-center mt-4">
-              <p>
-                قبلا ثبت نام کردی؟
-                <a
-                  onClick={() => handlePageChange("SignIn")}
-                  className=" no-underline hover:underline hover:underline-offset-2 mr-1"
-                  href="#"
-                >
-                  ورود به حساب کاربری
-                </a>
-              </p>
-            </div>
-            <div className="text-xs font-medium text-center mt-4">
-              <p>
-                هنوز ثبت نام نکردی؟
-                <a
-                  onClick={() => handlePageChange("SignUp")}
-                  className=" no-underline hover:underline hover:underline-offset-2 mr-1"
-                  href="#"
-                >
-                  ثبت نام
-                </a>
-              </p>
-            </div>
-          </form>
+        <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+          <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+            <form className="space-y-6" action="#" method="POST">
+              <SignInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
+                <AiOutlineMail />
+              </SignInput>
+
+              <SignLink
+                message={"عضو سایت هستی؟"}
+                handlePageChange={handlePageChange}
+                to={"SignIn"}
+              />
+
+              <SignButton message={"ارسال کد"} />
+            </form>
+          </div>
         </div>
       </div>
     </>

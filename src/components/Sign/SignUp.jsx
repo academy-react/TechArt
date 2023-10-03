@@ -1,50 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { AiOutlineUser, AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 
 import { CustomInput } from "../common/CustomInput";
 
-const SignIn = ({ handlePageChange }) => {
+const SignUp = ({ handlePageChange }) => {
   return (
     <>
-      <div className=" relative w-full h-full z-10 shadow-[0_0_30px_rgba(0,0,0,0.5)] flex place-items-center">
+      <div className=" relative w-full h-full rounded-sm z-10 shadow-[0_0_30px_rgba(0,0,0,0.5)] flex place-items-center">
         <div className=" w-full p-8">
-          <h2 className=" text-black text-2xl text-center mb-4">Login</h2>
+          <h2 className=" text-black text-2xl text-center mb-4">
+            Sign Up your account
+          </h2>
           <form action="#">
+            <CustomInput name="username" type="text">
+              <AiOutlineUser />
+            </CustomInput>
             <CustomInput name="email" type="email">
               <AiOutlineMail />
             </CustomInput>
             <CustomInput name="password" type="password">
               <AiOutlineLock />
             </CustomInput>
-            <div className=" text-xs font-medium mb-4 flex justify-between">
-              <a
-                onClick={() => handlePageChange("ForgetPass")}
-                className=" no-underline hover:underline hover:underline-offset-2"
-                href="#"
-              >
-                رمز عبورم را فراموش کرده ام
-              </a>
-              <label className="flex">
-                مرا به خاطر داشته باش
-                <input className=" accent-black ml-2" type="checkbox" />
+            <CustomInput name="password" type="password">
+              <AiOutlineLock />
+            </CustomInput>
+            <div className=" text-xs font-medium mb-4">
+              <label className="flex justify-center">
+                مقررات سایت را میپذیرم
+                <input type="checkbox" className="accent-black ml-2" />
               </label>
             </div>
             <button
               className=" w-full h-11 bg-red-300 border-none outline-none rounded-md  cursor-pointer font-medium"
               type="submit"
             >
-              ورود
+              ثبت
             </button>
             <div className="text-xs font-medium text-center mt-4">
               <p>
-                هنوز ثبت نام نکردی؟
+                قبلا ثبت نام کردی؟
                 <a
-                  onClick={() => handlePageChange("SignUp")}
+                  onClick={() => handlePageChange("SignIn")}
                   className=" no-underline hover:underline hover:underline-offset-2 mr-1"
                   href="#"
                 >
-                  ثبت نام
+                  ورود به حساب کاربری
                 </a>
               </p>
             </div>
@@ -55,4 +56,4 @@ const SignIn = ({ handlePageChange }) => {
   );
 };
 
-export { SignIn };
+export { SignUp };

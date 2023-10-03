@@ -22,6 +22,10 @@
   src: url("./assets/fonts/IRANSansWeb_UltraLight.woff");
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   line-height: 1.5;
   font-weight: 400;

@@ -4,7 +4,8 @@ import { SignCheckBox } from "../common/Sign/SignCheckBox";
 import { SignInput } from "../common/Sign/SignInput";
 import { SignLink } from "../common/Sign/SignLink";
 import { SignHeader } from "../common/Sign/SignHeader";
-import { AiOutlineUser, AiOutlineMail, AiOutlineLock } from "react-icons/ai";
+
+import { IoPerson, IoMail, IoLockClosed } from "react-icons/io5";
 
 const SignUp = ({ handlePageChange }) => {
   return (
@@ -16,15 +17,15 @@ const SignUp = ({ handlePageChange }) => {
           <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
             <form className="space-y-6" action="#" method="POST">
               <SignInput name={"username"} label={"نام کاربری"} type={"text"}>
-                <AiOutlineUser />
+                <IoPerson />
               </SignInput>
 
               <SignInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
-                <AiOutlineMail />
+                <IoMail />
               </SignInput>
 
               <SignInput name={"password"} label={"رمز عبور"} type={"password"}>
-                <AiOutlineLock />
+                <IoLockClosed />
               </SignInput>
 
               <SignInput
@@ -32,7 +33,7 @@ const SignUp = ({ handlePageChange }) => {
                 label={"تکرار رمز عبور"}
                 type={"password"}
               >
-                <AiOutlineLock />
+                <IoLockClosed />
               </SignInput>
 
               <SignCheckBox name={"agreeTerm"} message={"با مقررات موافقم"} />

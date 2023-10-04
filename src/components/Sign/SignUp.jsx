@@ -11,7 +11,7 @@ const SignUp = ({ handlePageChange }) => {
   return (
     <>
       <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
-        <SignHeader message={"به اکانت کاربریی خود وارد شوید "} />
+        <SignHeader message={"به اکانت کاربری خود وارد شوید "} />
 
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
           <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">

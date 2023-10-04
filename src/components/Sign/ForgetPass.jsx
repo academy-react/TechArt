@@ -3,7 +3,8 @@ import { SignButton } from "../common/Sign/SignButton";
 import { SignInput } from "../common/Sign/SignInput";
 import { SignLink } from "../common/Sign/SignLink";
 import { SignHeader } from "../common/Sign/SignHeader";
-import { AiOutlineMail } from "react-icons/ai";
+
+import { IoMail } from "react-icons/io5";
 
 const ForgetPass = ({ handlePageChange }) => {
   return (
@@ -15,7 +16,7 @@ const ForgetPass = ({ handlePageChange }) => {
           <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
             <form className="space-y-6" action="#" method="POST">
               <SignInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
-                <AiOutlineMail />
+                <IoMail />
               </SignInput>
 
               <SignLink

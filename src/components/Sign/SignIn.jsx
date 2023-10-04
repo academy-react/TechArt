@@ -4,23 +4,24 @@ import { SignCheckBox } from "../common/Sign/SignCheckBox";
 import { SignInput } from "../common/Sign/SignInput";
 import { SignLink } from "../common/Sign/SignLink";
 import { SignHeader } from "../common/Sign/SignHeader";
-import { AiOutlineMail, AiOutlineLock } from "react-icons/ai";
+
+import { IoMail, IoLockClosed } from "react-icons/io5";
 
 function SignIn({ handlePageChange }) {
   return (
     <>
-      <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
-        <SignHeader message={"به اکانت کاربریی خود وارد شوید "} />
+      <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8 ease-in">
+        <SignHeader message={"به اکانت کاربری خود وارد شوید "} />
 
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
           <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
             <form className="space-y-6" action="#" method="POST">
               <SignInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
-                <AiOutlineMail />
+                <IoMail />
               </SignInput>
 
               <SignInput name={"password"} label={"رمز عبور"} type={"password"}>
-                <AiOutlineLock />
+                <IoLockClosed />
               </SignInput>
 
               <SignCheckBox name={"rememberMe"} message={"مرا به خاطر بسپار"} />
@@ -31,7 +32,7 @@ function SignIn({ handlePageChange }) {
               />
 
               <SignLink
-                message={"هنوز عضو ساییت نشدی؟!"}
+                message={"هنوز عضو سایت نشدی؟!"}
                 handlePageChange={handlePageChange}
                 to={"SignUp"}
               />

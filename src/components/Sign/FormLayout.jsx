@@ -22,7 +22,7 @@ import ChangePassSVG from "../../assets/image/ChangePass.svg";
 import ForgetPassConfirmSVG from "../../assets/image/ForgetPassConfirm.svg";
 
 function FormLayout() {
-  const [signPage, setSignPage] = useState("ForgetPassConfirm");
+  const [signPage, setSignPage] = useState("SignIn");
 
   const handlePageChange = (to) => {
     setSignPage(to);

@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Form, Formik } from "formik";
 
 import { SignButton } from "./SignCustomElement/SignButton";
@@ -45,7 +44,7 @@ function SignIn({ handlePageChange }) {
           <SignLink
             message={"هنوز عضو سایت نشدی؟!"}
             handlePageChange={handlePageChange}
-            to={"SignUp"}
+            to={"PhoneRegister"}
           />
 
           <SignButton message={"ورود"} />

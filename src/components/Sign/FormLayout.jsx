@@ -3,37 +3,136 @@ import { useState } from "react";
 import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
 import { ForgetPass } from "./ForgetPass";
-
-import SignUpSVG from "../../assets/image/register.svg";
-import SignInSVG from "../../assets/image/login.svg";
-import ForgetPassSVG from "../../assets/image/forgot-password.svg";
 import { SignHeaderLogo } from "./SignHeaderLogo";
+import { PhoneRegister } from "./PhoneRegister";
+import { PhoneConfirm } from "./PhoneConfirm";
+import { PhoneConfirmed } from "./PhoneConfirmed";
+import { ForgetPassConfirm } from "./ForgetPassConfirm";
+import { ChangePass } from "./ChangePass";
+import { ChangePassConfirmed } from "./ChangePassConfirmed";
+
+import SignInSVG from "../../assets/image/SignIn.svg";
+import PhoneRegisterSVG from "../../assets/image/PhoneRegister.svg";
+import PhoneConfirmSVG from "../../assets/image/PhoneConfirm.svg";
+import PhoneConfirmedSVG from "../../assets/image/PhoneConfirmed.svg";
+import SignUpSVG from "../../assets/image/SignUp.svg";
+import ForgetPassSVG from "../../assets/image/ForgetPass.svg";
+import ChangePassConfirmedSVG from "../../assets/image/ChangePassConfirmed.svg";
+import ChangePassSVG from "../../assets/image/ChangePass.svg";
+import ForgetPassConfirmSVG from "../../assets/image/ForgetPassConfirm.svg";
 
 function FormLayout() {
-  const [signPage, setSignPage] = useState("SignIn");
+  const [signPage, setSignPage] = useState("ForgetPassConfirm");
 
   const handlePageChange = (to) => {
     setSignPage(to);
   };
 
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const handlePhoneNumber = (number) => {
+    setPhoneNumber(number);
+  };
+
+  const [emailAddress, setEmailAddress] = useState("");
+  const handleEmailAddress = (mail) => {
+    setEmailAddress(mail);
+  };
+
   const signForm = (signPage) => {
     switch (signPage) {
-      case "SignUp":
-        return <SignUp handlePageChange={handlePageChange} />;
-      case "ForgetPass":
-        return <ForgetPass handlePageChange={handlePageChange} />;
+      /*sign in components*/
       case "SignIn":
         return <SignIn handlePageChange={handlePageChange} />;
+      /*sign in components*/
+
+      /*sign up components*/
+      case "PhoneRegister":
+        return (
+          <PhoneRegister
+            handlePageChange={handlePageChange}
+            handlePhoneNumber={handlePhoneNumber}
+          />
+        );
+
+      case "PhoneConfirm":
+        return (
+          <PhoneConfirm
+            handlePageChange={handlePageChange}
+            phoneNumber={phoneNumber}
+          />
+        );
+
+      case "PhoneConfirmed":
+        return <PhoneConfirmed handlePageChange={handlePageChange} />;
+
+      case "SignUp":
+        return <SignUp handlePageChange={handlePageChange} />;
+      /*sign up components*/
+
+      /*forget password components*/
+      case "ForgetPass":
+        return (
+          <ForgetPass
+            handlePageChange={handlePageChange}
+            handleEmailAddress={handleEmailAddress}
+          />
+        );
+
+      case "ForgetPassConfirm":
+        return (
+          <ForgetPassConfirm
+            handlePageChange={handlePageChange}
+            emailAddress={emailAddress}
+          />
+        );
+
+      case "ChangePass":
+        return <ChangePass handlePageChange={handlePageChange} />;
+
+      case "ChangePassConfirmed":
+        return <ChangePassConfirmed handlePageChange={handlePageChange} />;
+      /*forget password components*/
     }
   };
   const signSVG = (signPage) => {
     switch (signPage) {
-      case "SignUp":
-        return <img src={SignUpSVG} alt="SignUpSVG" />;
-      case "ForgetPass":
-        return <img src={ForgetPassSVG} alt="ForgetPassSVG" />;
+      /*sign in components*/
       case "SignIn":
         return <img src={SignInSVG} alt="SignInSVG" />;
+
+      /*sign in components*/
+
+      /*sign up components*/
+      case "PhoneRegister":
+        return <img src={PhoneRegisterSVG} alt="PhoneRegisterSVG" />;
+
+      case "PhoneConfirm":
+        return <img src={PhoneConfirmSVG} alt="PhoneConfirmSVG" />;
+
+      case "PhoneConfirmed":
+        return <img src={PhoneConfirmedSVG} alt="PhoneConfirmSVG" />;
+
+      case "SignUp":
+        return <img src={SignUpSVG} alt="SignUpSVG" />;
+
+      /*sign up components*/
+
+      /*forget password components*/
+      case "ForgetPass":
+        return <img src={ForgetPassSVG} alt="ForgetPassSVG" />;
+
+      case "ForgetPassConfirm":
+        return <img src={ForgetPassConfirmSVG} alt="ForgetPassConfirmSVG" />;
+
+      case "ChangePass":
+        return <img src={ChangePassSVG} alt="ChangePassSVG" />;
+
+      case "ChangePassConfirmed":
+        return (
+          <img src={ChangePassConfirmedSVG} alt="ChangePassConfirmedSVG" />
+        );
+
+      /*forget password components*/
     }
   };
 

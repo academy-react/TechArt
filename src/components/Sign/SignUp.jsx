@@ -53,8 +53,9 @@ const SignUp = ({ handlePageChange }) => {
           </SignInput>
 
           <SignCheckBox name={"agreeTerm"} message={"با مقررات موافقم"} />
+
           <SignLink
-            message={"عضو سایت هستی؟"}
+            message={"صفحه ورود"}
             handlePageChange={handlePageChange}
             to={"SignIn"}
           />

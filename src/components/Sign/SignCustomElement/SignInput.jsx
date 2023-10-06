@@ -6,7 +6,7 @@ const SignInput = ({ children, label, ...props }) => {
 
   const [isFocus, setIsFocus] = useState(false);
 
-  const [field, meta, action] = useField(props);
+  const [field, meta] = useField(props);
 
   const handleLabelDeFocus = (event) => {
     field.onBlur(event);
@@ -22,7 +22,7 @@ const SignInput = ({ children, label, ...props }) => {
         <label
           htmlFor={name}
           className={
-            " absolute block text-sm font-medium text-gray-700 w-max px-2 bg-white transition-all duration-500" +
+            " absolute block text-sm font-medium text-gray-700 w-max px-2 bg-white transition-all duration-500 rounded-xl" +
             (!isFocus
               ? " top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
               : " top-0 -translate-y-3/4 left-2/3 -translate-x-1/2")

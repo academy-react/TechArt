@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Formik } from "formik";
 
 import { SignButton } from "./SignCustomElement/SignButton";
@@ -6,28 +6,27 @@ import { SignInput } from "./SignCustomElement/SignInput";
 import { SignLink } from "./SignCustomElement/SignLink";
 import { SignHeader } from "./SignCustomElement/SignHeader";
 
-import { IoMail } from "react-icons/io5";
+import { IoCall } from "react-icons/io5";
 
-import { forgetPassSchema } from "../../core/validations/schemas/forgetPassSchema";
+import { phoneNumberSchema } from "../../core/validations/schemas/PhoneNumberSchema";
 
-const ForgetPass = ({ handlePageChange, handleEmailAddress }) => {
+const PhoneRegister = ({ handlePageChange, handlePhoneNumber }) => {
   const onSubmit = (val) => {
-    handlePageChange("ForgetPassConfirm");
-    handleEmailAddress(val.email);
+    handlePageChange("PhoneConfirm");
+    handlePhoneNumber(val.phoneNumber);
   };
-
   return (
     <>
-      <SignHeader message={"بازیابی رمز عبور"} />
+      <SignHeader message={"شماره تماس خود را وارد کنید"} />
 
       <Formik
-        initialValues={{ email: "" }}
-        validationSchema={forgetPassSchema}
+        initialValues={{ phoneNumber: "" }}
+        validationSchema={phoneNumberSchema}
         onSubmit={onSubmit}
       >
         <Form className="space-y-6" action="#" method="POST">
-          <SignInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
-            <IoMail />
+          <SignInput name={"phoneNumber"} label={"شماره تماس"} type={"text"}>
+            <IoCall />
           </SignInput>
 
           <SignLink
@@ -43,4 +42,4 @@ const ForgetPass = ({ handlePageChange, handleEmailAddress }) => {
   );
 };
 
-export { ForgetPass };
+export { PhoneRegister };

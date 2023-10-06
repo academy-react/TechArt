@@ -1,53 +1,67 @@
 import React from "react";
-import { SignButton } from "../common/Sign/SignButton";
-import { SignCheckBox } from "../common/Sign/SignCheckBox";
-import { SignInput } from "../common/Sign/SignInput";
-import { SignLink } from "../common/Sign/SignLink";
-import { SignHeader } from "../common/Sign/SignHeader";
+import { Form, Formik } from "formik";
+
+import { SignButton } from "./SignCustomElement/SignButton";
+import { SignCheckBox } from "./SignCustomElement/SignCheckBox";
+import { SignInput } from "./SignCustomElement/SignInput";
+import { SignLink } from "./SignCustomElement/SignLink";
+import { SignHeader } from "./SignCustomElement/SignHeader";
 
 import { IoPerson, IoMail, IoLockClosed } from "react-icons/io5";
 
+import { signUpSchema } from "../../core/validations/schemas/signUpSchema";
+
 const SignUp = ({ handlePageChange }) => {
+  const onSubmit = () => {
+    console.log("submitted");
+  };
+
   return (
     <>
-      <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
-        <SignHeader message={"به اکانت کاربری خود وارد شوید "} />
+      <SignHeader message={"به اکانت کاربری خود وارد شوید "} />
 
-        <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-          <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-            <form className="space-y-6" action="#" method="POST">
-              <SignInput name={"username"} label={"نام کاربری"} type={"text"}>
-                <IoPerson />
-              </SignInput>
+      <Formik
+        initialValues={{
+          username: "",
+          email: "",
+          password: "",
+          confirmPassword: "",
+          agreeTerm: false,
+        }}
+        validationSchema={signUpSchema}
+        onSubmit={onSubmit}
+      >
+        <Form className="space-y-6" action="#" method="POST">
+          <SignInput name={"username"} label={"نام کاربری"} type={"text"}>
+            <IoPerson />
+          </SignInput>
 
-              <SignInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
-                <IoMail />
-              </SignInput>
+          <SignInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
+            <IoMail />
+          </SignInput>
 
-              <SignInput name={"password"} label={"رمز عبور"} type={"password"}>
-                <IoLockClosed />
-              </SignInput>
+          <SignInput name={"password"} label={"رمز عبور"} type={"password"}>
+            <IoLockClosed />
+          </SignInput>
 
-              <SignInput
-                name={"confirmPassword"}
-                label={"تکرار رمز عبور"}
-                type={"password"}
-              >
-                <IoLockClosed />
-              </SignInput>
+          <SignInput
+            name={"confirmPassword"}
+            label={"تکرار رمز عبور"}
+            type={"password"}
+          >
+            <IoLockClosed />
+          </SignInput>
 
-              <SignCheckBox name={"agreeTerm"} message={"با مقررات موافقم"} />
-              <SignLink
-                message={"عضو سایت هستی؟"}
-                handlePageChange={handlePageChange}
-                to={"SignIn"}
-              />
+          <SignCheckBox name={"agreeTerm"} message={"با مقررات موافقم"} />
+          <SignLink
+            message={"عضو سایت هستی؟"}
+            handlePageChange={handlePageChange}
+            to={"SignIn"}
+          />
 
-              <SignButton message={"ثبت نام"} />
-            </form>
-          </div>
-        </div>
-      </div>
+          <SignButton message={"ثبت نام"} />
+        </Form>
+      </Formik>
     </>
   );
 };

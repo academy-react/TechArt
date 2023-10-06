@@ -17,9 +17,9 @@ import PhoneConfirmSVG from "../../assets/image/PhoneConfirm.svg";
 import PhoneConfirmedSVG from "../../assets/image/PhoneConfirmed.svg";
 import SignUpSVG from "../../assets/image/SignUp.svg";
 import ForgetPassSVG from "../../assets/image/ForgetPass.svg";
-import ChangePassConfirmedSVG from "../../assets/image/ChangePassConfirmed.svg";
-import ChangePassSVG from "../../assets/image/ChangePass.svg";
 import ForgetPassConfirmSVG from "../../assets/image/ForgetPassConfirm.svg";
+import ChangePassSVG from "../../assets/image/ChangePass.svg";
+import ChangePassConfirmedSVG from "../../assets/image/ChangePassConfirmed.svg";
 
 function FormLayout() {
   const [signPage, setSignPage] = useState("SignIn");

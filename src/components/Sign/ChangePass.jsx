@@ -11,6 +11,10 @@ import { IoLockClosed } from "react-icons/io5";
 import { changePassSchema } from "../../core/validations/schemas/changePassSchema";
 
 const ChangePass = ({ handlePageChange }) => {
+  const onSubmit = () => {
+    handlePageChange("ChangePassConfirmed");
+    console.log("submitted");
+  };
   return (
     <>
       <SignHeader message={"رمز عبور جدید خود را وارد کنید"} />
@@ -21,6 +25,7 @@ const ChangePass = ({ handlePageChange }) => {
           confirmPassword: "",
         }}
         validationSchema={changePassSchema}
+        onSubmit={onSubmit}
       >
         <Form className="space-y-6" action="#" method="POST">
           <SignInput

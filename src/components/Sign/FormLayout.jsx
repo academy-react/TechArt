@@ -140,12 +140,10 @@ function FormLayout() {
     <>
       <div className="md:grid md:grid-cols-5 md:gap-6">
         <div className="md:col-span-2">
-          <div className=" min-h-full flex flex-col py-12 sm:px-6 lg:px-8">
+          <div className=" min-h-full flex flex-col py-12 sm:px-6 lg:px-8 overflow-hidden">
             <SignHeaderLogo />
             <div className="flex flex-col justify-center sm:mx-auto sm:w-full sm:max-w-md flex-grow">
-              <div className="bg-white pb-8 pt-1 px-4 shadow-2xl sm:rounded-lg sm:px-10">
-                {signForm(signPage)}
-              </div>
+              {signForm(signPage)}
             </div>
           </div>
         </div>

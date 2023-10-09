@@ -1,10 +1,10 @@
 import React from "react";
-import { FormLayout } from "./FormLayout";
+import { SignLayout } from "./SignLayout";
 
 const Sign = () => {
   return (
     <>
-      <FormLayout />
+      <SignLayout />
     </>
   );
 };

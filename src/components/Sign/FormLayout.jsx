@@ -138,17 +138,19 @@ function FormLayout() {
 
   return (
     <>
-      <div className="md:grid md:grid-cols-5 md:gap-6">
-        <div className="md:col-span-2">
+      <div className="md:grid md:grid-cols-5 md:gap-6" dir="ltr">
+        <div className="mt-5 md:col-span-3 md:mt-0 flex justify-center">
+          <div className="md:w-10/12 w-1/2 flex justify-center">
+            {signSVG(signPage)}
+          </div>
+        </div>
+        <div className="md:col-span-2" dir="rtl">
           <div className=" min-h-full flex flex-col py-12 sm:px-6 lg:px-8 overflow-hidden">
             <SignHeaderLogo />
             <div className="flex flex-col justify-center sm:mx-auto sm:w-full sm:max-w-md flex-grow">
               {signForm(signPage)}
             </div>
           </div>
-        </div>
-        <div className="mt-5 md:col-span-3 md:mt-0 flex justify-center">
-          <div className="w-10/12">{signSVG(signPage)}</div>
         </div>
       </div>
     </>

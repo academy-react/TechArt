@@ -1,9 +1,11 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { signFormChildrenVariant } from "../../../core/utils/signFormChildrenVariant";
 
 const SignLink = ({ message, handlePageChange, to }) => {
   return (
     <>
-      <div className="text-sm">
+      <motion.div className="text-sm" variants={signFormChildrenVariant()}>
         <a
           onClick={() => handlePageChange(to)}
           href="#"
@@ -11,7 +13,7 @@ const SignLink = ({ message, handlePageChange, to }) => {
         >
           {message}
         </a>
-      </div>
+      </motion.div>
     </>
   );
 };

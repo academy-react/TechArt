@@ -12,7 +12,7 @@ const PhoneConfirmed = ({ handlePageChange }) => {
         <SignHeader message={"شماره تماس شما با موفقیت تایید شد"} />
 
         <Timer
-          seconds={"5"}
+          seconds={"10"}
           func={() => {
             handlePageChange("SignUp");
           }}

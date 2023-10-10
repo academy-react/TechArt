@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
@@ -138,7 +139,14 @@ function SignLayout() {
 
   return (
     <>
-      <div className="md:grid lg:grid-cols-5 md:grid-cols-6 md:gap-6" dir="ltr">
+      <motion.div
+        className="md:grid lg:grid-cols-5 md:grid-cols-6 md:gap-6"
+        dir="ltr"
+        variants={{}}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
         <div className="md:col-span-3 lg:grid-col-2 md:mt-0 mt-28  flex justify-center">
           <div className="md:w-10/12 w-1/2 flex justify-center">
             {signSVG(signPage)}
@@ -152,7 +160,7 @@ function SignLayout() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

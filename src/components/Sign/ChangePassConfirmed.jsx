@@ -12,7 +12,7 @@ const ChangePassConfirmed = ({ handlePageChange }) => {
         <SignHeader message={"رمز عبور شما با موفقیت تغییر کرد"} />
 
         <Timer
-          seconds={"5"}
+          seconds={"10"}
           func={() => {
             handlePageChange("SignIn");
           }}

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { ErrorMessage, Field, useField } from "formik";
+import { motion } from "framer-motion";
+import { signFormChildrenVariant } from "../../../core/utils/signFormChildrenVariant";
 
 const SignInput = ({ children, label, ...props }) => {
   const { name, type } = props;
@@ -15,7 +17,7 @@ const SignInput = ({ children, label, ...props }) => {
 
   return (
     <>
-      <div className="relative">
+      <motion.div className="relative" variants={signFormChildrenVariant()}>
         <span className=" absolute right-2 text-2xl top-1/2 -translate-y-1/2 text-gray-700">
           {children}
         </span>
@@ -38,7 +40,7 @@ const SignInput = ({ children, label, ...props }) => {
             type={type}
             autoComplete={name}
             className={
-              "block w-full appearance-none rounded-md border pl-3 pr-10 py-2 sm:text-sm shadow-sm " +
+              "block w-full appearance-none rounded-md border pl-3 pr-10 py-2 sm:text-sm shadow-sm z-1" +
               (meta.touched && meta.error
                 ? "border-red-500 focus:border-red-500 focus:outline-none focus:ring-red-500 text-red-500"
                 : "border-gray-300  focus:border-indigo-500 focus:outline-none focus:ring-indigo-500  text-gray-800")
@@ -58,7 +60,7 @@ const SignInput = ({ children, label, ...props }) => {
             />
           )}
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

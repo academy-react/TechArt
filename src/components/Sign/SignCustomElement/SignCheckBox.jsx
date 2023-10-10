@@ -1,5 +1,8 @@
-import { ErrorMessage, useField } from "formik";
 import React from "react";
+import { ErrorMessage, useField } from "formik";
+import { motion } from "framer-motion";
+
+import { signFormChildrenVariant } from "../../../core/utils/signFormChildrenVariant";
 
 const SignCheckBox = ({ message, ...props }) => {
   const { name } = props;
@@ -8,7 +11,10 @@ const SignCheckBox = ({ message, ...props }) => {
 
   return (
     <>
-      <div className="flex relative items-center justify-between">
+      <motion.div
+        className="flex relative items-center justify-between"
+        variants={signFormChildrenVariant()}
+      >
         <div className="flex items-center mb-4">
           <input
             {...field}
@@ -29,7 +35,7 @@ const SignCheckBox = ({ message, ...props }) => {
             className="text-red-700 absolute -bottom-1 right-0 text-xs"
           />
         )}
-      </div>
+      </motion.div>
     </>
   );
 };

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
 import { ForgetPass } from "./ForgetPass";
-import { SignHeaderLogo } from "./SignHeaderLogo";
+import { AuthHeaderLogo } from "./AuthHeaderLogo";
 import { PhoneRegister } from "./PhoneRegister";
 import { PhoneConfirm } from "./PhoneConfirm";
 import { PhoneConfirmed } from "./PhoneConfirmed";
@@ -22,8 +22,8 @@ import ForgetPassConfirmSVG from "../../assets/image/ForgetPassConfirm.svg";
 import ChangePassSVG from "../../assets/image/ChangePass.svg";
 import ChangePassConfirmedSVG from "../../assets/image/ChangePassConfirmed.svg";
 
-function SignLayout() {
-  const [signPage, setSignPage] = useState("SignIn");
+function AuthLayout() {
+  const [signPage, setSignPage] = useState("SignUp");
 
   const handlePageChange = (to) => {
     setSignPage(to);
@@ -154,7 +154,6 @@ function SignLayout() {
         </div>
         <div className="md:col-span-3 lg:col-span-2" dir="rtl">
           <div className=" min-h-full flex flex-col pt-0 pb-12 md:py-12 sm:px-6 lg:px-8 overflow-hidden">
-            <SignHeaderLogo />
             <div className="flex flex-col justify-center sm:mx-auto sm:w-full sm:max-w-md flex-grow">
               {signForm(signPage)}
             </div>
@@ -164,4 +163,4 @@ function SignLayout() {
     </>
   );
 }
-export { SignLayout };
+export { AuthLayout };

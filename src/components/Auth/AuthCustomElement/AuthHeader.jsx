@@ -1,6 +1,6 @@
 import React from "react";
 
-const SignHeader = ({ message }) => {
+const AuthHeader = ({ message }) => {
   return (
     <>
       <div className="sm:mx-auto sm:w-full sm:max-w-md pb-8">
@@ -12,4 +12,4 @@ const SignHeader = ({ message }) => {
   );
 };
 
-export { SignHeader };
+export { AuthHeader };

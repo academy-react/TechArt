@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 import "./App.css";
-import { Sign } from "../components/Sign";
+import { Auth } from "../components/Auth";
 
 function App() {
   return (
     <>
-      <Sign />
+      <Auth />
     </>
   );
 }

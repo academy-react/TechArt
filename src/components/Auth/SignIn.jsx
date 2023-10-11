@@ -2,15 +2,16 @@ import React from "react";
 import { Form, Formik } from "formik";
 
 import { FormWrapper } from "./FormWrapper";
-import { SignButton } from "./SignCustomElement/SignButton";
-import { SignCheckBox } from "./SignCustomElement/SignCheckBox";
-import { SignInput } from "./SignCustomElement/SignInput";
-import { SignLink } from "./SignCustomElement/SignLink";
-import { SignHeader } from "./SignCustomElement/SignHeader";
+import {
+  AuthButton,
+  AuthCheckBox,
+  AuthHeader,
+  AuthInput,
+  AuthLink,
+} from "./AuthCustomElement";
+import { signInSchema } from "../../core/validations/schemas/auth";
 
 import { IoMail, IoLockClosed } from "react-icons/io5";
-
-import { signInSchema } from "../../core/validations/schemas/signInSchema";
 
 function SignIn({ handlePageChange }) {
   const onSubmit = () => {
@@ -20,7 +21,7 @@ function SignIn({ handlePageChange }) {
   return (
     <>
       <FormWrapper>
-        <SignHeader message={"به اکانت کاربری خود وارد شوید "} />
+        <AuthHeader message={"به اکانت کاربری خود وارد شوید "} />
 
         <Formik
           initialValues={{ email: "", password: "" }}
@@ -28,28 +29,28 @@ function SignIn({ handlePageChange }) {
           onSubmit={onSubmit}
         >
           <Form className="space-y-6" action="#" method="POST">
-            <SignInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
+            <AuthInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
               <IoMail />
-            </SignInput>
+            </AuthInput>
 
-            <SignInput name={"password"} label={"رمز عبور"} type={"password"}>
+            <AuthInput name={"password"} label={"رمز عبور"} type={"password"}>
               <IoLockClosed />
-            </SignInput>
+            </AuthInput>
 
-            <SignCheckBox name={"rememberMe"} message={"مرا به خاطر بسپار"} />
-            <SignLink
+            <AuthCheckBox name={"rememberMe"} message={"مرا به خاطر بسپار"} />
+            <AuthLink
               message={"رمز عبورت رو  فراموش کردی؟"}
               handlePageChange={handlePageChange}
               to={"ForgetPass"}
             />
 
-            <SignLink
+            <AuthLink
               message={"هنوز عضو سایت نشدی؟!"}
               handlePageChange={handlePageChange}
               to={"PhoneRegister"}
             />
 
-            <SignButton message={"ورود"} />
+            <AuthButton message={"ورود"} />
           </Form>
         </Formik>
       </FormWrapper>

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { ErrorMessage, Field, useField } from "formik";
+import { Field, useField } from "formik";
 import { motion } from "framer-motion";
-import { signFormChildrenVariant } from "../../../core/utils/signFormChildrenVariant";
+import { signFormChildrenVariant } from "../../../core/utils/auth";
+import { AuthErrorMessage } from "./AuthErrorMessage";
 
-const SignInput = ({ children, label, ...props }) => {
+const AuthInput = ({ children, label, ...props }) => {
   const { name, type } = props;
 
   const [isFocus, setIsFocus] = useState(false);
@@ -33,7 +34,7 @@ const SignInput = ({ children, label, ...props }) => {
           {label}
         </label>
 
-        <div className={meta.touched && meta.error ? "mb-10" : "mb-4"}>
+        <div className="mb-9">
           <Field
             id={name}
             name={name}
@@ -52,17 +53,11 @@ const SignInput = ({ children, label, ...props }) => {
             onBlur={handleLabelDeFocus}
           />
 
-          {meta.touched && meta.error && (
-            <ErrorMessage
-              name={name}
-              component={"span"}
-              className="text-red-700 absolute -bottom-6 right-0 text-xs"
-            />
-          )}
+          {meta.touched && meta.error && <AuthErrorMessage name={name} />}
         </div>
       </motion.div>
     </>
   );
 };
 
-export { SignInput };
+export { AuthInput };

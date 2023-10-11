@@ -2,14 +2,15 @@ import React from "react";
 import { Form, Formik } from "formik";
 
 import { FormWrapper } from "./FormWrapper";
-import { SignButton } from "./SignCustomElement/SignButton";
-import { SignInput } from "./SignCustomElement/SignInput";
-import { SignLink } from "./SignCustomElement/SignLink";
-import { SignHeader } from "./SignCustomElement/SignHeader";
+import {
+  AuthButton,
+  AuthHeader,
+  AuthInput,
+  AuthLink,
+} from "./AuthCustomElement";
+import { changePassSchema } from "../../core/validations/schemas/auth";
 
 import { IoLockClosed } from "react-icons/io5";
-
-import { changePassSchema } from "../../core/validations/schemas/changePassSchema";
 
 const ChangePass = ({ handlePageChange }) => {
   const onSubmit = () => {
@@ -20,7 +21,7 @@ const ChangePass = ({ handlePageChange }) => {
   return (
     <>
       <FormWrapper>
-        <SignHeader message={"رمز عبور جدید خود را وارد کنید"} />
+        <AuthHeader message={"رمز عبور جدید خود را وارد کنید"} />
 
         <Formik
           initialValues={{
@@ -31,29 +32,29 @@ const ChangePass = ({ handlePageChange }) => {
           onSubmit={onSubmit}
         >
           <Form className="space-y-6" action="#" method="POST">
-            <SignInput
+            <AuthInput
               name={"password"}
               label={"رمز عبور جدید"}
               type={"password"}
             >
               <IoLockClosed />
-            </SignInput>
+            </AuthInput>
 
-            <SignInput
+            <AuthInput
               name={"confirmPassword"}
               label={"تکرار رمز عبور جدید"}
               type={"password"}
             >
               <IoLockClosed />
-            </SignInput>
+            </AuthInput>
 
-            <SignLink
+            <AuthLink
               message={"صفحه ورود"}
               handlePageChange={handlePageChange}
               to={"SignIn"}
             />
 
-            <SignButton message={"تایید"} />
+            <AuthButton message={"تایید"} />
           </Form>
         </Formik>
       </FormWrapper>

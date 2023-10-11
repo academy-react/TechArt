@@ -2,15 +2,16 @@ import React from "react";
 import { Form, Formik } from "formik";
 
 import { FormWrapper } from "./FormWrapper";
-import { SignButton } from "./SignCustomElement/SignButton";
-import { SignCheckBox } from "./SignCustomElement/SignCheckBox";
-import { SignInput } from "./SignCustomElement/SignInput";
-import { SignLink } from "./SignCustomElement/SignLink";
-import { SignHeader } from "./SignCustomElement/SignHeader";
+import {
+  AuthButton,
+  AuthCheckBox,
+  AuthHeader,
+  AuthInput,
+  AuthLink,
+} from "./AuthCustomElement";
+import { signUpSchema } from "../../core/validations/schemas/auth";
 
 import { IoPerson, IoMail, IoLockClosed } from "react-icons/io5";
-
-import { signUpSchema } from "../../core/validations/schemas/signUpSchema";
 
 const SignUp = ({ handlePageChange }) => {
   const onSubmit = () => {
@@ -20,7 +21,7 @@ const SignUp = ({ handlePageChange }) => {
   return (
     <>
       <FormWrapper>
-        <SignHeader message={"به اکانت کاربری خود وارد شوید "} />
+        <AuthHeader message={"به اکانت کاربری خود وارد شوید "} />
 
         <Formik
           initialValues={{
@@ -34,35 +35,35 @@ const SignUp = ({ handlePageChange }) => {
           onSubmit={onSubmit}
         >
           <Form className="space-y-6" action="#" method="POST">
-            <SignInput name={"username"} label={"نام کاربری"} type={"text"}>
+            <AuthInput name={"username"} label={"نام کاربری"} type={"text"}>
               <IoPerson />
-            </SignInput>
+            </AuthInput>
 
-            <SignInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
+            <AuthInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
               <IoMail />
-            </SignInput>
+            </AuthInput>
 
-            <SignInput name={"password"} label={"رمز عبور"} type={"password"}>
+            <AuthInput name={"password"} label={"رمز عبور"} type={"password"}>
               <IoLockClosed />
-            </SignInput>
+            </AuthInput>
 
-            <SignInput
+            <AuthInput
               name={"confirmPassword"}
               label={"تکرار رمز عبور"}
               type={"password"}
             >
               <IoLockClosed />
-            </SignInput>
+            </AuthInput>
 
-            <SignCheckBox name={"agreeTerm"} message={"با مقررات موافقم"} />
+            <AuthCheckBox name={"agreeTerm"} message={"با مقررات موافقم"} />
 
-            <SignLink
+            <AuthLink
               message={"صفحه ورود"}
               handlePageChange={handlePageChange}
               to={"SignIn"}
             />
 
-            <SignButton message={"ثبت نام"} />
+            <AuthButton message={"ثبت نام"} />
           </Form>
         </Formik>
       </FormWrapper>

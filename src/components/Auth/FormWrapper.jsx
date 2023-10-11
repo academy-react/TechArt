@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { signFormVariant } from "../../core/utils/signFormVariant";
+import { signFormVariant } from "../../core/utils/auth";
 
 const FormWrapper = ({ children }) => {
   return (

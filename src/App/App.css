@@ -1,10 +1,9 @@
 #root {
+  width: 100%;
   margin: 0 auto;
   text-align: center;
-}
+  font-family: IRANSans;
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  --primary-color: #4ecdc4;
+  --secondary-color: #f94144;
 }

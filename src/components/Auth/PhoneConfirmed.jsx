@@ -1,17 +1,15 @@
 import React from "react";
 
 import { FormWrapper } from "./FormWrapper";
-import { SignLink } from "./SignCustomElement/SignLink";
-import { SignHeader } from "./SignCustomElement/SignHeader";
-import { Timer } from "./SignCustomElement/Timer";
+import { AuthHeader, AuthLink, AuthTimer } from "./AuthCustomElement";
 
 const PhoneConfirmed = ({ handlePageChange }) => {
   return (
     <>
       <FormWrapper>
-        <SignHeader message={"شماره تماس شما با موفقیت تایید شد"} />
+        <AuthHeader message={"شماره تماس شما با موفقیت تایید شد"} />
 
-        <Timer
+        <AuthTimer
           seconds={"10"}
           func={() => {
             handlePageChange("SignUp");
@@ -19,7 +17,7 @@ const PhoneConfirmed = ({ handlePageChange }) => {
           goToLabel={"ثبت نهایی اطلاعات"}
         />
 
-        <SignLink
+        <AuthLink
           message={"انتقال به صفحه ثبت اطلاعات"}
           handlePageChange={handlePageChange}
           to={"SignUp"}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Timer = ({ seconds, func, goToLabel }) => {
+const AuthTimer = ({ seconds, func, goToLabel }) => {
   const [remaining, setRemaining] = useState(seconds);
 
   useEffect(() => {
@@ -30,4 +30,4 @@ const Timer = ({ seconds, func, goToLabel }) => {
   );
 };
 
-export { Timer };
+export { AuthTimer };

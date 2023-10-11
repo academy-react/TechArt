@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { signFormChildrenVariant } from "../../../core/utils/signFormChildrenVariant";
+import { signFormChildrenVariant } from "../../../core/utils/auth";
 
-const SignLink = ({ message, handlePageChange, to }) => {
+const AuthLink = ({ message, handlePageChange, to }) => {
   return (
     <>
       <motion.div className="text-sm" variants={signFormChildrenVariant()}>
@@ -18,4 +18,4 @@ const SignLink = ({ message, handlePageChange, to }) => {
   );
 };
 
-export { SignLink };
+export { AuthLink };

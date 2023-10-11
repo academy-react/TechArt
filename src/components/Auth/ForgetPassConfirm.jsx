@@ -1,15 +1,13 @@
 import React from "react";
 
 import { FormWrapper } from "./FormWrapper";
-import { SignLink } from "./SignCustomElement/SignLink";
-import { SignHeader } from "./SignCustomElement/SignHeader";
-import { Timer } from "./SignCustomElement/Timer";
+import { AuthHeader, AuthLink, AuthTimer } from "./AuthCustomElement";
 
 const ForgetPassConfirm = ({ handlePageChange, emailAddress }) => {
   return (
     <>
       <FormWrapper>
-        <SignHeader message={"تغییر رمز"} />
+        <AuthHeader message={"تغییر رمز"} />
 
         <div className="font-medium text-gray-600 mb-5">
           <span>پیام حاوی لینک تغییر پسوورد به آدرس ایمیل</span>
@@ -17,7 +15,7 @@ const ForgetPassConfirm = ({ handlePageChange, emailAddress }) => {
           <span>ارسال شده است</span>
         </div>
 
-        <Timer
+        <AuthTimer
           seconds={"5"}
           func={() => {
             handlePageChange("SignIn");
@@ -25,7 +23,7 @@ const ForgetPassConfirm = ({ handlePageChange, emailAddress }) => {
           goToLabel={"ورود"}
         />
 
-        <SignLink
+        <AuthLink
           message={"انتقال به صفحه ورود"}
           handlePageChange={handlePageChange}
           to={"SignIn"}

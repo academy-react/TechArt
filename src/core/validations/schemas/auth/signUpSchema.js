@@ -1,5 +1,5 @@
 import * as yup from "yup";
-import { passwordRules } from "../../utils/passwordRules.utils";
+import { passwordRules } from "../../../utils/auth";
 
 const { lowerCase, upperCase, number } = passwordRules;
 

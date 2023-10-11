@@ -2,14 +2,15 @@ import React from "react";
 import { Form, Formik } from "formik";
 
 import { FormWrapper } from "./FormWrapper";
-import { SignButton } from "./SignCustomElement/SignButton";
-import { SignInput } from "./SignCustomElement/SignInput";
-import { SignLink } from "./SignCustomElement/SignLink";
-import { SignHeader } from "./SignCustomElement/SignHeader";
+import {
+  AuthButton,
+  AuthHeader,
+  AuthInput,
+  AuthLink,
+} from "./AuthCustomElement";
+import { forgetPassSchema } from "../../core/validations/schemas/auth";
 
 import { IoMail } from "react-icons/io5";
-
-import { forgetPassSchema } from "../../core/validations/schemas/forgetPassSchema";
 
 const ForgetPass = ({ handlePageChange, handleEmailAddress }) => {
   const onSubmit = (val) => {
@@ -20,7 +21,7 @@ const ForgetPass = ({ handlePageChange, handleEmailAddress }) => {
   return (
     <>
       <FormWrapper>
-        <SignHeader message={"بازیابی رمز عبور"} />
+        <AuthHeader message={"بازیابی رمز عبور"} />
 
         <Formik
           initialValues={{ email: "" }}
@@ -28,17 +29,17 @@ const ForgetPass = ({ handlePageChange, handleEmailAddress }) => {
           onSubmit={onSubmit}
         >
           <Form className="space-y-6" action="#" method="POST">
-            <SignInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
+            <AuthInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
               <IoMail />
-            </SignInput>
+            </AuthInput>
 
-            <SignLink
+            <AuthLink
               message={"عضو سایت هستی؟"}
               handlePageChange={handlePageChange}
               to={"SignIn"}
             />
 
-            <SignButton message={"ارسال کد"} />
+            <AuthButton message={"ارسال کد"} />
           </Form>
         </Formik>
       </FormWrapper>

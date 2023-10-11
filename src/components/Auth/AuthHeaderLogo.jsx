@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../../assets/icon/header-logo.png";
 
-const SignHeaderLogo = () => {
+const AuthHeaderLogo = () => {
   return (
     <div className="mx-auto md:relative md:top-0 md:-left-0 md:translate-x-0 absolute top-5 left-1/2 -translate-x-1/2">
       <img
@@ -13,4 +13,4 @@ const SignHeaderLogo = () => {
   );
 };
 
-export { SignHeaderLogo };
+export { AuthHeaderLogo };

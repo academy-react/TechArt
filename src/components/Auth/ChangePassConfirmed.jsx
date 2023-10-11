@@ -1,17 +1,15 @@
 import React from "react";
 
 import { FormWrapper } from "./FormWrapper";
-import { SignLink } from "./SignCustomElement/SignLink";
-import { SignHeader } from "./SignCustomElement/SignHeader";
-import { Timer } from "./SignCustomElement/Timer";
+import { AuthHeader, AuthLink, AuthTimer } from "./AuthCustomElement";
 
 const ChangePassConfirmed = ({ handlePageChange }) => {
   return (
     <>
       <FormWrapper>
-        <SignHeader message={"رمز عبور شما با موفقیت تغییر کرد"} />
+        <AuthHeader message={"رمز عبور شما با موفقیت تغییر کرد"} />
 
-        <Timer
+        <AuthTimer
           seconds={"10"}
           func={() => {
             handlePageChange("SignIn");
@@ -19,7 +17,7 @@ const ChangePassConfirmed = ({ handlePageChange }) => {
           goToLabel={"ورود"}
         />
 
-        <SignLink
+        <AuthLink
           message={"انتقال به صفحه ورود"}
           handlePageChange={handlePageChange}
           to={"SignIn"}

@@ -1,5 +1,5 @@
 import * as yup from "yup";
-import { phoneConfirmCodeRules } from "../../utils/phoneConfirmCodeRules.utils";
+import { phoneConfirmCodeRules } from "../../../utils/auth";
 
 const phoneConfirmSchema = yup.object().shape({
   confirmCode: yup

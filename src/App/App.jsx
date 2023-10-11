@@ -2,7 +2,7 @@ import React from "react";
 import { RouterProvider } from "react-router-dom";
 import { router } from "../Router/router";
 import "./App.css";
-import { Sign } from "../components/Sign";
+import { Auth } from "../components/Auth";
 
 function App() {
   return (

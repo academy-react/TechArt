@@ -1,10 +1,11 @@
 import React from "react";
-import { ErrorMessage, useField } from "formik";
+import { useField } from "formik";
 import { motion } from "framer-motion";
 
-import { signFormChildrenVariant } from "../../../core/utils/signFormChildrenVariant";
+import { signFormChildrenVariant } from "../../../core/utils/auth";
+import { AuthErrorMessage } from "./AuthErrorMessage";
 
-const SignCheckBox = ({ message, ...props }) => {
+const AuthCheckBox = ({ message, ...props }) => {
   const { name } = props;
 
   const [field, meta] = useField(props);
@@ -15,7 +16,7 @@ const SignCheckBox = ({ message, ...props }) => {
         className="flex relative items-center justify-between"
         variants={signFormChildrenVariant()}
       >
-        <div className="flex items-center mb-4">
+        <div className="flex items-center">
           <input
             {...field}
             id={name}
@@ -28,16 +29,10 @@ const SignCheckBox = ({ message, ...props }) => {
           </label>
         </div>
 
-        {meta.touched && meta.error && (
-          <ErrorMessage
-            name={name}
-            component={"span"}
-            className="text-red-700 absolute -bottom-1 right-0 text-xs"
-          />
-        )}
+        {meta.touched && meta.error && <AuthErrorMessage name={name} />}
       </motion.div>
     </>
   );
 };
 
-export { SignCheckBox };
+export { AuthCheckBox };

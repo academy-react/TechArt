@@ -1,5 +1,5 @@
 import * as yup from "yup";
-import { phoneNumberRules } from "../../utils/phoneNumberRules.utils";
+import { phoneNumberRules } from "../../../utils/auth";
 
 const { start, count } = phoneNumberRules;
 

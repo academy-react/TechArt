@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { signFormChildrenVariant } from "../../../core/utils/signFormChildrenVariant";
+import { signFormChildrenVariant } from "../../../core/utils/auth";
 
-const SignButton = ({ message }) => {
+const AuthButton = ({ message }) => {
   return (
     <>
       <motion.div variants={signFormChildrenVariant()}>
@@ -17,4 +17,4 @@ const SignButton = ({ message }) => {
   );
 };
 
-export { SignButton };
+export { AuthButton };

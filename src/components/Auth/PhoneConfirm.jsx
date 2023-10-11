@@ -2,14 +2,15 @@ import React from "react";
 import { Form, Formik } from "formik";
 
 import { FormWrapper } from "./FormWrapper";
-import { SignButton } from "./SignCustomElement/SignButton";
-import { SignInput } from "./SignCustomElement/SignInput";
-import { SignLink } from "./SignCustomElement/SignLink";
-import { SignHeader } from "./SignCustomElement/SignHeader";
+import {
+  AuthButton,
+  AuthHeader,
+  AuthInput,
+  AuthLink,
+} from "./AuthCustomElement";
+import { phoneConfirmSchema } from "../../core/validations/schemas/auth";
 
 import { IoShieldCheckmark } from "react-icons/io5";
-
-import { phoneConfirmSchema } from "../../core/validations/schemas/phoneConfirmSchema";
 
 const PhoneConfirm = ({ handlePageChange, phoneNumber }) => {
   const onSubmit = () => {
@@ -19,13 +20,13 @@ const PhoneConfirm = ({ handlePageChange, phoneNumber }) => {
   return (
     <>
       <FormWrapper>
-        <SignHeader message={"کد تایید دریافتی را وارد کنید"} />
+        <AuthHeader message={"کد تایید دریافتی را وارد کنید"} />
 
         <div className="font-medium text-gray-600 mb-5">
           <span>شماره وارد شده</span>
           <span className="text-indigo-700">{" " + phoneNumber + " "}</span>
           <span>است</span>
-          <SignLink
+          <AuthLink
             message={"برای تغییر شماره کلیک کنید"}
             handlePageChange={handlePageChange}
             to={"PhoneRegister"}
@@ -38,11 +39,11 @@ const PhoneConfirm = ({ handlePageChange, phoneNumber }) => {
           onSubmit={onSubmit}
         >
           <Form className="space-y-6" action="#" method="POST">
-            <SignInput name={"confirmCode"} label={"کد تایید"} type={"text"}>
+            <AuthInput name={"confirmCode"} label={"کد تایید"} type={"text"}>
               <IoShieldCheckmark />
-            </SignInput>
+            </AuthInput>
 
-            <SignButton message={"تایید"} />
+            <AuthButton message={"تایید"} />
           </Form>
         </Formik>
       </FormWrapper>

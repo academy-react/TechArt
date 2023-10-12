@@ -1,3 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "IRANSans"; /*Can be any text*/
+  src: local("IRANSans-Bold"),
+    url("./Assets/fonts/IRANSans_Bold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "IRANSans"; /*Can be any text*/
+  src: local("IRANSans-Medium"),
+    url("./Assets/fonts/IRANSans_Medium.ttf") format("ttf");
+}
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -24,11 +38,15 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  margin: 0 0 0 22px;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: iransans;
+  /* padding: 2rem; */
+  /* text-align: center; */
+  /* max-width: 1280px; */
 }
 
 h1 {

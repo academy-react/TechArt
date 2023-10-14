@@ -1,3 +1,24 @@
+@font-face {
+  font-family: IRANSans;
+  src: url("./assets/font/IRANSans.ttf");
+}
+@font-face {
+  font-family: IRANSans_Bold;
+  src: url("./assets/font/IRANSans_Bold.ttf");
+}
+@font-face {
+  font-family: IRANSans_Light;
+  src: url("./assets/font/IRANSans_Light.ttf");
+}
+@font-face {
+  font-family: IRANSans_Medium;
+  src: url("./assets/font/IRANSans_Medium.ttf");
+}
+@font-face {
+  font-family: IRANSans_UltraLight;
+  src: url("./assets/font/IRANSans_UltraLight.ttf");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,13 +40,9 @@
 }
 
 body {
-  margin: 0 0 0 22px;
+  margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  font-family: iransans;
-  /* padding: 2rem; */
-  /* text-align: center; */
-  /* max-width: 1280px; */
 }

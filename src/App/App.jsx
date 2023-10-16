@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
+import { Article } from "../components/Article/Article";
 import "./App.css";
 
+
 function App() {
-  return <></>;
+  return (
+  <Fragment>
+    <Article />
+  
+  </Fragment>
+  )
 }
 
 export default App;

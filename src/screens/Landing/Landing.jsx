@@ -4,11 +4,11 @@ import { HeroSection } from "../../components/HeroSection/HeroSection";
 
 function Landing() {
   return (
-    <>
+    <div className="px-6	">
       <NavbarHeader />
       <HeroSection />
       <Footer />
-    </>
+    </div>
   );
 }
 

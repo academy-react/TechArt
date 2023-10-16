@@ -53,8 +53,8 @@ function NavbarHeader() {
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? "bg-emerald-200	 text-black"
-                            : "text-black	 hover:border-b	hover:border-cyan-400		 hover:text-emerald-500	",
+                            ? "bg-emerald-200	 text-black sm:text-xs	"
+                            : "sm:text-xs	 text-black	 hover:border-b	hover:border-cyan-400		 hover:text-emerald-500	",
                           "px-3 py-2 rounded-md text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}

@@ -6,7 +6,7 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div className="	px-px border-2 border-red-600 w-auto	">
+    <div className="	px-px w-auto	">
       <div>
         <Landing />
       </div>

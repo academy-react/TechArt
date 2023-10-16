@@ -1,7 +1,7 @@
 const navigation = {
   main: [
     { name: "درباره ما", href: "#" },
-    { name: "بلاگ", href: "#" },
+    { name: " بلاگ ", href: "#" },
     { name: "همکاری با ما", href: "#" },
     { name: "پنل من", href: "#" },
     { name: "اساتید", href: "#" },
@@ -55,7 +55,7 @@ function Footer() {
     <footer className="bg-white">
       <div className="mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8">
         <nav
-          className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
+          className="mb-6 columns-2 flex justify-center space-x-8"
           aria-label="Footer"
         >
           {navigation.main.map((item) => (
@@ -69,12 +69,12 @@ function Footer() {
             </div>
           ))}
         </nav>
-        <div className="mt-10 flex justify-center space-x-10">
+        <div className="mt-10 flex justify-center ">
           {navigation.social.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-400 hover:text-gray-500"
+              className="text-gray-400 hover:text-gray-500 space-x-2"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />

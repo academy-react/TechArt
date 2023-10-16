@@ -1,10 +1,15 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
+
+// Auth Layout Import
 import { AuthLayout } from "./AuthLayout";
 
 const Auth = () => {
   return (
     <>
-      <AuthLayout />
+      <AuthLayout>
+        <Outlet />
+      </AuthLayout>
     </>
   );
 };

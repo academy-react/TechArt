@@ -1,28 +1,33 @@
 import React from "react";
 
-import { FormWrapper } from "./FormWrapper";
-import { AuthHeader, AuthLink, AuthTimer } from "./AuthCustomElement";
+import { AuthTimer } from "./AuthCustomElement";
+import ChangePassConfirmedSVG from "../../assets/image/ChangePassConfirmed.svg";
+import { SVGSection } from "./SVGSection";
+import { FormSection } from "./FormSection";
+import { AuthHeading } from "./AuthHeading";
+import { CustomLink } from "../common/customElements";
+import { useNavigate } from "react-router-dom";
 
-const ChangePassConfirmed = ({ handlePageChange }) => {
+const ChangePassConfirmed = () => {
+  const navigate = useNavigate();
   return (
     <>
-      <FormWrapper>
-        <AuthHeader message={"رمز عبور شما با موفقیت تغییر کرد"} />
-
+      <SVGSection
+        SVGSrc={ChangePassConfirmedSVG}
+        alt={"Change Password Confirmed SVG"}
+      ></SVGSection>
+      <FormSection>
+        <AuthHeading message={"رمز عبور شما با موفقیت تغییر کرد"} />
         <AuthTimer
           seconds={"10"}
           func={() => {
-            handlePageChange("SignIn");
+            navigate("/auth");
           }}
           goToLabel={"ورود"}
         />
 
-        <AuthLink
-          message={"انتقال به صفحه ورود"}
-          handlePageChange={handlePageChange}
-          to={"SignIn"}
-        />
-      </FormWrapper>
+        <CustomLink to={"/auth"} message={"انتقال به صفحه ورود"} />
+      </FormSection>
     </>
   );
 };

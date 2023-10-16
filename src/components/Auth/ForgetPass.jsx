@@ -1,48 +1,49 @@
 import React from "react";
-import { Form, Formik } from "formik";
 
-import { FormWrapper } from "./FormWrapper";
-import {
-  AuthButton,
-  AuthHeader,
-  AuthInput,
-  AuthLink,
-} from "./AuthCustomElement";
+import { AuthLink } from "./AuthCustomElement";
 import { forgetPassSchema } from "../../core/validations/schemas/auth";
 
 import { IoMail } from "react-icons/io5";
+import { SVGSection } from "./SVGSection";
+import { FormSection } from "./FormSection";
+import { AuthHeading } from "./AuthHeading";
+import {
+  CustomButton,
+  CustomForm,
+  CustomInput,
+  CustomLink,
+} from "../common/customElements";
+import ForgetPassSVG from "../../assets/image/ForgetPass.svg";
 
-const ForgetPass = ({ handlePageChange, handleEmailAddress }) => {
+const ForgetPass = ({ handleStep, handleEmailAddress }) => {
   const onSubmit = (val) => {
-    handlePageChange("ForgetPassConfirm");
     handleEmailAddress(val.email);
+    handleStep("ForgetPassConfirm");
+    console.log("forgetPass submitted", val);
   };
 
   return (
     <>
-      <FormWrapper>
-        <AuthHeader message={"بازیابی رمز عبور"} />
-
-        <Formik
+      <SVGSection
+        SVGSrc={ForgetPassSVG}
+        alt={"Forget Password SVG"}
+      ></SVGSection>
+      <FormSection>
+        <AuthHeading message={"بازیابی رمز عبور"} />
+        <CustomForm
           initialValues={{ email: "" }}
           validationSchema={forgetPassSchema}
           onSubmit={onSubmit}
         >
-          <Form className="space-y-6" action="#" method="POST">
-            <AuthInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
-              <IoMail />
-            </AuthInput>
+          <CustomInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
+            <IoMail />
+          </CustomInput>
 
-            <AuthLink
-              message={"عضو سایت هستی؟"}
-              handlePageChange={handlePageChange}
-              to={"SignIn"}
-            />
+          <CustomLink to={"/auth"} message={"عضو سایت هستی؟"} />
 
-            <AuthButton message={"ارسال کد"} />
-          </Form>
-        </Formik>
-      </FormWrapper>
+          <CustomButton message={"ارسال کد"} />
+        </CustomForm>
+      </FormSection>
     </>
   );
 };

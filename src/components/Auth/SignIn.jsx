@@ -1,59 +1,55 @@
 import React from "react";
-import { Form, Formik } from "formik";
 
-import { FormWrapper } from "./FormWrapper";
-import {
-  AuthButton,
-  AuthCheckBox,
-  AuthHeader,
-  AuthInput,
-  AuthLink,
-} from "./AuthCustomElement";
+import { SVGSection } from "./SVGSection";
+import { FormSection } from "./FormSection";
+import { AuthLink } from "./AuthCustomElement";
+import SignInSVG from "../../assets/image/SignIn.svg";
 import { signInSchema } from "../../core/validations/schemas/auth";
+import {
+  CustomButton,
+  CustomCheckBox,
+  CustomForm,
+  CustomInput,
+  CustomLink,
+} from "../common/customElements";
+import { AuthHeading } from "./AuthHeading";
 
 import { IoMail, IoLockClosed } from "react-icons/io5";
 
-function SignIn({ handlePageChange }) {
+function SignIn() {
   const onSubmit = () => {
     console.log("submitted");
   };
 
   return (
     <>
-      <FormWrapper>
-        <AuthHeader message={"به اکانت کاربری خود وارد شوید "} />
-
-        <Formik
+      <SVGSection SVGSrc={SignInSVG} alt={"Sign In SVG"}></SVGSection>
+      <FormSection>
+        <AuthHeading message={"به اکانت کاربری خود وارد شوید "} />
+        <CustomForm
           initialValues={{ email: "", password: "" }}
           validationSchema={signInSchema}
           onSubmit={onSubmit}
         >
-          <Form className="space-y-6" action="#" method="POST">
-            <AuthInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
-              <IoMail />
-            </AuthInput>
+          <CustomInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
+            <IoMail />
+          </CustomInput>
 
-            <AuthInput name={"password"} label={"رمز عبور"} type={"password"}>
-              <IoLockClosed />
-            </AuthInput>
+          <CustomInput name={"password"} label={"رمز عبور"} type={"password"}>
+            <IoLockClosed />
+          </CustomInput>
 
-            <AuthCheckBox name={"rememberMe"} message={"مرا به خاطر بسپار"} />
-            <AuthLink
-              message={"رمز عبورت رو  فراموش کردی؟"}
-              handlePageChange={handlePageChange}
-              to={"ForgetPass"}
-            />
+          <CustomCheckBox name={"rememberMe"} message={"مرا به خاطر بسپار"} />
+          <CustomLink
+            to={"forgetPass"}
+            message={"رمز عبورت رو  فراموش کردی؟"}
+          />
 
-            <AuthLink
-              message={"هنوز عضو سایت نشدی؟!"}
-              handlePageChange={handlePageChange}
-              to={"PhoneRegister"}
-            />
+          <CustomLink to={"register"} message={"هنوز عضو سایت نشدی؟!"} />
 
-            <AuthButton message={"ورود"} />
-          </Form>
-        </Formik>
-      </FormWrapper>
+          <CustomButton message={"ورود"} />
+        </CustomForm>
+      </FormSection>
     </>
   );
 }

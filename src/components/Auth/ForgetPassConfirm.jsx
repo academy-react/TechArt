@@ -1,34 +1,40 @@
 import React from "react";
 
-import { FormWrapper } from "./FormWrapper";
-import { AuthHeader, AuthLink, AuthTimer } from "./AuthCustomElement";
+import { AuthLink, AuthTimer } from "./AuthCustomElement";
+import { SVGSection } from "./SVGSection";
+import { FormSection } from "./FormSection";
+import { AuthHeading } from "./AuthHeading";
+import ForgetPassConfirmSVG from "../../assets/image/ForgetPassConfirm.svg";
+import { CustomLink } from "../common/customElements";
+import { useNavigate } from "react-router-dom";
 
-const ForgetPassConfirm = ({ handlePageChange, emailAddress }) => {
+const ForgetPassConfirm = ({ emailAddress }) => {
+  const navigate = useNavigate();
   return (
     <>
-      <FormWrapper>
-        <AuthHeader message={"تغییر رمز"} />
+      <SVGSection
+        SVGSrc={ForgetPassConfirmSVG}
+        alt={"Forget Password Confirmed SVG"}
+      ></SVGSection>
+      <FormSection>
+        <AuthHeading message={"تغییر رمز عبور"} />
 
         <div className="font-medium text-gray-600 mb-5">
-          <span>پیام حاوی لینک تغییر پسوورد به آدرس ایمیل</span>
+          <span>پیام حاوی لینک تغییر رمز عبور به آدرس ایمیل</span>
           <span className="text-indigo-700">{" " + emailAddress + " "}</span>
           <span>ارسال شده است</span>
         </div>
 
         <AuthTimer
-          seconds={"5"}
+          seconds={"10"}
           func={() => {
-            handlePageChange("SignIn");
+            navigate("/auth");
           }}
           goToLabel={"ورود"}
         />
 
-        <AuthLink
-          message={"انتقال به صفحه ورود"}
-          handlePageChange={handlePageChange}
-          to={"SignIn"}
-        />
-      </FormWrapper>
+        <CustomLink to={"/auth"} message={"انتقال به صفحه ورود"} />
+      </FormSection>
     </>
   );
 };

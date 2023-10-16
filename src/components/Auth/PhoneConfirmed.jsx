@@ -1,28 +1,34 @@
 import React from "react";
 
-import { FormWrapper } from "./FormWrapper";
-import { AuthHeader, AuthLink, AuthTimer } from "./AuthCustomElement";
+import { AuthLink, AuthTimer } from "./AuthCustomElement";
+import { SVGSection } from "./SVGSection";
+import { FormSection } from "./FormSection";
+import { AuthHeading } from "./AuthHeading";
+import PhoneConfirmedSVG from "../../assets/image/PhoneConfirmed.svg";
 
-const PhoneConfirmed = ({ handlePageChange }) => {
+const PhoneConfirmed = ({ handleStep }) => {
   return (
     <>
-      <FormWrapper>
-        <AuthHeader message={"شماره تماس شما با موفقیت تایید شد"} />
-
+      <SVGSection
+        SVGSrc={PhoneConfirmedSVG}
+        alt={"Phone Confirmed SVG"}
+      ></SVGSection>
+      <FormSection>
+        <AuthHeading message={"شماره تماس شما با موفقیت تایید شد"} />
         <AuthTimer
           seconds={"10"}
           func={() => {
-            handlePageChange("SignUp");
+            console.log("go to");
           }}
           goToLabel={"ثبت نهایی اطلاعات"}
         />
 
         <AuthLink
           message={"انتقال به صفحه ثبت اطلاعات"}
-          handlePageChange={handlePageChange}
+          handleStep={handleStep}
           to={"SignUp"}
         />
-      </FormWrapper>
+      </FormSection>
     </>
   );
 };

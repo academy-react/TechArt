@@ -10,7 +10,7 @@ const CardMain = ({title}) => {
             <div className='w-[120px] h-[59px] items-center flex pt-[26px] pr-[10px]'> 
             <img  src={images} alt="image" /> 
             </div>
-            <h2 className='w-[300px] h-[90px] items-center flex text-center text-black text-xs text-right'> {title} </h2>
+            <h2 className='w-[300px] h-[90px] items-center flex  text-black text-xs text-right'> {title} </h2>
     </div>
     )
 }

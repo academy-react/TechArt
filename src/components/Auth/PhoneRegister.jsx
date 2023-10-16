@@ -1,47 +1,47 @@
 import React from "react";
-import { Form, Formik } from "formik";
 
-import { FormWrapper } from "./FormWrapper";
-import {
-  AuthButton,
-  AuthHeader,
-  AuthInput,
-  AuthLink,
-} from "./AuthCustomElement";
 import { phoneNumberSchema } from "../../core/validations/schemas/auth";
+import PhoneRegisterSVG from "../../assets/image/PhoneRegister.svg";
 
 import { IoCall } from "react-icons/io5";
+import { AuthHeading } from "./AuthHeading";
+import {
+  CustomButton,
+  CustomForm,
+  CustomInput,
+  CustomLink,
+} from "../common/customElements";
+import { SVGSection } from "./SVGSection";
+import { FormSection } from "./FormSection";
 
-const PhoneRegister = ({ handlePageChange, handlePhoneNumber }) => {
+const PhoneRegister = ({ handleStep, handlePhoneNumber }) => {
   const onSubmit = (val) => {
-    handlePageChange("PhoneConfirm");
     handlePhoneNumber(val.phoneNumber);
+    handleStep("PhoneConfirm");
+    console.log("phoneRegister submitted", val);
   };
   return (
     <>
-      <FormWrapper>
-        <AuthHeader message={"شماره تماس خود را وارد کنید"} />
-
-        <Formik
+      <SVGSection
+        SVGSrc={PhoneRegisterSVG}
+        alt={"Phone Register SVG"}
+      ></SVGSection>
+      <FormSection>
+        <AuthHeading message={"شماره تماس خود را وارد کنید"} />
+        <CustomForm
           initialValues={{ phoneNumber: "" }}
           validationSchema={phoneNumberSchema}
           onSubmit={onSubmit}
         >
-          <Form className="space-y-6" action="#" method="POST">
-            <AuthInput name={"phoneNumber"} label={"شماره تماس"} type={"text"}>
-              <IoCall />
-            </AuthInput>
+          <CustomInput name={"phoneNumber"} label={"شماره تماس"} type={"text"}>
+            <IoCall />
+          </CustomInput>
 
-            <AuthLink
-              message={"عضو سایت هستی؟"}
-              handlePageChange={handlePageChange}
-              to={"SignIn"}
-            />
+          <CustomLink to={"/auth"} message={"عضو سایت هستی؟"} />
 
-            <AuthButton message={"ارسال کد"} />
-          </Form>
-        </Formik>
-      </FormWrapper>
+          <CustomButton message={"ارسال کد"} />
+        </CustomForm>
+      </FormSection>
     </>
   );
 };

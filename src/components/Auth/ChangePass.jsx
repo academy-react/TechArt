@@ -1,29 +1,35 @@
 import React from "react";
-import { Form, Formik } from "formik";
 
-import { FormWrapper } from "./FormWrapper";
-import {
-  AuthButton,
-  AuthHeader,
-  AuthInput,
-  AuthLink,
-} from "./AuthCustomElement";
+import { AuthLink } from "./AuthCustomElement";
 import { changePassSchema } from "../../core/validations/schemas/auth";
 
 import { IoLockClosed } from "react-icons/io5";
+import ChangePassSVG from "../../assets/image/ChangePass.svg";
+import { SVGSection } from "./SVGSection";
+import { FormSection } from "./FormSection";
+import { AuthHeading } from "./AuthHeading";
+import {
+  CustomButton,
+  CustomForm,
+  CustomInput,
+  CustomLink,
+} from "../common/customElements";
 
-const ChangePass = ({ handlePageChange }) => {
+const ChangePass = ({ handleStep }) => {
   const onSubmit = () => {
-    handlePageChange("ChangePassConfirmed");
+    handleStep("ChangePassConfirmed");
     console.log("submitted");
   };
 
   return (
     <>
-      <FormWrapper>
-        <AuthHeader message={"رمز عبور جدید خود را وارد کنید"} />
-
-        <Formik
+      <SVGSection
+        SVGSrc={ChangePassSVG}
+        alt={"Change Password SVG"}
+      ></SVGSection>
+      <FormSection>
+        <AuthHeading message={"رمز عبور جدید خود را وارد کنید"} />
+        <CustomForm
           initialValues={{
             password: "",
             confirmPassword: "",
@@ -31,33 +37,27 @@ const ChangePass = ({ handlePageChange }) => {
           validationSchema={changePassSchema}
           onSubmit={onSubmit}
         >
-          <Form className="space-y-6" action="#" method="POST">
-            <AuthInput
-              name={"password"}
-              label={"رمز عبور جدید"}
-              type={"password"}
-            >
-              <IoLockClosed />
-            </AuthInput>
+          <CustomInput
+            name={"password"}
+            label={"رمز عبور جدید"}
+            type={"password"}
+          >
+            <IoLockClosed />
+          </CustomInput>
 
-            <AuthInput
-              name={"confirmPassword"}
-              label={"تکرار رمز عبور جدید"}
-              type={"password"}
-            >
-              <IoLockClosed />
-            </AuthInput>
+          <CustomInput
+            name={"confirmPassword"}
+            label={"تکرار رمز عبور جدید"}
+            type={"password"}
+          >
+            <IoLockClosed />
+          </CustomInput>
 
-            <AuthLink
-              message={"صفحه ورود"}
-              handlePageChange={handlePageChange}
-              to={"SignIn"}
-            />
+          <CustomLink message={"صفحه ورود"} to={"/auth"} />
 
-            <AuthButton message={"تایید"} />
-          </Form>
-        </Formik>
-      </FormWrapper>
+          <CustomButton message={"تایید"} />
+        </CustomForm>
+      </FormSection>
     </>
   );
 };

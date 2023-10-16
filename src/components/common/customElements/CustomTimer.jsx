@@ -2,26 +2,25 @@ import React, { useEffect, useState } from "react";
 
 const CustomTimer = ({ seconds, func }) => {
   const [remaining, setRemaining] = useState(seconds);
-
+  const [timer, setTimer] = useState();
   useEffect(() => {
-    const timer = setInterval(() => {
+    const timerInterval = setInterval(() => {
       setRemaining((perv) => perv - 1);
     }, 1000);
-
-    return () => clearInterval(timer);
+    setTimer(timerInterval);
+    return () => clearInterval(timerInterval);
   }, []);
 
   useEffect(() => {
-    {
-      remaining <= 0 && func && func();
+    if (remaining <= 0) {
+      clearInterval(timer);
+      if (func) func();
     }
   }, [remaining]);
 
   return (
     <>
-      <span className="font-medium text-gray-600 mb-5">
-        {" " + remaining + " "}
-      </span>
+      <span className="font-medium text-gray-600 mb-5">{remaining + " "}</span>
     </>
   );
 };

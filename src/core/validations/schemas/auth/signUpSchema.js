@@ -4,10 +4,6 @@ import { passwordRules } from "../../../utils/auth";
 const { lowerCase, upperCase, number } = passwordRules;
 
 const signUpSchema = yup.object().shape({
-  username: yup
-    .string()
-    .min(3, "حاجی نام کاربری حد اقل ۳ کاراکتر باشه دیگ ! مرسی")
-    .required("نام کاربری نمیخوای وارد کنی؟"),
   email: yup
     .string()
     .email("ایمیل باید آدمیزادی باشه این دیگ چیه؟")

@@ -1,31 +1,33 @@
 import React from "react";
-import { Form, Formik } from "formik";
 
-import { FormWrapper } from "./FormWrapper";
-import {
-  AuthButton,
-  AuthCheckBox,
-  AuthHeader,
-  AuthInput,
-  AuthLink,
-} from "./AuthCustomElement";
+import { SVGSection } from "./SVGSection";
+import { FormSection } from "./FormSection";
+import { AuthLink } from "./AuthCustomElement";
 import { signUpSchema } from "../../core/validations/schemas/auth";
+import SignUpSVG from "../../assets/image/SignUp.svg";
+import {
+  CustomButton,
+  CustomCheckBox,
+  CustomForm,
+  CustomInput,
+  CustomLink,
+} from "../common/customElements";
+import { AuthHeading } from "./AuthHeading";
 
-import { IoPerson, IoMail, IoLockClosed } from "react-icons/io5";
+import { IoMail, IoLockClosed } from "react-icons/io5";
 
-const SignUp = ({ handlePageChange }) => {
+const SignUp = () => {
   const onSubmit = () => {
     console.log("submitted");
   };
 
   return (
     <>
-      <FormWrapper>
-        <AuthHeader message={"به اکانت کاربری خود وارد شوید "} />
-
-        <Formik
+      <SVGSection SVGSrc={SignUpSVG} alt={"Sign Up SVG"}></SVGSection>
+      <FormSection>
+        <AuthHeading message={"اطلاعات خود را وارد کنید"} />
+        <CustomForm
           initialValues={{
-            username: "",
             email: "",
             password: "",
             confirmPassword: "",
@@ -34,39 +36,29 @@ const SignUp = ({ handlePageChange }) => {
           validationSchema={signUpSchema}
           onSubmit={onSubmit}
         >
-          <Form className="space-y-6" action="#" method="POST">
-            <AuthInput name={"username"} label={"نام کاربری"} type={"text"}>
-              <IoPerson />
-            </AuthInput>
+          <CustomInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
+            <IoMail />
+          </CustomInput>
 
-            <AuthInput name={"email"} label={"آدرس ایمیل"} type={"text"}>
-              <IoMail />
-            </AuthInput>
+          <CustomInput name={"password"} label={"رمز عبور"} type={"password"}>
+            <IoLockClosed />
+          </CustomInput>
 
-            <AuthInput name={"password"} label={"رمز عبور"} type={"password"}>
-              <IoLockClosed />
-            </AuthInput>
+          <CustomInput
+            name={"confirmPassword"}
+            label={"تکرار رمز عبور"}
+            type={"password"}
+          >
+            <IoLockClosed />
+          </CustomInput>
 
-            <AuthInput
-              name={"confirmPassword"}
-              label={"تکرار رمز عبور"}
-              type={"password"}
-            >
-              <IoLockClosed />
-            </AuthInput>
+          <CustomCheckBox name={"agreeTerm"} message={"با مقررات موافقم"} />
 
-            <AuthCheckBox name={"agreeTerm"} message={"با مقررات موافقم"} />
+          <CustomLink message={"صفحه ورود"} to={"/auth"} />
 
-            <AuthLink
-              message={"صفحه ورود"}
-              handlePageChange={handlePageChange}
-              to={"SignIn"}
-            />
-
-            <AuthButton message={"ثبت نام"} />
-          </Form>
-        </Formik>
-      </FormWrapper>
+          <CustomButton message={"ثبت نام"} />
+        </CustomForm>
+      </FormSection>
     </>
   );
 };

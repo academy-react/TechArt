@@ -1,19 +1,19 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { signFormChildrenVariant } from "../../../core/utils/auth";
 
-const AuthLink = ({ message, handlePageChange, to }) => {
+const AuthLink = ({ message, handleStep, to }) => {
   return (
     <>
-      <motion.div className="text-sm" variants={signFormChildrenVariant()}>
+      <div className="text-sm">
         <a
-          onClick={() => handlePageChange(to)}
+          onClick={() => {
+            handleStep(to);
+          }}
           href="#"
           className="font-medium text-indigo-600 hover:text-indigo-500"
         >
           {message}
         </a>
-      </motion.div>
+      </div>
     </>
   );
 };

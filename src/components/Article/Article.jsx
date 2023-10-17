@@ -8,8 +8,7 @@ const Article = () => {
     return (
         <div className=' w-[600px] h-[450px] mx-auto'>
                 <TitleArticle />
-
-                    <Card />
+                <Card />
         </div>
     )
 }

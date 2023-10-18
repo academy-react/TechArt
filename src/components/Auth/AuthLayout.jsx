@@ -1,12 +1,18 @@
-import { FormSection } from "./FormSection";
-import { SVGSection } from "./SVGSection";
+import { motion } from "framer-motion";
 
 function AuthLayout({ children }) {
   return (
     <>
-      <div className="md:grid lg:grid-cols-5 md:grid-cols-6 md:gap-6" dir="ltr">
+      <motion.div
+        className="md:grid lg:grid-cols-5 md:grid-cols-6 md:gap-6"
+        dir="ltr"
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        whileHover="hover"
+      >
         {children}
-      </div>
+      </motion.div>
     </>
   );
 }

@@ -5,6 +5,7 @@ import images from '../../../assets/image/cardmini2.png';
 import icon from '../../../assets/image/flash.png';
 
 
+
 const CardMain = ({title}) => {
     return (
 

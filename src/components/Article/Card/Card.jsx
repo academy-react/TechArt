@@ -17,7 +17,7 @@ const Card = () => {
 
     return (
     <Fragment>
-        <div className="w-[100%] h-[300px] flex flex-wrap  gap-0.5 justify-between">
+        <div className="w-full flex flex-wrap gap-0.5 justify-between">
             {CardList.map((item,index) => {
                 return(
                 <CardMain  key={index} title={item.title} />

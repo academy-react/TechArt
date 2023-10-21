@@ -1,7 +1,7 @@
 import React from "react";
 import { CardHeader } from "./CourseCardHeader";
 import { CardBody } from "./CourseCardBody";
-import { CustomLink } from "../common/customElements/CustomLink";
+
 
 const Card = ({ product }) => {
   return (

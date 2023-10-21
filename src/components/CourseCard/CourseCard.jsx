@@ -11,7 +11,7 @@ const Card = ({ product }) => {
           دوره های آموزشی
         </h2>
 
-        <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8 ">
+        <div className="mt-8 grid grid-cols-1 mx-5 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8 ">
           {product.map((product) => (
             <div key={product.id}>
               <div className="relative border shadow-[-5px_-8px_15px_5px_rgba(0,0,0,0.1),_5px_8px_15px_5px_rgba(45,78,255,0.15)]  rounded-xl">

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from '../../CourseCard/CourseCard'
+import { Card } from '../../common/CourseCard/CourseCard'
 import {products} from '../../../core/data/data'
 
 const CourseSection = () => {

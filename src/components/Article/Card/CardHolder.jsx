@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 
 import { CardMain } from './CardMain';
 
-const Card = () => {
+const CardHolder = () => {
     const [CardList, setCardList] = useState([
         {title:'لورم ایسپوم دارای استاندارد صنعتی متن ساختگی از سال میلادی زمانی که یک پرینتر ناشناخته به زحمت 1500 درحال گسترش بود می باشد '},
         {title:'لورم ایسپوم فارسی  متن ساختگی از سال میلادی زمانی که یک پرینتر ناشناخته به زحمت 1500 درحال گسترش بود می باشد '},
@@ -17,7 +17,7 @@ const Card = () => {
 
     return (
     <Fragment>
-        <div className="w-full flex flex-wrap gap-0.5 justify-between">
+        <div className="w-full sm:flex-wrap flex flex-wrap  gap-7 mt-[42px]">
             {CardList.map((item,index) => {
                 return(
                 <CardMain  key={index} title={item.title} />
@@ -30,4 +30,4 @@ const Card = () => {
     )
 }
 
-export  {Card}
+export  {CardHolder}

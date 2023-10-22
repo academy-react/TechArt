@@ -2,7 +2,7 @@
 import React, {Fragment, useState } from 'react'
 import { CardMain2 } from './CardMain2'
 
-const Card2 = () => {
+const Card2Holder = () => {
     const [CardList, setCardList] = useState([
         {title:'آموزش ریکت جی اس با استاد جدید ' ,desc:' این کتابخانه توسط فیسبوک و جامعه ای از توسعه دهندگان و به صورت انفرادی توسعه ونگهداری می شود  باشد ک رستگار باشید '},
         {title:'آموزش ریکت جی اس با استاد جدید ' ,desc:' این نمونه توسط فیسبوک و جامعه ای از توسعه دهندگان و به صورت انفرادی توسعه ونگهداری می شود  باشد ک رستگار باشید '},
@@ -17,7 +17,7 @@ const Card2 = () => {
 
     return (
     <Fragment>
-        <div className="w-[100%] h-[500px] flex flex-wrap  gap-7 mt-[42px] ">
+        <div className="w-full sm:flex-wrap flex flex-wrap  gap-7 mt-[42px] ">
             {CardList.map((item,index) => {
                 return(
                 <CardMain2  key={index} title={item.title} desc={item.desc} />
@@ -30,4 +30,4 @@ const Card2 = () => {
     )
 }
 
-export {Card2}
+export {Card2Holder}

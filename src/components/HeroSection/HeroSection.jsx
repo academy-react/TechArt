@@ -27,7 +27,7 @@ function HeroSection() {
               فارسی ایجاد کرد.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
-              <CustomButton></CustomButton>
+              <CustomButton message={"شروع آموزش"} />
             </div>
           </div>
         </div>

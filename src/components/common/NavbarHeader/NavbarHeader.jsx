@@ -69,8 +69,9 @@ function NavbarHeader() {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <CustomSearchBox />
-                <div className="w-10">
-                  <CustomButton />
+                <CustomButton message={"ورود"} className="px-px" />
+                <div className="px-3">
+                  <CustomButton message={"ثبت نام"} />
                 </div>
                 {/*View notifications button*/}
 

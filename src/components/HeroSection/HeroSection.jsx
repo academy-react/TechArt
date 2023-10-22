@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import image from "../../assets/image/hero/10.png";
+import { CustomButton } from "../common/customElements/CustomButton";
 
 function HeroSection() {
   return (
@@ -26,12 +27,7 @@ function HeroSection() {
               فارسی ایجاد کرد.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-teal-400	 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 "
-              >
-                شروع آموزش
-              </a>
+              <CustomButton></CustomButton>
             </div>
           </div>
         </div>

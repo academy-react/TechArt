@@ -17,7 +17,7 @@ const Card2Holder = () => {
 
     return (
     <Fragment>
-        <div className="w-full sm:flex-wrap flex flex-wrap  gap-7 mt-[42px] ">
+        <div className="w-full grid grid-cols-3 gap-7 mt-10 ">
             {CardList.map((item,index) => {
                 return(
                 <CardMain2  key={index} title={item.title} desc={item.desc} />

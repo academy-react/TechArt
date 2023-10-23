@@ -3,7 +3,7 @@ import React from "react";
 function CustomSearchBox() {
   return (
     <>
-      <div className="mx-auto max-w-md   absolute nset-y-0 left--20 	">
+      <div className="mx-auto max-w-md	">
         <form action="" className="relative mx-auto w-max ">
           <input
             type="search"

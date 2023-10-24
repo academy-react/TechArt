@@ -2,42 +2,44 @@
 
 const people = [
         {
-        name: 'Leslie Alexander',
+        name: 'لورم ایسپوم دارای استاندارد صنعتی متن ساختگی از سال میلادی زمانی که یک پرینتر ناشناخته به زحمت 1500 درحال گسترش بود می باشد ',
+        email: 'leslie.alexander@example.com',
+        imageUrl:
+            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        },
+        {
+        name: 'لورم ایسپوم دارای استاندارد صنعتی متن ساختگی از سال میلادی زمانی که یک پرینتر ناشناخته به زحمت 1500 درحال گسترش بود می باشد ',
+
+        email: 'leslie.alexander@example.com',
+        
+        imageUrl:
+            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        },
+        {
+        name: 'لورم ایسپوم دارای استاندارد صنعتی متن ساختگی از سال میلادی زمانی که یک پرینتر ناشناخته به زحمت 1500 درحال گسترش بود می باشد ',
+
+        email: 'leslie.alexander@example.com',
+        imageUrl:
+            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        },
+        {
+        name: 'لورم ایسپوم دارای استاندارد صنعتی متن ساختگی از سال میلادی زمانی که یک پرینتر ناشناخته به زحمت 1500 درحال گسترش بود می باشد ',
+
+        email: 'leslie.alexander@example.com',
+        imageUrl:
+            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        },
+        {
+        name: 'لورم ایسپوم دارای استاندارد صنعتی متن ساختگی از سال میلادی زمانی که یک پرینتر ناشناخته به زحمت 1500 درحال گسترش بود می باشد ',
+
         email: 'leslie.alexander@example.com',
         role: 'Co-Founder / CEO',
         imageUrl:
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
         },
         {
-        name: 'Leslie Alexander',
-        email: 'leslie.alexander@example.com',
-        role: 'Co-Founder / CEO',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        },
-        {
-        name: 'Leslie Alexander',
-        email: 'leslie.alexander@example.com',
-        role: 'Co-Founder / CEO',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        },
-        {
-        name: 'Leslie Alexander',
-        email: 'leslie.alexander@example.com',
-        role: 'Co-Founder / CEO',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        },
-        {
-        name: 'Leslie Alexander',
-        email: 'leslie.alexander@example.com',
-        role: 'Co-Founder / CEO',
-        imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        },
-        {
-        name: 'Leslie Alexander',
+        name: 'لورم ایسپوم دارای استاندارد صنعتی متن ساختگی از سال میلادی زمانی که یک پرینتر ناشناخته به زحمت 1500 درحال گسترش بود می باشد ',
+
         email: 'leslie.alexander@example.com',
         role: 'Co-Founder / CEO',
         imageUrl:

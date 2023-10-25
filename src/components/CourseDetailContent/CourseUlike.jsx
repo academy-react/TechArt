@@ -1,7 +1,6 @@
-// PricingCards.js file
 import React from "react";
 
-const PricingCards = () => {
+const CourseUlike = () => {
   const cardData = [
     {
       image: "https://i.imgur.com/Ql4jRdB.png",
@@ -61,4 +60,4 @@ const PricingCards = () => {
   );
 };
 
-export default PricingCards;
+export default CourseUlike;

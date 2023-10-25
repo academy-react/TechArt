@@ -1,5 +1,5 @@
 import React from "react";
-import { Landing } from "../screens/Landing/Landing";
+import { CourseDetailes } from "../screens/CourseDetailes";
 import "./App.css";
 
 //fonts
@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="	px-px w-auto 	">
       <div>
-        <Landing />
+        <CourseDetailes />
       </div>
     </div>
   );

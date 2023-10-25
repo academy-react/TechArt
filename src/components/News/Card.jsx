@@ -1,39 +1,63 @@
 
     import React from 'react'
 
+    import { Search } from '../Search/Search'
+    
+    import imageBig from '../../assets/image/bigimage.png'
     import images from '../../assets/image/new.png'
+
 
     const categories = [
         {
-        name: 'Handcrafted Collection',
+        name: 'آموزش ریکت جی اس با استاد جدید ',
         href: '#',
-        description: 'Keep your phone, keys, and wallet together, so you can lose everything at once.',
+        description: 'این قسمت از کتابخانه توسط فیسبوک و جامعه ای از توسعه دهندگان و به صورت انفرادی توسعه ونگهداری می شود  باشد ک رستگار باشید ',
         },
         {
-        name: 'Organized Desk Collection',
+        name: 'آموزش ریکت جی اس با استاد جدید ',
         href: '#',
-        description: 'The rest of the house will still be a mess, but your desk will look great.',
+        description: 'این قسمت از کتابخانه توسط فیسبوک و جامعه ای از توسعه دهندگان و به صورت انفرادی توسعه ونگهداری می شود  باشد ک رستگار باشید ',
         },
         {
-        name: 'Focus Collection',
+        name: 'آموزش ریکت جی اس با استاد جدید ',
         href: '#',
-        description: 'Be more productive than enterprise project managers with a single piece of paper.',
+        description: 'این قسمت از کتابخانه توسط فیسبوک و جامعه ای از توسعه دهندگان و به صورت انفرادی توسعه ونگهداری می شود  باشد ک رستگار باشید ',
         },
+        {
+        name: 'آموزش ریکت جی اس با استاد جدید ',
+        href: '#',
+        description: 'این قسمت از کتابخانه توسط فیسبوک و جامعه ای از توسعه دهندگان و به صورت انفرادی توسعه ونگهداری می شود  باشد ک رستگار باشید ',
+        },
+        {
+        name: 'آموزش ریکت جی اس با استاد جدید ',
+        href: '#',
+        description: 'این قسمت از کتابخانه توسط فیسبوک و جامعه ای از توسعه دهندگان و به صورت انفرادی توسعه ونگهداری می شود  باشد ک رستگار باشید ',
+        },
+        {
+        name: 'آموزش ریکت جی اس با استاد جدید ',
+        href: '#',
+        description: 'این قسمت از کتابخانه توسط فیسبوک و جامعه ای از توسعه دهندگان و به صورت انفرادی توسعه ونگهداری می شود  باشد ک رستگار باشید ',
+        },
+    
+    
     ]
     
     const Card = () => {
         return (
         <div className="bg-white">
+            <img
+            src={imageBig}
+            alt='ima'
+            className="m-auto"
+            />
             <div className="mx-auto max-w-xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900">Shop by Collection</h2>
-            <p className="mt-4 text-base text-gray-500">
-                Each season, we collaborate with world-class designers to create a collection inspired by the natural world.
-            </p>
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-8"> اخبار و مقالات  </h2>
+                <Search />
     
-            <div className="mt-10 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
+            <div className="mt-10 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0 ">
                 {categories.map((category) => (
                 <a key={category.name} href={category.href} className="group block">
-                    <div
+                    <div 
                     aria-hidden="true"
                     className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6"
                     >

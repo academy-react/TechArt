@@ -11,7 +11,6 @@ const CardHolder = () => {
             <div className='w-full'>
                 <CardTitle />
                 <Card />
-        
             </div>
         </Fragment>
     )

@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./App.css";
+import { CardHolder } from "../components/News/CardHolder";
 
 function App() {
-  return <></>;
+  return <CardHolder/>;
 }
 
 export default App;

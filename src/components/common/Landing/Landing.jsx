@@ -229,9 +229,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Landing() {
   return (
-    <div className="bg-white">
+    <div className="bg-white container">
       <header>
         <Popover className="relative bg-white">
           <div className="mx-auto flex max-w-7xl items-center justify-between p-6 md:justify-start md:space-x-10 lg:px-8">

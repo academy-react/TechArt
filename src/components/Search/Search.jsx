@@ -10,7 +10,7 @@ const Search = () => {
                 name="name"
                 id="name"
                 className="block w-full rounded-full text-gray-700 px-4 shadow-2xl border-solid border-2 sm:text-sm"
-                placeholder="search"
+                placeholder="search "
             />
             </div>
         </div>

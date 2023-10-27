@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+=======
+>>>>>>> 9c5a52fc06e477d68c9f10634017c57925eda037
 @font-face {
   font-family: IRANSans;
   src: url("./assets/font/IRANSans.ttf");
@@ -22,6 +25,13 @@
   src: url("./assets/font/IRANSans_UltraLight.ttf");
 }
 
+<<<<<<< HEAD
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+>>>>>>> 9c5a52fc06e477d68c9f10634017c57925eda037
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

@@ -1,8 +1,10 @@
 import React from "react";
-import { useState } from "react";
-
-import "./App.css";
+import Courses from "../components/common/Courses/Courses";
+import Error404 from "../components/common/Error404.jsx/Error404";
 import NewsArticle from "../components/common/NewsArticle/NewsArticle";
+import StudentPannel from "../components/common/StudentPannel/Studentpannel";
+import { BlogDetailes } from "../screens/BlogDetailes";
+import "./App.css";
 
 //fonts
 
@@ -10,11 +12,13 @@ const App = () => {
   return (
     <div className="	px-px w-auto 	">
       <div>
-        <NewsArticle />
+        <Courses />
       </div>
     </div>
   );
 };
+
+export default App;
 
 // const router = createBrowserRouter([
 //   {

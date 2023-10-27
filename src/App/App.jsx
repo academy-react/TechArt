@@ -1,4 +1,5 @@
 import React from "react";
+
 import { CourseDetailes } from "../screens/CourseDetailes";
 import "./App.css";
 
@@ -15,3 +16,20 @@ const App = () => {
 };
 
 export default App;
+
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <Auth />,
+//   },
+// ]);
+
+// function App() {
+//   return (
+//     <>
+//       <RouterProvider router={router} />
+//     </>
+//   );
+// }
+
+// export default App;

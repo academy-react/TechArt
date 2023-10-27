@@ -9,14 +9,17 @@ import PricingCards from "../components/CourseDetailSidebar/CoursePrice";
 function CourseDetailes() {
   return (
     <div className="	">
-      {/* <NavbarHeader />
+      {/* 
       <CourseDetailContent />
       <CourseTeacher />
       <CoursInfo />
       <PricingCards />
-      <CourseUlike />
-      <Footer /> */}
+
+ */}
+      <NavbarHeader />
       <CourseDetailContent />
+      <CourseUlike />
+      <Footer />
     </div>
   );
 }

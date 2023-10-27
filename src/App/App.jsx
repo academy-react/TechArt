@@ -12,3 +12,20 @@ function App() {
 }
 
 export default App;
+
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <Auth />,
+//   },
+// ]);
+
+// function App() {
+//   return (
+//     <>
+//       <RouterProvider router={router} />
+//     </>
+//   );
+// }
+
+// export default App;

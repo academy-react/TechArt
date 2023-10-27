@@ -15,8 +15,6 @@ const App = () => {
     </div>
   );
 };
-import { RouterProvider } from "react-router-dom";
-import { router } from "../Router/router";
 
 // const router = createBrowserRouter([
 //   {

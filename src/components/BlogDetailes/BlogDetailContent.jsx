@@ -1,212 +1,132 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/typography'),
-    ],
-  }
-  ```
-*/
+const stats = [
+  { label: "Founded", value: "2021" },
+  { label: "Employees", value: "5" },
+  { label: "Beta Users", value: "521" },
+  { label: "Raised", value: "$25M" },
+];
+
 export default function BlogDetailContent() {
   return (
-    <div className="relative overflow-hidden bg-white py-16">
-      <div className="hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full lg:[overflow-anchor:none]">
-        <div
-          className="relative mx-auto h-full max-w-prose text-lg"
-          aria-hidden="true"
-        >
-          <svg
-            className="absolute top-12 left-full translate-x-32 transform"
-            width={404}
-            height={384}
-            fill="none"
-            viewBox="0 0 404 384"
+    <div className="relative bg-white py-16 sm:py-24">
+      <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
+        <div className="relative sm:py-16 lg:py-0">
+          <div
+            aria-hidden="true"
+            className="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen"
           >
-            <defs>
-              <pattern
-                id="74b3fd99-0a6f-4271-bef2-e80eeafdf357"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
+            <div className="absolute inset-y-0 right-1/2 w-full rounded-r-3xl bg-gray-50 lg:right-72" />
+            <svg
+              className="absolute top-8 left-1/2 -ml-3 lg:-right-8 lg:left-auto lg:top-12"
+              width={404}
+              height={392}
+              fill="none"
+              viewBox="0 0 404 392"
+            >
+              <defs>
+                <pattern
+                  id="02f20b47-fd69-4224-a62a-4c9de5c763f7"
                   x={0}
                   y={0}
-                  width={4}
-                  height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width={404}
-              height={384}
-              fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)"
-            />
-          </svg>
-          <svg
-            className="absolute top-1/2 right-full -translate-y-1/2 -translate-x-32 transform"
-            width={404}
-            height={384}
-            fill="none"
-            viewBox="0 0 404 384"
-          >
-            <defs>
-              <pattern
-                id="f210dbf6-a58d-4871-961e-36d5016a0f49"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x={0}
-                  y={0}
-                  width={4}
-                  height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width={404}
-              height={384}
-              fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"
-            />
-          </svg>
-          <svg
-            className="absolute bottom-12 left-full translate-x-32 transform"
-            width={404}
-            height={384}
-            fill="none"
-            viewBox="0 0 404 384"
-          >
-            <defs>
-              <pattern
-                id="d3eb07ae-5182-43e6-857d-35c643af9034"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x={0}
-                  y={0}
-                  width={4}
-                  height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width={404}
-              height={384}
-              fill="url(#d3eb07ae-5182-43e6-857d-35c643af9034)"
-            />
-          </svg>
+                  width={20}
+                  height={20}
+                  patternUnits="userSpaceOnUse"
+                >
+                  <rect
+                    x={0}
+                    y={0}
+                    width={4}
+                    height={4}
+                    className="text-gray-200"
+                    fill="currentColor"
+                  />
+                </pattern>
+              </defs>
+              <rect
+                width={404}
+                height={392}
+                fill="url(#02f20b47-fd69-4224-a62a-4c9de5c763f7)"
+              />
+            </svg>
+          </div>
+          <div className="relative mx-auto max-w-md px-6 sm:max-w-3xl lg:max-w-none lg:px-0 lg:py-20">
+            {/* Testimonial card*/}
+            <div className="relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-xl">
+              <img
+                className="absolute inset-0 h-full w-full object-cover"
+                src="https://images.unsplash.com/photo-1521510895919-46920266ddb3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&fp-x=0.5&fp-y=0.6&fp-z=3&width=1440&height=1440&sat=-100"
+                alt=""
+              />
+              <div className="absolute inset-0 bg-indigo-500 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-gradient-to-t from-indigo-600 via-indigo-600 opacity-90" />
+              <div className="relative px-8">
+                <div>
+                  <img
+                    className="h-12"
+                    src="https://tailwindui.com/img/logos/workcation.svg?color=white"
+                    alt="Workcation"
+                  />
+                </div>
+                <blockquote className="mt-8">
+                  <div className="relative text-lg font-medium text-white md:flex-grow">
+                    <svg
+                      className="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-indigo-400"
+                      fill="currentColor"
+                      viewBox="0 0 32 32"
+                      aria-hidden="true"
+                    >
+                      <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                    </svg>
+                    <p className="relative">
+                      Tincidunt integer commodo, cursus etiam aliquam neque, et.
+                      Consectetur pretium in volutpat, diam. Montes, magna
+                      cursus nulla feugiat dignissim id lobortis amet.
+                    </p>
+                  </div>
+
+                  <footer className="mt-4">
+                    <p className="text-base font-semibold text-indigo-200">
+                      Sarah Williams, CEO at Workcation
+                    </p>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="relative px-6 lg:px-8">
-        <div className="mx-auto max-w-prose text-lg">
-          <h1>
-            <span className="block text-center text-lg font-semibold text-indigo-600">
-              Introducing
-            </span>
-            <span className="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
-              JavaScript for Beginners
-            </span>
-          </h1>
-          <p className="mt-8 text-xl leading-8 text-gray-500">
-            Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At
-            arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae
-            feugiat egestas ac. Diam nulla orci at in viverra scelerisque eget.
-            Eleifend egestas fringilla sapien.
-          </p>
-        </div>
-        <div className="prose prose-lg prose-indigo mx-auto mt-6 text-gray-500">
-          <p>
-            Faucibus commodo massa rhoncus, volutpat. <strong>Dignissim</strong>{" "}
-            sed <strong>eget risus enim</strong>. Mattis mauris semper sed amet
-            vitae sed turpis id. Id dolor praesent donec est. Odio penatibus
-            risus viverra tellus varius sit neque erat velit. Faucibus commodo
-            massa rhoncus, volutpat. Dignissim sed eget risus enim.{" "}
-            <a href="#">Mattis mauris semper</a> sed amet vitae sed turpis id.
-          </p>
-          <ul role="list">
-            <li>Quis elit egestas venenatis mattis dignissim.</li>
-            <li>
-              Cras cras lobortis vitae vivamus ultricies facilisis tempus.
-            </li>
-            <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
-          </ul>
-          <p>
-            Quis semper vulputate aliquam venenatis egestas sagittis quisque
-            orci. Donec commodo sit viverra aliquam porttitor ultrices gravida
-            eu. Tincidunt leo, elementum mattis elementum ut nisl, justo, amet,
-            mattis. Nunc purus, diam commodo tincidunt turpis. Amet, duis sed
-            elit interdum dignissim.
-          </p>
-          <h2>From beginner to expert in 30 days</h2>
-          <p>
-            Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat
-            in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum
-            mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed
-            tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi.
-            Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis
-            diam.
-          </p>
-          <blockquote>
-            <p>
-              Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum
-              urna sed consectetur neque tristique pellentesque. Blandit amet,
-              sed aenean erat arcu morbi.
-            </p>
-          </blockquote>
-          <p>
-            Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus
-            enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor
-            praesent donec est. Odio penatibus risus viverra tellus varius sit
-            neque erat velit.
-          </p>
-          <figure>
-            <img
-              className="w-full rounded-lg"
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&w=1310&h=873&q=80&facepad=3"
-              alt=""
-              width={1310}
-              height={873}
-            />
-            <figcaption>
-              Sagittis scelerisque nulla cursus in enim consectetur quam.
-            </figcaption>
-          </figure>
-          <h2>Everything you need to get up and running</h2>
-          <p>
-            Purus morbi dignissim senectus mattis <a href="#">adipiscing</a>.
-            Amet, massa quam varius orci dapibus volutpat cras. In amet eu
-            ridiculus leo sodales cursus tristique. Tincidunt sed tempus ut
-            viverra ridiculus non molestie. Gravida quis fringilla amet eget dui
-            tempor dignissim. Facilisis auctor venenatis varius nunc, congue
-            erat ac. Cras fermentum convallis quam.
-          </p>
-          <p>
-            Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus
-            enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor
-            praesent donec est. Odio penatibus risus viverra tellus varius sit
-            neque erat velit.
-          </p>
+
+        <div className="relative mx-auto max-w-md px-6 sm:max-w-3xl lg:px-0">
+          {/* Content area */}
+          <div className="pt-12 sm:pt-16 lg:pt-20">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              On a mission to empower teams
+            </h2>
+            <div className="mt-6 space-y-6 text-gray-500">
+              <p className="text-lg">
+                Sagittis scelerisque nulla cursus in enim consectetur quam.
+                Dictum urna sed consectetur neque tristique pellentesque.
+                Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc
+                nisl netus morbi vel porttitor vitae ut. Amet vitae fames
+                senectus vitae.
+              </p>
+              <p className="text-base leading-7">
+                Sollicitudin tristique eros erat odio sed vitae, consequat
+                turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
+                eu viverra donec ut volutpat donec laoreet quam urna.
+                Sollicitudin tristique eros erat odio sed vitae, consequat
+                turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
+                eu viverra donec ut volutpat donec laoreet quam urna.
+              </p>
+              <p className="text-base leading-7">
+                Rhoncus nisl, libero egestas diam fermentum dui. At quis
+                tincidunt vel ultricies. Vulputate aliquet velit faucibus
+                semper. Pellentesque in venenatis vestibulum consectetur nibh
+                id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim
+                fermentum lacus in. Viverra.
+              </p>
+            </div>
+          </div>
+
+          {/* Stats section */}
         </div>
       </div>
     </div>

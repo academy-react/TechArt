@@ -4,7 +4,6 @@ import NewsArticle from "../components/common/NewsArticle/NewsArticle";
 
 //fonts
 
-
 const App = () => {
   return (
     <div className="	px-px w-auto 	">

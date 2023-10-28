@@ -1,8 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import { CourseLayout } from "./CourseLayout";
 
 // Auth Layout Import
-import { AuthLayout } from "./AuthLayout";
 
 const Details = () => {
   return (

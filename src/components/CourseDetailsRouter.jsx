@@ -3,7 +3,7 @@ import React from "react";
 import { router } from "../Router/router";
 import { CourseDetailes } from "../screens/CourseDetailes";
 
-const router = createBrowserRouter([
+const CourseDetailsRouter = createBrowserRouter([
   {
     path: "/",
     element: <CourseDetailes />,

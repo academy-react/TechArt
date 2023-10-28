@@ -20,13 +20,6 @@ import "./App.css";
 // export default App;
 /////
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <CourseDetailes />,
-  },
-]);
-
 function App() {
   return (
     <>

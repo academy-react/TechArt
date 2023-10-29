@@ -8,9 +8,7 @@ import StudentPannel from "../components/common/StudentPannel/Studentpannel";
 import { BlogDetailes } from "../screens/BlogDetailes";
 import "./App.css";
 
-//fonts
-
-const App = () => {
+function App() {
   return (
     <div className="	px-px w-auto 	">
       <div>
@@ -18,7 +16,7 @@ const App = () => {
       </div>
     </div>
   );
-};
+}
 
 export default App;
 

@@ -1,20 +1,15 @@
 import React from "react";
-import Courses from "../components/common/Courses/Courses";
-import Error404 from "../components/common/Error404.jsx/Error404";
-import Landing from "../components/common/Landing/Landing";
-import NewsArticle from "../components/common/NewsArticle/NewsArticle";
-import CourseList from "../components/common/StudentPannel/CourseList";
-import StudentPannel from "../components/common/StudentPannel/Studentpannel";
-import { BlogDetailes } from "../screens/BlogDetailes";
+import { RouterProvider } from "react-router-dom";
+import { router } from "../Router/router";
+import { useState } from "react";
+import { CourseDetailes } from "../screens/CourseDetailes";
 import "./App.css";
 
 function App() {
   return (
-    <div className="	px-px w-auto 	">
-      <div>
-        <CourseList />
-      </div>
-    </div>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 

@@ -13,7 +13,7 @@ const people = [
   // More people...
 ];
 
-export default function Example() {
+function CourseTeacher() {
   return (
     <ul
       role="list"
@@ -77,3 +77,4 @@ export default function Example() {
     </ul>
   );
 }
+export { CourseTeacher };

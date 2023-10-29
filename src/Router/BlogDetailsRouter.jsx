@@ -1,10 +1,10 @@
 import React from "react";
 import BlogDetailContent from "../components/BlogDetailes/BlogDetailContent";
 
-const CourseDetailsRouter = [
+const BlogDetailsRouter = [
   {
     path: "/",
     element: <BlogDetailContent />,
   },
 ];
-export { CourseDetailsRouter };
+export { BlogDetailsRouter };

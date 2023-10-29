@@ -1,10 +1,10 @@
 import React from "react";
-import CourseDetailContent from "../components/CourseDetailContent/CourseDetailContent";
+import BlogDetailContent from "../components/BlogDetailes/BlogDetailContent";
 
 const CourseDetailsRouter = [
   {
     path: "/",
-    element: <CourseDetailContent />,
+    element: <BlogDetailContent />,
   },
 ];
 export { CourseDetailsRouter };

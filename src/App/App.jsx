@@ -4,14 +4,14 @@ import "./App.css";
 
 //fonts
 
-const App = () => {
-  return (
-    <div className="	px-px w-auto 	">
-      <div>
-        <BlogDetailes />
-      </div>
-    </div>
-  );
-};
+// const App = () => {
+//   return (
+//     <div className="	px-px w-auto 	">
+//       <div>
+//         <BlogDetailes />
+//       </div>
+//     </div>
+//   );
+// };
 
-export default App;
+// export default App;

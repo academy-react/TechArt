@@ -9,7 +9,7 @@ const stats = [
 
 export default function BlogDetailContent() {
   return (
-    <BlogLayout>
+
       <div className="relative bg-white py-16 sm:py-24">
         <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
           <div className="relative sm:py-16 lg:py-0">
@@ -133,6 +133,6 @@ export default function BlogDetailContent() {
           </div>
         </div>
       </div>
-    </BlogLayout>
+
   );
 }

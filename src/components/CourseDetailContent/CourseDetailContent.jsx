@@ -34,6 +34,8 @@ import {
   PlusIcon as PlusIconMini,
   Squares2X2Icon as Squares2X2IconMini,
 } from "@heroicons/react/20/solid";
+import { CourseTeacher } from "./CourseDetailSidebar/CourseTeachr";
+import PricingCards from "./CourseDetailSidebar/CoursePrice";
 
 const navigation = [
   { name: "Home", href: "#", icon: HomeIcon, current: false },
@@ -345,8 +347,9 @@ export default function CourseDetailContent() {
                     ))}
                   </dl>
                 </div>
-                <div>
-                  <h3 className="font-medium text-gray-900">Description</h3>
+
+                <CourseTeacher />
+                {/* <h3 className="font-medium text-gray-900">Description</h3>
                   <div className="mt-2 flex items-center justify-between">
                     <p className="text-sm italic text-gray-500">
                       Add a description to this image.
@@ -358,10 +361,11 @@ export default function CourseDetailContent() {
                       <PencilIcon className="h-5 w-5" aria-hidden="true" />
                       <span className="sr-only">Add description</span>
                     </button>
-                  </div>
-                </div>
+                  </div> */}
+
                 <div>
-                  <h3 className="font-medium text-gray-900">Shared with</h3>
+                  <PricingCards />
+                  {/* <h3 className="font-medium text-gray-900">Shared with</h3>
                   <ul
                     role="list"
                     className="mt-2 divide-y divide-gray-200 border-t border-b border-gray-200"
@@ -405,7 +409,7 @@ export default function CourseDetailContent() {
                         </span>
                       </button>
                     </li>
-                  </ul>
+                  </ul> */}
                 </div>
                 <div className="flex">
                   <button

@@ -1,20 +1,20 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
-import { CourseLayout } from "../CourseLayout";
+// import React from "react";
+// import { Outlet } from "react-router-dom";
+// import { CourseLayout } from "../CourseLayout";
 
-// Auth Layout Import
+// // Auth Layout Import
 
-const Details = () => {
-  return (
-    <>
-      <CourseLayout>
-        <Outlet />
-      </CourseLayout>
-    </>
-  );
-};
+// const Details = () => {
+//   return (
+//     <>
+//       <CourseLayout>
+//         <Outlet />
+//       </CourseLayout>
+//     </>
+//   );
+// };
 
-export { Details };
+// export { Details };
 
 // import React from "react";
 // import { Outlet } from "react-router-dom";

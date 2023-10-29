@@ -3,7 +3,8 @@ import CourseDetailContent from "../components/CourseDetailContent/CourseDetailC
 
 const CourseDetailsRouter = [
   {
-    path: "/courseDetails",
+    path: "/",
     element: <CourseDetailContent />,
   },
 ];
+export { CourseDetailsRouter };

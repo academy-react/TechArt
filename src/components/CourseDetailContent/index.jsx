@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { CourseLayout } from "./CourseLayout";
+import { CourseLayout } from "../CourseLayout";
 
 // Auth Layout Import
 

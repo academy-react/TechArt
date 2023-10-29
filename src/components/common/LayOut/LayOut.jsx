@@ -2,9 +2,9 @@ import React from "react";
 const MainContent = (props) => {
   return (
     <>
-      <main className="max-w-5xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="container">{props.children}</div>
-      </main>
+      </div>
     </>
   );
 };

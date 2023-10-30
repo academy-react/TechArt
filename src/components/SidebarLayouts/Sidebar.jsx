@@ -1,14 +1,15 @@
 
 
-    import React from 'react'
-    import { BiPlus,BiSolidMessageAltEdit,BiXCircle,BiWallet,BiShuffle,BiChat,BiFoodMenu} from "react-icons/bi";
+    import React, { useState } from 'react'
+    import { BiPlus,BiSolidMessageAltEdit,BiWallet,BiShuffle,BiChat,BiFoodMenu} from "react-icons/bi";
+    import { CiPower } from "react-icons/ci";
     import { Disclosure } from '@headlessui/react'
 
     const navigation = [
-    { name: 'داشبورد', href: '#', current: true },
+    { name: 'داشبورد', href: '#', current: false },
     {
         name: 'دوره ها ',
-        current: false,
+        current: true,
         icon:BiPlus,
         children: [
         { name: 'دوره های خریداری شده', href: '#' },
@@ -66,7 +67,7 @@
     {
         name: ' خروج',
         current: false,
-        icon:BiXCircle,
+        icon:CiPower,
         children: [
 
         ],
@@ -76,25 +77,24 @@
     function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
     }
-
     const Sidebar = () => {
     return (
-        <div className="flex flex-grow flex-col overflow-y-auto bg-white mt-16 ">
+        <div className="flex flex-grow flex-col overflow-y-auto bg-indigo-800		mt-0 ">
         <div className="flex flex-shrink-0 items-center px-4">
             
         </div>
         <div className="mt-5 flex flex-grow flex-col">
-            <nav className="flex-1 space-y-1 bg-white px-2" aria-label="Sidebar">
-            {navigation.map((item) =>
+            <nav className="flex-1 space-y-1 bg-indigo-800		pr-3" aria-label="Sidebar">
+            {navigation.map((item,index) =>
                 !item.children ? (
                 <div key={item.name}>
                     <a
                     href={item.href}
                     className={classNames(
                         item.current
-                        ? 'bg-gray-100 text-gray-900'
-                        : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900',
-                        'group w-full flex items-center pl-7 pr-2 py-2 text-sm font-medium rounded-md'
+                        ? 'bg-white text-gray-900  pr-4'
+                        : '		text-gray-600 hover:bg-gray-50 hover:text-gray-900',
+                        'group w-full flex items-center pl-7 pr-2 py-2 text-sm font-medium rounded-r-full'
                     )}
                     >
                     {item.name}
@@ -107,9 +107,9 @@
                         <Disclosure.Button
                         className={classNames(
                             item.current
-                            ? 'bg-gray-100 text-gray-900'
-                            : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900',
-                            'group w-full flex items-center pr-2 py-2 text-left text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500'
+                            ? 'bg-white text-gray-900  pr-4'
+                            : '		text-gray-600 hover:bg-gray-50 hover:text-gray-900',
+                            'group w-full flex items-center pr-2 py-2 text-left text-sm font-medium rounded-r-full focus:outline-none focus:ring-2 focus:ring-indigo-500'
                         )}
                         >
 

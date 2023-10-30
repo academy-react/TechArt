@@ -129,7 +129,7 @@ const SidebarLayouts = () => {
             </Transition.Root>
 
             {/* Static sidebar for desktop */}
-            <div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col mr-7">
+            <div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col mr-0">
             {/* Sidebar component, swap this element with another sidebar if you like */}
             {/* <div className="flex flex-grow flex-col overflow-y-auto border border-gray-200 bg-white pt-5">
                 <div className="flex flex-shrink-0 items-center px-4">
@@ -254,7 +254,7 @@ const SidebarLayouts = () => {
                     <div className="px-4 sm:px-6 md:px-0">
                     {/* Replace with your content */}
                     <div className="py-4">
-                        <div className=" rounded-lg">
+                        <div className=" rounded-lg border-4 border-dashed">
                             <Dashboard />
                             </div>
                     </div>

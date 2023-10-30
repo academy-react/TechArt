@@ -8,7 +8,7 @@ import { CardTitle } from './CardTitle'
 const CardHolder = () => {
     return (
         <Fragment>
-            <div className='w-full'>
+            <div className=''>
                 <CardTitle />
                 <Card />
             </div>

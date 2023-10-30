@@ -12,19 +12,13 @@
   }
   ```
 */
-import { Fragment } from "react";
-import { Menu, Popover, Transition } from "@headlessui/react";
+
 import {
-  ArrowLongLeftIcon,
   CheckIcon,
   HandThumbUpIcon,
-  HomeIcon,
-  MagnifyingGlassIcon,
-  PaperClipIcon,
-  QuestionMarkCircleIcon,
   UserIcon,
 } from "@heroicons/react/20/solid";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+
 import BlogDetailContent from "./BlogDetailContent";
 
 const user = {
@@ -39,20 +33,7 @@ const navigation = [
   { name: "Applicants", href: "#" },
   { name: "Company", href: "#" },
 ];
-const breadcrumbs = [
-  { name: "Jobs", href: "#", current: false },
-  { name: "Front End Developer", href: "#", current: false },
-  { name: "Applicants", href: "#", current: true },
-];
-const userNavigation = [
-  { name: "Your Profile", href: "#" },
-  { name: "Settings", href: "#" },
-  { name: "Sign out", href: "#" },
-];
-const attachments = [
-  { name: "resume_front_end_developer.pdf", href: "#" },
-  { name: "coverletter_front_end_developer.pdf", href: "#" },
-];
+
 const eventTypes = {
   applied: { icon: UserIcon, bgColorClass: "bg-gray-400" },
   advanced: { icon: HandThumbUpIcon, bgColorClass: "bg-blue-500" },
@@ -100,29 +81,6 @@ const timeline = [
     datetime: "2020-10-04",
   },
 ];
-const comments = [
-  {
-    id: 1,
-    name: "Leslie Alexander",
-    date: "4d ago",
-    imageId: "1494790108377-be9c29b29330",
-    body: "Ducimus quas delectus ad maxime totam doloribus reiciendis ex. Tempore dolorem maiores. Similique voluptatibus tempore non ut.",
-  },
-  {
-    id: 2,
-    name: "Michael Foster",
-    date: "4d ago",
-    imageId: "1519244703995-f4e0f30006d5",
-    body: "Et ut autem. Voluptatem eum dolores sint necessitatibus quos. Quis eum qui dolorem accusantium voluptas voluptatem ipsum. Quo facere iusto quia accusamus veniam id explicabo et aut.",
-  },
-  {
-    id: 3,
-    name: "Dries Vincent",
-    date: "4d ago",
-    imageId: "1506794778202-cad84cf45f1d",
-    body: "Expedita consequatur sit ea voluptas quo ipsam recusandae. Ab sint et voluptatem repudiandae voluptatem et eveniet. Nihil quas consequatur autem. Perferendis rerum et.",
-  },
-];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -131,14 +89,6 @@ function classNames(...classes) {
 export default function BlogDetailHolder() {
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```
-      */}
       <div className="min-h-full">
         <main className="py-10">
           {/* Page header */}
@@ -169,20 +119,6 @@ export default function BlogDetailHolder() {
                   on <time dateTime="2020-08-25">August 25, 2020</time>
                 </p>
               </div>
-            </div>
-            <div className="justify-stretch mt-6 flex flex-col-reverse space-y-4 space-y-reverse sm:flex-row-reverse sm:justify-end sm:space-y-0 sm:space-x-3 sm:space-x-reverse md:mt-0 md:flex-row md:space-x-3">
-              <button
-                type="button"
-                className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-100"
-              >
-                Disqualify
-              </button>
-              <button
-                type="button"
-                className="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-100"
-              >
-                Advance to offer
-              </button>
             </div>
           </div>
 
@@ -254,14 +190,6 @@ export default function BlogDetailHolder() {
                       </li>
                     ))}
                   </ul>
-                </div>
-                <div className="justify-stretch mt-6 flex flex-col">
-                  <button
-                    type="button"
-                    className="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                  >
-                    Advance to offer
-                  </button>
                 </div>
               </div>
             </section>

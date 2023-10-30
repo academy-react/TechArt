@@ -185,9 +185,9 @@ export default function CourseDetailContent() {
         </Transition.Root>
 
         {/* Content area */}
-        <div className="flex flex-1 flex-col overflow-hidden">
+        <div className="flex flex-1 overflow-hidden">
           {/* Main content */}
-          <div className="flex flex-1 items-stretch overflow-hidden">
+          <div className=" lg:flex flex-1 items-stretch overflow-hidden">
             <main className="flex-1 overflow-y-auto">
               <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
                 <div className="flex">
@@ -205,26 +205,6 @@ export default function CourseDetailContent() {
                     حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای
                     موجود طراحی اساسا مورد استفاده قرار گیرد.
                   </p>
-
-                  <div className="ml-6 flex items-center rounded-lg bg-gray-100 p-0.5 sm:hidden">
-                    <button
-                      type="button"
-                      className="rounded-md p-1.5 text-gray-400 hover:bg-white hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                    >
-                      <Bars4Icon className="h-5 w-5" aria-hidden="true" />
-                      <span className="sr-only">Use list view</span>
-                    </button>
-                    <button
-                      type="button"
-                      className="ml-0.5 rounded-md bg-white p-1.5 text-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                    >
-                      <Squares2X2IconMini
-                        className="h-5 w-5"
-                        aria-hidden="true"
-                      />
-                      <span className="sr-only">Use grid view</span>
-                    </button>
-                  </div>
                 </div>
 
                 {/* Gallery */}
@@ -281,7 +261,7 @@ export default function CourseDetailContent() {
             </main>
 
             {/* Details sidebar */}
-            <aside className="hidden w-96 overflow-y-auto border-l border-gray-200 bg-white p-8 lg:block">
+            <aside className=" md:grid-cols-1 lg:w-96 overflow-y-auto border-l border-gray-200 bg-white p-8 ">
               <div className="space-y-6 pb-16">
                 <div>
                   <div className="aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg">
@@ -306,14 +286,11 @@ export default function CourseDetailContent() {
                     </button>
                   </div>
                 </div>
- 
 
                 <CourseTeacher className="w-full" />
 
-
                 <div>
                   <PricingCards />
-
                 </div>
                 <div className="flex">
                   <button

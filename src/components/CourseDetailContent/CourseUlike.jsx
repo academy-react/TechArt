@@ -6,19 +6,19 @@ const CourseUlike = () => {
     {
       imageUrl: "../../assets/image/CourseDetails/01.png",
       title: "React js",
-      price: "15000 ریال",
+      price: "۱۵۰۰۰ ریال",
       features: ["دکتر محمدحسین بحرالعلومی"],
     },
     {
       imageUrl: "../../assets/image/CourseDetails/01.png",
       title: "next js",
-      price: "15000 ریال",
+      price: "۱۵۰۰۰ ریال",
       features: ["دکتر محمدحسین بحرالعلومی"],
     },
     {
       imageUrl: "../../assets/image/CourseDetails/01.png",
       title: "Html-css",
-      price: "15000 ریال",
+      price: "۱۵۰۰۰ ریال",
       features: ["دکتر محمدحسین بحرالعلومی"],
     },
   ];

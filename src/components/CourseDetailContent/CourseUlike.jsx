@@ -1,21 +1,22 @@
 import React from "react";
+import image from "../../assets/image/CourseDetails/01.png";
 
 const CourseUlike = () => {
   const cardData = [
     {
-      image: "https://i.imgur.com/Ql4jRdB.png",
+      imageUrl: "../../assets/image/CourseDetails/01.png",
       title: "Single User",
       price: "$149",
       features: ["500 GB Storage", "1 Granted User", "Send up to 2 GB"],
     },
     {
-      image: "https://i.imgur.com/pJNFEHR.png",
+      imageUrl: "../../assets/image/CourseDetails/01.png",
       title: "Double User",
       price: "$149",
       features: ["500 GB Storage", "1 Granted User", "Send up to 2 GB"],
     },
     {
-      image: "https://i.imgur.com/Hg0sUJP.png",
+      imageUrl: "../../assets/image/CourseDetails/01.png",
       title: "Triple User",
       price: "$149",
       features: ["500 GB Storage", "1 Granted User", "Send up to 2 GB"],
@@ -30,8 +31,8 @@ const CourseUlike = () => {
             className={`w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300`}
           >
             <img
-              className="w-20 mx-auto mt-[-3rem] bg-white"
-              src={card.image}
+              className="rounded-2xl		 mx-auto mt-[-3rem] bg-white"
+              src={image}
               alt="/"
             />
             <h2 className="text-2xl font-bold text-center py-8">
@@ -49,9 +50,9 @@ const CourseUlike = () => {
               ))}
             </div>
             <button
-              className={`bg-[#00df9a] hover:text-[#00df9a] hover:bg-gray-50 duration-150 w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3`}
+              className={`bg-teal-500 hover:text-white	 hover:bg-blue-500 duration-150 w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3`}
             >
-              Start Trial
+              شروع دوره
             </button>
           </div>
         ))}

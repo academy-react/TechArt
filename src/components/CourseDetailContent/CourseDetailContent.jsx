@@ -13,6 +13,8 @@
   }
   ```
 */
+import image from "../../assets/image/CourseDetails/01.png";
+
 import { Fragment, useState } from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 import {
@@ -52,40 +54,17 @@ const userNavigation = [
 
 const files = [
   {
-    name: "IMG_4985.HEIC",
-    size: "3.9 MB",
-    source:
-      "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+    name: "react js",
+
+    imageUrl: "../../assets/image/CourseDetails/01.png",
     current: true,
   },
   // More files...
 ];
 const currentFile = {
-  name: "IMG_4985.HEIC",
-  size: "3.9 MB",
-  source:
-    "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
-  information: {
-    "Uploaded by": "Marie Culver",
-    Created: "June 8, 2020",
-    "Last modified": "June 8, 2020",
-    Dimensions: "4032 x 3024",
-    Resolution: "72 x 72",
-  },
-  sharedWith: [
-    {
-      id: 1,
-      name: "Aimee Douglas",
-      imageUrl:
-        "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=1024&h=1024&q=80",
-    },
-    {
-      id: 2,
-      name: "Andrea McMillan",
-      imageUrl:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixqx=oilqXxSqey&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-  ],
+  name: "react js",
+
+  imageUrl: "../../assets/image/CourseDetails/01.png",
 };
 
 function classNames(...classes) {
@@ -271,7 +250,7 @@ export default function CourseDetailContent() {
                           )}
                         >
                           <img
-                            src={file.source}
+                            src={image}
                             alt=""
                             className={classNames(
                               file.current ? "" : "group-hover:opacity-75",
@@ -306,11 +285,7 @@ export default function CourseDetailContent() {
               <div className="space-y-6 pb-16">
                 <div>
                   <div className="aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg">
-                    <img
-                      src={currentFile.source}
-                      alt=""
-                      className="object-cover"
-                    />
+                    <img src={image} alt="" className="object-cover" />
                   </div>
                   <div className="mt-4 flex items-start justify-between">
                     <div>
@@ -331,7 +306,7 @@ export default function CourseDetailContent() {
                     </button>
                   </div>
                 </div>
-                <div>
+                {/* <div>
                   <h3 className="font-medium text-gray-900">Information</h3>
                   <dl className="mt-2 divide-y divide-gray-200 border-t border-b border-gray-200">
                     {Object.keys(currentFile.information).map((key) => (
@@ -346,9 +321,9 @@ export default function CourseDetailContent() {
                       </div>
                     ))}
                   </dl>
-                </div>
+                </div> */}
 
-                <CourseTeacher />
+                <CourseTeacher className="w-full" />
                 {/* <h3 className="font-medium text-gray-900">Description</h3>
                   <div className="mt-2 flex items-center justify-between">
                     <p className="text-sm italic text-gray-500">

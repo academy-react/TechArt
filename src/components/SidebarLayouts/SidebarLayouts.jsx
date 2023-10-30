@@ -16,6 +16,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { Sidebar } from './Sidebar'
 import { Dashboard } from './Dashboard'
 
+
 const navigation = [
     { name: 'داشبود', href: '#', icon: HomeIcon, current: true },
     { name: 'دوره ها ', href: '#', icon: UsersIcon, current: false },
@@ -127,9 +128,11 @@ const SidebarLayouts = () => {
                 </div>
             </Dialog>
             </Transition.Root>
+<div className='flex '>
 
-            {/* Static sidebar for desktop */}
-            <div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col mr-0">
+
+            <div className="hidden  md:inset-y-0 md:flex md:w-64 md:flex-col mr-0">
+                
             {/* Sidebar component, swap this element with another sidebar if you like */}
             {/* <div className="flex flex-grow flex-col overflow-y-auto border border-gray-200 bg-white pt-5">
                 <div className="flex flex-shrink-0 items-center px-4">
@@ -167,9 +170,9 @@ const SidebarLayouts = () => {
                 <Sidebar />
             </div>
 
-            <div className="md:pr-80">
-            <div className="mx-auto flex max-w-4xl flex-col md:px-8 xl:px-0">
-                <div className="sticky top-0 z-10 flex h-16 flex-shrink-0 border-b border-gray-200 bg-white">
+            <div className="  flex-1 ">
+            <div className="flex  flex-col md:px-8 xl:px-0">
+                <div className="w-full sticky top-0 z-10 flex h-16 flex-shrink-0 border-b border-gray-200 bg-indigo-800	">
                 <button
                     type="button"
                     className="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden"
@@ -190,7 +193,7 @@ const SidebarLayouts = () => {
                         </div>
                         <input
                             id="search-field"
-                            className="block h-full w-full border-transparent py-2 pl-8 pr-3 text-gray-900 placeholder-gray-500 focus:border-transparent focus:placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-sm"
+                            className="block h-full w-full border-transparent py-2 pl-8 pr-3 text-gray-900 placeholder-gray-500 focus:border-transparent focus:placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-sm bg-indigo-800	"
                             placeholder="Search"
                             type="search"
                             name="search"
@@ -253,7 +256,7 @@ const SidebarLayouts = () => {
                     </div>
                     <div className="px-4 sm:px-6 md:px-0">
                     {/* Replace with your content */}
-                    <div className="py-4">
+                    <div className="p-16">
                         <div className=" rounded-lg border-4 border-dashed">
                             <Dashboard />
                             </div>
@@ -264,6 +267,8 @@ const SidebarLayouts = () => {
                 </main>
             </div>
             </div>
+            </div>
+            {/* Static sidebar for desktop */}
         </div>
         </>
     )

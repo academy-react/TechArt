@@ -44,7 +44,7 @@
     
     const Card = () => {
         return (
-        <div className="bg-white">
+        <div className="bg-white lg:px-40">
             <img
             src={imageBig}
             alt='ima'

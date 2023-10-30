@@ -79,7 +79,7 @@
 
     const Sidebar = () => {
     return (
-        <div className="flex flex-grow flex-col overflow-y-auto bg-white mt-0 ">
+        <div className="flex flex-grow flex-col overflow-y-auto bg-white mt-16 ">
         <div className="flex flex-shrink-0 items-center px-4">
             
         </div>

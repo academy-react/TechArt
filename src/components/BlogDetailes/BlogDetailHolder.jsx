@@ -18,6 +18,7 @@ import {
   HandThumbUpIcon,
   UserIcon,
 } from "@heroicons/react/20/solid";
+import image from "../../assets/image/writer/writer.jpg";
 
 import BlogDetailContent from "./BlogDetailContent";
 import BlogInfo from "./BlogSidebar";
@@ -97,11 +98,7 @@ export default function BlogDetailHolder() {
             <div className="flex items-center space-x-5">
               <div className="flex-shrink-0">
                 <div className="relative">
-                  <img
-                    className="h-16 w-16 rounded-full"
-                    src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                    alt=""
-                  />
+                  <img className="h-16 w-16 rounded-full" src={image} alt="" />
                   <span
                     className="absolute inset-0 rounded-full shadow-inner"
                     aria-hidden="true"
@@ -110,10 +107,10 @@ export default function BlogDetailHolder() {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">
-                  Ricardo Cooper
+                  ملیحه هاشمی
                 </h1>
                 <p className="text-sm font-medium text-gray-500">
-                  Applied for{" "}
+                  {" "}
                   <a href="#" className="text-gray-900">
                     Front End Developer
                   </a>{" "}

@@ -5,21 +5,21 @@ const CourseUlike = () => {
   const cardData = [
     {
       imageUrl: "../../assets/image/CourseDetails/01.png",
-      title: "Single User",
-      price: "$149",
-      features: ["500 GB Storage", "1 Granted User", "Send up to 2 GB"],
+      title: "React js",
+      price: "15000 ریال",
+      features: ["دکتر محمدحسین بحرالعلومی"],
     },
     {
       imageUrl: "../../assets/image/CourseDetails/01.png",
-      title: "Double User",
-      price: "$149",
-      features: ["500 GB Storage", "1 Granted User", "Send up to 2 GB"],
+      title: "next js",
+      price: "15000 ریال",
+      features: ["دکتر محمدحسین بحرالعلومی"],
     },
     {
       imageUrl: "../../assets/image/CourseDetails/01.png",
-      title: "Triple User",
-      price: "$149",
-      features: ["500 GB Storage", "1 Granted User", "Send up to 2 GB"],
+      title: "Html-css",
+      price: "15000 ریال",
+      features: ["دکتر محمدحسین بحرالعلومی"],
     },
   ];
   return (

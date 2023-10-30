@@ -2,12 +2,12 @@ import React from "react";
 
 const CardHeader = ({ imageSrc, imageAlt,name }) => {
   return (
-    <div className="relative h-40 overflow-hidden ">
-      <div className=" h-[80%]  w-[90%] m-auto   ">
+    <div className="relative border    h-48 ">
+      <div className="  m-auto p-5  ">
         <img
         src={imageSrc}
         alt={imageAlt}
-        className=" h-[100%]  object-center  rounded-3xl object-contain mx-auto mt-3"
+        className="   object-center  rounded-3xl object-contain mx-auto mt-3"
       />
     
       </div>

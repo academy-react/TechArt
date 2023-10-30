@@ -5,50 +5,39 @@ export default function PricingCards() {
     <div className="overflow-hidden bg-white shadow sm:rounded-lg">
       <div className="px-4 py-5 sm:px-6">
         <h3 className="text-lg font-medium leading-6 text-gray-900">
-          Applicant Information
+          اطلاعات دوره
         </h3>
-        <p className="mt-1 max-w-2xl text-sm text-gray-500">
-          Personal details and application.
-        </p>
       </div>
       <div className="border-t border-gray-200 px-4 py-5 sm:p-0">
         <dl className="sm:divide-y sm:divide-gray-200">
           <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
-            <dt className="text-sm font-medium text-gray-500">Full name</dt>
+            <dt className="text-sm font-medium text-gray-500">ظرفیت دوره</dt>
             <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-              Margot Foster
+              15 نفر
             </dd>
           </div>
           <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
-            <dt className="text-sm font-medium text-gray-500">
-              Application for
-            </dt>
+            <dt className="text-sm font-medium text-gray-500">مدت دوره</dt>
             <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-              Backend Developer
+              5 ماه
             </dd>
           </div>
           <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
-            <dt className="text-sm font-medium text-gray-500">Email address</dt>
+            <dt className="text-sm font-medium text-gray-500">قیمت دوره</dt>
             <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-              margotfoster@example.com
+              150000 تومان
             </dd>
           </div>
           <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
-            <dt className="text-sm font-medium text-gray-500">
-              Salary expectation
-            </dt>
+            <dt className="text-sm font-medium text-gray-500">تعداد دانشجو</dt>
             <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-              $120,000
+              15 نفر
             </dd>
           </div>
           <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
-            <dt className="text-sm font-medium text-gray-500">About</dt>
-            <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-              Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim
-              incididunt cillum culpa consequat. Excepteur qui ipsum aliquip
-              consequat sint. Sit id mollit nulla mollit nostrud in ea officia
-              proident. Irure nostrud pariatur mollit ad adipisicing
-              reprehenderit deserunt qui eu.
+            <dt className="text-sm font-medium text-gray-500">درباره ی دوره</dt>
+            <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 text-justify sm:mt-0">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
             </dd>
           </div>
           <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">

@@ -12,7 +12,7 @@ const Search = () => {
                 name="name"
                 id="name"
                 className="block w-full text-gray-700 px-4  rounded-md shadow-2xl border-solid border-2  leading-10"
-                placeholder="search "
+                placeholder="دنباله چی میگردی "
             
             />
             <FiSearch className='absolute top-1/2 -translate-y-1/2 left-2 text-neutral-500' />

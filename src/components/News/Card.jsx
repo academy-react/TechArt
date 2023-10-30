@@ -54,7 +54,7 @@
             <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-8"> اخبار و مقالات  </h2>
                 <Search />
     
-            <div className="mt-10 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0 ">
+            <div className="mt-10 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0 gap-y-20 ">
                 {categories.map((category) => (
                 <a key={category.name} href={category.href} className="group block">
                     <div 

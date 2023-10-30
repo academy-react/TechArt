@@ -306,85 +306,14 @@ export default function CourseDetailContent() {
                     </button>
                   </div>
                 </div>
-                {/* <div>
-                  <h3 className="font-medium text-gray-900">Information</h3>
-                  <dl className="mt-2 divide-y divide-gray-200 border-t border-b border-gray-200">
-                    {Object.keys(currentFile.information).map((key) => (
-                      <div
-                        key={key}
-                        className="flex justify-between py-3 text-sm font-medium"
-                      >
-                        <dt className="text-gray-500">{key}</dt>
-                        <dd className="whitespace-nowrap text-gray-900">
-                          {currentFile.information[key]}
-                        </dd>
-                      </div>
-                    ))}
-                  </dl>
-                </div> */}
+ 
 
                 <CourseTeacher className="w-full" />
-                {/* <h3 className="font-medium text-gray-900">Description</h3>
-                  <div className="mt-2 flex items-center justify-between">
-                    <p className="text-sm italic text-gray-500">
-                      Add a description to this image.
-                    </p>
-                    <button
-                      type="button"
-                      className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                    >
-                      <PencilIcon className="h-5 w-5" aria-hidden="true" />
-                      <span className="sr-only">Add description</span>
-                    </button>
-                  </div> */}
+
 
                 <div>
                   <PricingCards />
-                  {/* <h3 className="font-medium text-gray-900">Shared with</h3>
-                  <ul
-                    role="list"
-                    className="mt-2 divide-y divide-gray-200 border-t border-b border-gray-200"
-                  >
-                    {currentFile.sharedWith.map((person) => (
-                      <li
-                        key={person.id}
-                        className="flex items-center justify-between py-3"
-                      >
-                        <div className="flex items-center">
-                          <img
-                            src={person.imageUrl}
-                            alt=""
-                            className="h-8 w-8 rounded-full"
-                          />
-                          <p className="ml-4 text-sm font-medium text-gray-900">
-                            {person.name}
-                          </p>
-                        </div>
-                        <button
-                          type="button"
-                          className="ml-6 rounded-md bg-white text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                        >
-                          Remove<span className="sr-only"> {person.name}</span>
-                        </button>
-                      </li>
-                    ))}
-                    <li className="flex items-center justify-between py-2">
-                      <button
-                        type="button"
-                        className="group -ml-1 flex items-center rounded-md bg-white p-1 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                      >
-                        <span className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-dashed border-gray-300 text-gray-400">
-                          <PlusIconMini
-                            className="h-5 w-5"
-                            aria-hidden="true"
-                          />
-                        </span>
-                        <span className="ml-4 text-sm font-medium text-indigo-600 group-hover:text-indigo-500">
-                          Share
-                        </span>
-                      </button>
-                    </li>
-                  </ul> */}
+
                 </div>
                 <div className="flex">
                   <button

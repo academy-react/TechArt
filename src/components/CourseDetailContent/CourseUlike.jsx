@@ -38,7 +38,7 @@ const CourseUlike = () => {
             <h2 className="text-2xl font-bold text-center py-8">
               {card.title}
             </h2>
-            <p className="text-center text-4xl font-bold">{card.price}</p>
+            <p className="text-center text-xl font-bold">{card.price}</p>
             <div className="text-center font-medium">
               {card.features.map((feature, index) => (
                 <p
@@ -50,7 +50,7 @@ const CourseUlike = () => {
               ))}
             </div>
             <button
-              className={`bg-teal-500 hover:text-white	 hover:bg-blue-500 duration-150 w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3`}
+              className={`bg-teal-500 hover:text-white	 hover:bg-blue-500 duration-150  rounded-md font-medium my-6 mx-auto px-6 py-3`}
             >
               شروع دوره
             </button>

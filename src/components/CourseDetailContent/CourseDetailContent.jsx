@@ -29,13 +29,7 @@ import {
   UserGroupIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import {
-  Bars4Icon,
-  MagnifyingGlassIcon,
-  PencilIcon,
-  PlusIcon as PlusIconMini,
-  Squares2X2Icon as Squares2X2IconMini,
-} from "@heroicons/react/20/solid";
+
 import { CourseTeacher } from "./CourseDetailSidebar/CourseTeachr";
 import PricingCards from "./CourseDetailSidebar/CoursePrice";
 
@@ -190,7 +184,10 @@ export default function CourseDetailContent() {
           <div className=" lg:flex flex-1 items-stretch overflow-hidden">
             <main className="flex-1 overflow-y-auto">
               <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
-                <div className="flex">
+                <div className="flex-col ">
+                  <div className="rounded-xl overflow-hidden">
+                    <img className="" src={image} alt="" />
+                  </div>
                   <p className="mt-6  text-md leading-8 text-gray-600 text-justify">
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
                     با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه
@@ -215,75 +212,21 @@ export default function CourseDetailContent() {
                   <h2 id="gallery-heading" className="sr-only">
                     Recently viewed
                   </h2>
-                  <ul
-                    role="list"
-                    className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
-                  >
-                    {files.map((file) => (
-                      <li key={file.name} className="relative">
-                        <div
-                          className={classNames(
-                            file.current
-                              ? "ring-2 ring-offset-2 ring-indigo-500"
-                              : "focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500",
-                            "group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 overflow-hidden"
-                          )}
-                        >
-                          <img
-                            src={image}
-                            alt=""
-                            className={classNames(
-                              file.current ? "" : "group-hover:opacity-75",
-                              "object-cover pointer-events-none"
-                            )}
-                          />
-
-                          <button
-                            type="button"
-                            className="absolute inset-0 focus:outline-none"
-                          >
-                            <span className="sr-only">
-                              View details for {file.name}
-                            </span>
-                          </button>
-                        </div>
-                        <p className="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
-                          {file.name}
-                        </p>
-                        <p className="pointer-events-none block text-sm font-medium text-gray-500">
-                          {file.size}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
                 </section>
               </div>
             </main>
 
             {/* Details sidebar */}
-            <aside className=" md:grid-cols-1 lg:w-96 overflow-y-auto border-l border-gray-200 bg-white p-8 ">
+            <aside className=" md:grid-cols-1 lg:w-96 overflow-y-auto border-l  bg-white p-8 ">
               <div className="space-y-6 pb-16">
                 <div>
-                  <div className="aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg">
-                    <img src={image} alt="" className="object-cover" />
-                  </div>
+                  <div className="aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg"></div>
                   <div className="mt-4 flex items-start justify-between">
                     <div>
-                      <h2 className="text-lg font-medium text-gray-900">
-                        <span className="sr-only">Details for </span>
-                        {currentFile.name}
-                      </h2>
                       <p className="text-sm font-medium text-gray-500">
                         {currentFile.size}
                       </p>
                     </div>
-                    <button
-                      type="button"
-                      className="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-white text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                    >
-                      <HeartIcon className="h-6 w-6" aria-hidden="true" />
-                      <span className="sr-only">Favorite</span>
-                    </button>
                   </div>
                 </div>
 

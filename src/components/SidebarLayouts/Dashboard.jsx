@@ -1,8 +1,10 @@
 
 import React from 'react'
-import { FcVoicePresentation ,FcSalesPerformance , FcLike} from "react-icons/fc";
-import { ArrowPathIcon, CloudArrowUpIcon, LockClosedIcon } from '@heroicons/react/20/solid'
+
 import { Calendar } from './Calendar'
+
+import { FcVoicePresentation ,FcSalesPerformance , FcLike} from "react-icons/fc";
+
 
         const features = [
         {

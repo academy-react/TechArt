@@ -56,7 +56,6 @@
             end: '2:30 PM',
             endDatetime: '2022-01-21T14:30',
         },
-        // More meetings...
         ]
         
         function classNames(...classes) {

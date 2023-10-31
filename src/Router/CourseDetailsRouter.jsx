@@ -4,7 +4,7 @@ import { CourseDetailes } from "../screens/CourseDetailes";
 
 const CourseDetailsRouter = [
   {
-    path: "/",
+    path: "/courseDetail",
     element: <CourseDetailes />,
   },
 ];

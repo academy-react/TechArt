@@ -5,7 +5,7 @@ import BlogDetailHolder from "./../components/BlogDetailes/BlogDetailHolder";
 
 const BlogDetailsRouter = [
   {
-    path: "/",
+    path: "/blogDetail",
     element: <BlogDetailes />,
   },
 ];

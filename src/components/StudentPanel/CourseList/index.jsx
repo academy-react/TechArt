@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Pagination } from "../../common/Pagination";
 import { TableBody } from "./TableBody";
 import { TableHeading } from "./TableHeading";
+import { Pag } from "../../common/pag";
 
 const courses = [
   {

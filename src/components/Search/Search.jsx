@@ -1,5 +1,6 @@
 
 import React from 'react'
+
 import { FiSearch } from "react-icons/fi";
 
 
@@ -16,7 +17,6 @@ const Search = () => {
             
             />
             <FiSearch className='absolute top-1/2 -translate-y-1/2 left-2 text-neutral-500' />
-            {/* <img className='absolute' src={FiSearch} alt="image" /> */}
             </div>
         </div>
         )

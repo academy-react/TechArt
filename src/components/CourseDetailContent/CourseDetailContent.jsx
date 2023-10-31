@@ -16,11 +16,9 @@
 import image from "../../assets/image/CourseDetails/01.png";
 
 import { Fragment, useState } from "react";
-import { Dialog, Menu, Transition } from "@headlessui/react";
+import { Dialog, Transition } from "@headlessui/react";
 import {
-  Bars3BottomLeftIcon,
   CogIcon,
-  HeartIcon,
   HomeIcon,
   PhotoIcon,
   PlusIcon as PlusIconOutline,

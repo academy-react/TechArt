@@ -4,8 +4,9 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import image from "../../../assets/image/logo/avatar-1.png";
 import { CustomSearchBox } from "../customElements/CustomSearchBox";
 import { CustomButton } from "../customElements/CustomButton";
+import { useNavigate } from "react-router-dom";
 const navigation = [
-  { name: "صفحه اصلی", href: "#", current: true },
+  { name: "صفحه اصلی", href: "/", current: true },
   { name: "دوره ها", href: "#", current: false },
   { name: "اخبار", href: "#", current: false },
   { name: "خدمات", href: "#", current: false },
@@ -17,6 +18,7 @@ function classNames(...classes) {
 }
 
 function NavbarHeader() {
+  const navigate = useNavigate();
   return (
     <Disclosure as="nav" className=" ">
       {({ open }) => (
@@ -66,7 +68,12 @@ function NavbarHeader() {
                 <CustomSearchBox />
 
                 <div className="px-3">
-                  <CustomButton message={"ثبت نام"} />
+                  <CustomButton
+                    onClick={() => {
+                      navigate("/auth/register");
+                    }}
+                    message={"ثبت نام"}
+                  />
                 </div>
                 {/*View notifications button*/}
 

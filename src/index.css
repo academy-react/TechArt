@@ -1,5 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @font-face {
   font-family: IRANSans;
+
   src: url("./assets/fonts/IRANSansWeb.woff");
 }
 @font-face {
@@ -17,6 +21,7 @@
 @font-face {
   font-family: IRANSans_UltraLight;
   src: url("./assets/fonts/IRANSansWeb_UltraLight.woff");
+
 }
 
 @tailwind base;
@@ -26,9 +31,11 @@
 :root {
   line-height: 1.5;
   font-weight: 400;
-  color: black;
+  font-family: IRANSans; 
+   color: black;
 
   direction: rtl;
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

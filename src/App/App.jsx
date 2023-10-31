@@ -1,11 +1,14 @@
 
-import { SidebarLayouts } from "../components/SidebarLayouts/SidebarLayouts";
-
 import "./App.css";
+
+import { RouterProvider } from "react-router-dom";
+import { router } from "../Router/router";
 
 function App() {
   return (
-  <SidebarLayouts />
+
+      <RouterProvider router={router} />
+
   );
 }
 

@@ -5,7 +5,7 @@ const products = [
     teacher: "استاد 1",
     href: "#",
     imageSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJXhQGf0ODqqYL8WLA1dSZVgf3G3PVSZUyuWrBoEMl33VzBrM65xeOFXlUN6bPT_OwaHo&usqp=CAU",
+      "https://images.ctfassets.net/aq13lwl6616q/7cS8gBoWulxkWNWEm0FspJ/c7eb42dd82e27279307f8b9fc9b136fa/nodejs_cover_photo_smaller_size.png",
     imageAlt: "تصویر در دسترس نیست",
     price: "1400",
     rate: 3,
@@ -19,7 +19,7 @@ const products = [
     teacher: "استاد 2",
     href: "#",
     imageSrc:
-      "https://nareshit.com/wp-content/uploads/2018/08/angular-JS-online-training-nareshit.jpg",
+      "https://images.ctfassets.net/aq13lwl6616q/7cS8gBoWulxkWNWEm0FspJ/c7eb42dd82e27279307f8b9fc9b136fa/nodejs_cover_photo_smaller_size.png",
     imageAlt: "تصویر در دسترس نیست",
     price: "1400",
     rate: 5,
@@ -47,70 +47,14 @@ const products = [
     teacher: "استاد 4",
     href: "#",
     imageSrc:
-      "https://soilmodels.com/wp-content/uploads/2018/01/simulia-abaqus.png",
+      "https://images.ctfassets.net/aq13lwl6616q/7cS8gBoWulxkWNWEm0FspJ/c7eb42dd82e27279307f8b9fc9b136fa/nodejs_cover_photo_smaller_size.png",
     imageAlt: "تصویر در دسترس نیست",
     price: "1400",
     rate: 3,
     price: 244000,
     desc: "adsadgagargegegaafvafvafvafv",
     duration: 60,
-  },
-  {
-    id: 8,
-    name: "دوره  React",
-    teacher: "استاد 1",
-    href: "#",
-    imageSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJXhQGf0ODqqYL8WLA1dSZVgf3G3PVSZUyuWrBoEMl33VzBrM65xeOFXlUN6bPT_OwaHo&usqp=CAU",
-    imageAlt: "تصویر در دسترس نیست",
-    price: "1400",
-    rate: 0,
-    price: 34000,
-    desc: "adsadgagargegegaafvafvafvafv",
-    duration: 60,
-  },
-  {
-    id: 5,
-    name: "دوره  React",
-    teacher: "استاد 2",
-    href: "#",
-    imageSrc:
-      "https://nareshit.com/wp-content/uploads/2018/08/angular-JS-online-training-nareshit.jpg",
-    imageAlt: "تصویر در دسترس نیست",
-    price: "1400",
-    rate: 5,
-    price: 54000,
-    desc: "adsadgagargegegaafvafvafvafv",
-    duration: 60,
-  },
-  {
-    id: 6,
-    name: "دوره  React",
-    teacher: "استاد 3",
-    href: "#",
-    imageSrc:
-      "https://images.ctfassets.net/aq13lwl6616q/7cS8gBoWulxkWNWEm0FspJ/c7eb42dd82e27279307f8b9fc9b136fa/nodejs_cover_photo_smaller_size.png",
-    imageAlt: "تصویر در دسترس نیست",
-    price: "1400",
-    rate: 4,
-    price: 2460,
-    desc: "adsadgagargegegaafvafvafvafv",
-    duration: 60,
-  },
-  {
-    id: 7,
-    name: "دوره  React",
-    teacher: "استاد 4",
-    href: "#",
-    imageSrc:
-      "https://soilmodels.com/wp-content/uploads/2018/01/simulia-abaqus.png",
-    imageAlt: "تصویر در دسترس نیست",
-    price: "1400",
-    rate: 2,
-    price: 2420,
-    desc: "adsadgagargegegaafvafvafvafv",
-    duration: 60,
-  },
+  }
   // More products...
 ];
 

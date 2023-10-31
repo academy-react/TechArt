@@ -1,15 +1,17 @@
-import { useState } from "react";
 
-import { CardHolder } from "../components/Card/CardHolder";
 
 import "./App.css";
 
+import { RouterProvider } from "react-router-dom";
+import { router } from "../Router/router";
+
 function App() {
   return (
-  
-    <CardHolder />
-    
-  
+
+
+      <RouterProvider router={router} />
+
+
   );
 }
 

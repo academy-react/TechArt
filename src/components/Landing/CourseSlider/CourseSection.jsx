@@ -9,6 +9,14 @@ const CourseSection = () => {
         دوره های آموزشی
       </h4>
       <Card product={products} />
+      <div className="flex justify-center">
+        <a
+          href="#"
+          className="relative flex items-center   w-32  h-8 justify-center rounded-xl border border-transparent border-stone-500 hover:bg-amber-100 py-3  p-2 text-sm font-medium hover:text-amber-600 bg-amber-600 text-white"
+        >
+          مشاهده دوره ها
+        </a>
+      </div>
     </div>
   );
 };

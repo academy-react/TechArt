@@ -1,15 +1,15 @@
-import { Courses } from "../components/Courses/Courses";
-import { CourseSection } from "../components/Landing/CourseSlider/CourseSection";
-import { ProfessorCard } from "../components/ProfessorCard/ProfessorCard";
+import { useState } from "react";
+
 import "./App.css";
 
+import { RouterProvider } from "react-router-dom";
+import { router } from "../Router/router";
 
 function App() {
   return (
-   <>
-   <CourseSection/>
-   <ProfessorCard/>
-  </>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 

@@ -11,7 +11,7 @@ const Card = ({ product, cardStyle }) => {
           <div className=" grid grid-cols-1 mx-5 gap-y-12   ">
             {product.map((product) => (
               <div key={product.id} >
-                <div className="relative border shadow-[-1px_-0px_10px_8px_rgba(0,0,0,0.1),_1px_0px_10px_8px_rgba(45,78,255,0.15)]  rounded-xl cursor-pointer flex flex-row p-5">
+                <div className="relative border  shadow-xl  rounded-xl cursor-pointer flex flex-row p-2">
                   <div className=" w-1/5 ">
                     <CardHeader
                       imageSrc={product.imageSrc}
@@ -46,7 +46,7 @@ const Card = ({ product, cardStyle }) => {
           <div className=" grid grid-cols-1 mx-5 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4  xl:gap-x-8  ">
             {product.map((product) => (
               <div key={product.id}>
-                <div className="relative border shadow-[-1px_-0px_10px_8px_rgba(0,0,0,0.1),_1px_0px_10px_8px_rgba(45,78,255,0.15)]  rounded-xl cursor-pointer ">
+                <div className="relative border  shadow-xl  rounded-2xl cursor-pointer p-2 ">
                   <div className="">
                     <CardHeader
                       imageSrc={product.imageSrc}

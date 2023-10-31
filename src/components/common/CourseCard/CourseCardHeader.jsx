@@ -1,18 +1,15 @@
 import React from "react";
 
-const CardHeader = ({ imageSrc, imageAlt,name }) => {
+const CardHeader = ({ imageSrc, imageAlt, name }) => {
   return (
-    <div className="relative border    h-48 ">
-      <div className="  m-auto p-5  ">
+    <div className="relative   ">
+      <div className="  h-32 rounded-xl overflow-hidden">
         <img
-        src={imageSrc}
-        alt={imageAlt}
-        className="   object-center  rounded-3xl object-contain mx-auto mt-3"
-      />
-    
+          src={imageSrc}
+          alt={imageAlt}
+          className=" w-full h-full object-fill "
+        />
       </div>
-      
-      
     </div>
   );
 };

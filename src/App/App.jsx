@@ -1,7 +1,8 @@
 import { useState } from "react";
-import "./App.css";
+
 import { CardHolder } from "../components/Card/CardHolder";
 
+import "./App.css";
 
 function App() {
   return (

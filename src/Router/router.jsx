@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import { BlogDetailsRouter } from "./BlogDetailsRouter";
+import { DashboardRouter } from "./DashboardRouter";
 
-const router = createBrowserRouter([...BlogDetailsRouter]);
+const router = createBrowserRouter([...DashboardRouter]);
 
 export { router };

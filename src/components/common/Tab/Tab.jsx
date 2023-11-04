@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CustomInput } from "../customElements/CustomInput";
 
 export default function TabsComponent() {
   const [openTab, setOpenTab] = useState(1);
@@ -13,10 +14,10 @@ export default function TabsComponent() {
                 href="#"
                 onClick={() => setOpenTab(1)}
                 className={` ${
-                  openTab === 1 ? "bg-purple-600 text-white" : ""
+                  openTab === 1 ? "bg-purple-600 text-blue" : ""
                 } inline-block px-4 py-2 text-gray-600 bg-white rounded shadow`}
               >
-                React Tabs 1
+                نظرات
               </a>
             </li>
             <li>
@@ -24,34 +25,20 @@ export default function TabsComponent() {
                 href="#"
                 onClick={() => setOpenTab(2)}
                 className={` ${
-                  openTab === 2 ? "bg-purple-600 text-white" : ""
+                  openTab === 2 ? "bg-purple-600 text-blue" : ""
                 } inline-block px-4 py-2 text-gray-600 bg-white rounded shadow`}
               >
-                React Tabs 2
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                onClick={() => setOpenTab(3)}
-                className={` ${
-                  openTab === 3 ? "bg-purple-600 text-white" : ""
-                } inline-block px-4 py-2 text-gray-600 bg-white rounded shadow`}
-              >
-                React Tabs 3
+                درج نظرات
               </a>
             </li>
           </ul>
-          <div className="p-3 mt-6 bg-white border">
+          <div className="p-3 mt-6 bg-red border">
             <div className={openTab === 1 ? "block" : "hidden"}>
               {" "}
-              React JS with Tailwind CSS Tab 1 Content show
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
             </div>
             <div className={openTab === 2 ? "block" : "hidden"}>
               React JS with Tailwind CSS Tab 2 Content show
-            </div>
-            <div className={openTab === 3 ? "block" : "hidden"}>
-              React JS with Tailwind CSS Tab 3 Content show
             </div>
           </div>
         </div>

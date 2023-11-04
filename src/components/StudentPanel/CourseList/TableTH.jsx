@@ -7,7 +7,7 @@ const TableTH = ({ children, stacker, stackSize }) => {
       className={
         "title px-3 py-3.5 text-sm font-semibold text-gray-900" +
         " " +
-        (stacker ? "hidden " + stackSize + ":table-cell" : "")
+        (stacker ? "hidden " + stackSize : "")
       }
     >
       {children}

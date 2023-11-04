@@ -18,12 +18,12 @@ const TableBody = ({ coursesData }) => {
               <TableInnerDL
                 label={"مدرس"}
                 toShow={course.teacher}
-                stackSize={"lg"}
+                stackSize={"lg:hidden"}
               />
               <TableInnerDL
                 label={"تاریخ شروع دوره"}
                 toShow={course.startDate}
-                stackSize={"md"}
+                stackSize={"md:hidden"}
               />
             </dl>
           </TableTD>

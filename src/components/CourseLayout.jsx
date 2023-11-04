@@ -1,9 +1,7 @@
 function CourseLayout({ children }) {
   return (
     <>
-      <div className="md:grid lg:grid-cols-5 md:grid-cols-6 md:gap-6" dir="ltr">
-        {children}
-      </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
     </>
   );
 }

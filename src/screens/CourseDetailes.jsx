@@ -5,10 +5,11 @@ import CoursInfo from "../components/CourseDetailContent/CourseDetailSidebar/Cou
 import { CourseTeacher } from "../components/CourseDetailContent/CourseDetailSidebar/CourseTeachr";
 import CourseUlike from "../components/CourseDetailContent/CourseUlike";
 import PricingCards from "../components/CourseDetailContent/CourseDetailSidebar/CoursePrice";
+import { CourseLayout } from "../components/CourseLayout";
 
 function CourseDetailes() {
   return (
-    <div className="	">
+    <CourseLayout>
       {/* 
       <CourseDetailContent />
       <CourseTeacher />
@@ -20,7 +21,7 @@ function CourseDetailes() {
       <CourseDetailContent />
       <CourseUlike />
       <Footer />
-    </div>
+    </CourseLayout>
   );
 }
 

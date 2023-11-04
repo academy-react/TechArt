@@ -1,24 +1,25 @@
 import React from "react";
+import image from "../../assets/image/CourseDetails/01.png";
 
 const CourseUlike = () => {
   const cardData = [
     {
-      image: "https://i.imgur.com/Ql4jRdB.png",
-      title: "Single User",
-      price: "$149",
-      features: ["500 GB Storage", "1 Granted User", "Send up to 2 GB"],
+      imageUrl: "../../assets/image/CourseDetails/01.png",
+      title: "React js",
+      price: "۱۵۰۰۰ ریال",
+      features: ["دکتر محمدحسین بحرالعلومی"],
     },
     {
-      image: "https://i.imgur.com/pJNFEHR.png",
-      title: "Double User",
-      price: "$149",
-      features: ["500 GB Storage", "1 Granted User", "Send up to 2 GB"],
+      imageUrl: "../../assets/image/CourseDetails/01.png",
+      title: "next js",
+      price: "۱۵۰۰۰ ریال",
+      features: ["دکتر محمدحسین بحرالعلومی"],
     },
     {
-      image: "https://i.imgur.com/Hg0sUJP.png",
-      title: "Triple User",
-      price: "$149",
-      features: ["500 GB Storage", "1 Granted User", "Send up to 2 GB"],
+      imageUrl: "../../assets/image/CourseDetails/01.png",
+      title: "Html-css",
+      price: "۱۵۰۰۰ ریال",
+      features: ["دکتر محمدحسین بحرالعلومی"],
     },
   ];
   return (
@@ -30,14 +31,14 @@ const CourseUlike = () => {
             className={`w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300`}
           >
             <img
-              className="w-20 mx-auto mt-[-3rem] bg-white"
-              src={card.image}
+              className="rounded-2xl		 mx-auto mt-[-3rem] bg-white"
+              src={image}
               alt="/"
             />
             <h2 className="text-2xl font-bold text-center py-8">
               {card.title}
             </h2>
-            <p className="text-center text-4xl font-bold">{card.price}</p>
+            <p className="text-center text-xl font-bold">{card.price}</p>
             <div className="text-center font-medium">
               {card.features.map((feature, index) => (
                 <p
@@ -49,9 +50,9 @@ const CourseUlike = () => {
               ))}
             </div>
             <button
-              className={`bg-[#00df9a] hover:text-[#00df9a] hover:bg-gray-50 duration-150 w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3`}
+              className={`bg-teal-500 hover:text-white	 hover:bg-blue-500 duration-150  rounded-md font-medium my-6 mx-auto px-6 py-3`}
             >
-              Start Trial
+              شروع دوره
             </button>
           </div>
         ))}

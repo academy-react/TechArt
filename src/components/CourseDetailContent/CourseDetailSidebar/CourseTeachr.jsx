@@ -1,30 +1,32 @@
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
+import image from "../../../assets/image/Teacher/teacher.jpg";
 
 const people = [
   {
-    name: "Jane Cooper",
-    title: "Regional Paradigm Technician",
+    name: "دکتر محمد حسین بحرالعلومی",
+    title: "مدرس دوره",
     role: "Admin",
-    email: "janecooper@example.com",
-    telephone: "+1-202-555-0170",
-    imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+    email: "bahr@gmail.com",
+    telephone: "0911-9999999",
+    imageUrl: "../../assets/image/CourseDetails/01.png",
   },
   // More people...
 ];
 
 function CourseTeacher() {
   return (
-    <ul
-      role="list"
-      className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-    >
+    <ul role="list" className="grid  gap-6 sm:grid-cols-1 lg:grid-cols-1">
       {people.map((person) => (
         <li
           key={person.email}
           className="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow"
         >
           <div className="flex w-full items-center justify-between space-x-6 p-6">
+            <img
+              className="h-10 px-px w-10 flex-shrink-0 rounded-full bg-gray-300"
+              src={image}
+              alt=""
+            />
             <div className="flex-1 truncate">
               <div className="flex items-center space-x-3">
                 <h3 className="truncate text-sm font-medium text-gray-900">
@@ -34,15 +36,10 @@ function CourseTeacher() {
                   {person.role}
                 </span>
               </div>
-              <p className="mt-1 truncate text-sm text-gray-500">
+              <p className="mt-1 truncate text-sm text-gray-500 text-right">
                 {person.title}
               </p>
             </div>
-            <img
-              className="h-10 w-10 flex-shrink-0 rounded-full bg-gray-300"
-              src={person.imageUrl}
-              alt=""
-            />
           </div>
           <div>
             <div className="-mt-px flex divide-x divide-gray-200">

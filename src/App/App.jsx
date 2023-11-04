@@ -1,14 +1,12 @@
-import { Courses } from "../components/Courses/Courses";
-import { CourseSection } from "../components/Landing/CourseSlider/CourseSection";
-import { ProfessorCard } from "../components/ProfessorCard/ProfessorCard";
+import { RouterProvider } from "react-router";
+import {router} from "../Router/router"
 import "./App.css";
 
 
 function App() {
   return (
    <>
-   <CourseSection/>
-   <ProfessorCard/>
+  <RouterProvider router={router}/>
   </>
   );
 }

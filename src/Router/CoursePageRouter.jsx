@@ -5,8 +5,8 @@ import { Card } from '../components/common/CourseCard/CourseCard'
 const CoursePageRouter =[
 
    {
-    path:"/course",
-    elementment:<Card/>
+    path:"/courses",
+    element:<Courses/>
  
 } 
 ] 

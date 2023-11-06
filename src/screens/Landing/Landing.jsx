@@ -4,14 +4,16 @@ import { HeroSection } from "../../components/HeroSection/HeroSection";
 import { CourseSection } from "../../components/Landing/CourseSlider/CourseSection";
 import { CardHolder } from "../../components/Card/CardHolder";
 import { ProfessorCard } from "../../components/ProfessorCard/ProfessorCard";
+import Shortcut from "../../components/Shortcut";
+import Abstract from "../../components/Abstract";
 
 function Landing() {
   return (
     <div className="px-6	">
       <NavbarHeader />
       <HeroSection />
-      <CourseSection />
-      <ProfessorCard />
+      <Shortcut />
+      <Abstract />
       <CardHolder />
       <Footer />
     </div>

@@ -6,6 +6,10 @@ import { CardHolder } from "../../components/Card/CardHolder";
 import { ProfessorCard } from "../../components/ProfessorCard/ProfessorCard";
 import Shortcut from "../../components/Shortcut";
 import Abstract from "../../components/Abstract";
+import PricingSection from "./../../components/PricingSection";
+import BlogSection from "../../components/BlogSection";
+import Events from "../../components/events";
+import Testimonial from "../../components/Testimonial";
 
 function Landing() {
   return (
@@ -14,7 +18,13 @@ function Landing() {
       <HeroSection />
       <Shortcut />
       <Abstract />
+      <CourseSection />
       <CardHolder />
+      <PricingSection />
+      <Events />
+      <Testimonial />
+      <BlogSection />
+
       <Footer />
     </div>
   );

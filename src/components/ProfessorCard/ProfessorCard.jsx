@@ -58,7 +58,7 @@ const ProfessorCard = () => {
                     </h3>
                     <a
                       href="#"
-                      className="relative flex items-center m-2  w-20  h-8 justify-center rounded-xl border border-transparent border-stone-500 hover:bg-amber-100 py-3  p-2 text-sm font-medium hover:text-amber-600 bg-amber-600 text-white"
+                      className="relative flex items-center m-2  w-20  h-8 justify-center rounded-xl border border-transparent border-stone-500py-3  p-2 text-sm font-medium bg-amber-600 text-white"
                     >
                       {product.ability}
                     </a>

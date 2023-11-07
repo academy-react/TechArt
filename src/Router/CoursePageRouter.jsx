@@ -1,12 +1,16 @@
 import React from 'react'
+
+import { CourseSection } from '../components/Landing/CourseSlider/CourseSection'
+import { ProfessorCard } from '../components/ProfessorCard/ProfessorCard'
 import { Courses } from '../components/Courses/Courses'
-import { Card } from '../components/common/CourseCard/CourseCard'
 
 const CoursePageRouter =[
 
    {
-    path:"/courses",
-    element:<Courses/>
+    path:"/",
+    element:<CourseSection/>,
+ 
+    
  
 } 
 ] 

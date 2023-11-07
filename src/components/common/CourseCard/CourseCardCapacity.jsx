@@ -3,7 +3,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 const CourseCardCapacity = () => {
   return (
     <>
-      <div className="border-2  rounded-full m-1 flex flex-col   shadow-lg    ">
+      <div className="border-2  rounded-full m-1 flex flex-col   shadow-lg  h-1/2  ">
         <div className=" border-b-2 text-xl  text-left p-1 h-1/3">
           <BsFillPersonFill className=" w-full" />
         </div>

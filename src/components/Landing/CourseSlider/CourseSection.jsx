@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card } from "../../common/CourseCard/CourseCard";
 import { products } from "../../../core/data/data";
 import { ProfessorCard } from "../../ProfessorCard/ProfessorCard";
+import { useEffect } from "react";
 
 const CourseSection = () => {
+  const [course, setCourses] = useState(products);
+
+  const sortByRate = () => {
+    const courseCopy = [...course];
+    courseCopy.sort((A, B) => {
+    
+        return B.rate - A.rate;
+      
+    });
+    setCourses(courseCopy.slice(0,4));
+  };
+  useEffect(() => {
+    sortByRate();
+  });
+
   return (
-    <div className=" overflow-hidden">
+    <div className=" overflow-hidden ">
       <h4 className=" text-2xl font-bold drop-shadow-lg shadow-black  text-gray-700">
         دوره های آموزشی
       </h4>
-      <Card product={products} />
+      <div className="  ">
+        <Card product={course} numberOfCard={4} />
+      </div>
+
       <div className="flex justify-center">
         <a
           href="#"
@@ -18,7 +37,7 @@ const CourseSection = () => {
           مشاهده دوره ها
         </a>
       </div>
-      <ProfessorCard/>
+      <ProfessorCard />
     </div>
   );
 };

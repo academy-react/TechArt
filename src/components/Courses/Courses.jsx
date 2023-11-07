@@ -10,7 +10,10 @@ const Courses = () => {
   const [cardStyle, setCardStyle] = useState(0);
   return (
     <div className="main-div container mx-auto">
-      <div className="holder"></div>
+      <div className="holder">
+
+        
+      </div>
       <div className="course-name flex flex-row border w-full justify-center">
         <h3 className="  text-2xl font-bold drop-shadow-lg shadow-black  text-gray-700">
           دوره ها ی آموزشی{" "}

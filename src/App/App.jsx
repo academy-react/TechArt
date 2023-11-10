@@ -1,9 +1,4 @@
-<<<<<<<<< Temporary merge branch 1
-import { useState } from "react";
 
-=========
-
->>>>>>>>> Temporary merge branch 2
 import "./App.css";
 
 import { RouterProvider } from "react-router-dom";

@@ -4,16 +4,11 @@ import { BsFillGrid3X3GapFill, BsListUl } from "react-icons/bs";
 import { products } from "../../core/data/data";
 import { Filter } from "../CourseFilter/Filter";
 
-
-
 const Courses = () => {
   const [cardStyle, setCardStyle] = useState(0);
   return (
     <div className="main-div container mx-auto">
-      <div className="holder">
-
-        
-      </div>
+      <div className="holder"></div>
       <div className="course-name flex flex-row border w-full justify-center">
         <h3 className="  text-2xl font-bold drop-shadow-lg shadow-black  text-gray-700">
           دوره ها ی آموزشی{" "}
@@ -37,9 +32,7 @@ const Courses = () => {
 
       <div className="flex  flex-row">
         <div className=" border-2 course-filter w-1/4 mt-10 p-1">
-       
-       <Filter />
-
+          <Filter />
         </div>
         <div className="course w-3/4 ">
           <Card product={products} cardStyle={cardStyle} />

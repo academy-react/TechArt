@@ -43,7 +43,7 @@ const Card = ({ product, cardStyle }) => {
     return (
       <div className="bg-white font-sans">
         <div className="mx-auto max-w-3xl py-16 px-4 sm:py-10 sm:px-6 lg:max-w-7xl lg:px-8">
-          <div className=" grid grid-cols-1 mx-5 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3  xl:gap-x-8  ">
+          <div className=" grid grid-cols-1 mx-5 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8  ">
             {product.map((product) => (
               <div key={product.id}>
                 <div className="relative border  shadow-xl  rounded-2xl cursor-pointer p-2 ">

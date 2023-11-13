@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { CustomForm } from "./CustomForm";
+
 import Rate from "./Rate";
 
 export default function TabsComponent() {
@@ -51,7 +53,7 @@ export default function TabsComponent() {
               <Rate />
             </div>
             <div className={openTab === 2 ? "block" : "hidden"}>
-              React JS formik
+              <CustomForm>xxx</CustomForm>
             </div>
           </div>
         </div>

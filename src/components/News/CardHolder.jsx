@@ -8,7 +8,7 @@ const CardHolder = () => {
     return (
         <div className="CardHolder">
                 <Card />
-                <CustomButton/>
+            
         </div>
     )
 }

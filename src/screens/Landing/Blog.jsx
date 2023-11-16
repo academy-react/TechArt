@@ -15,12 +15,12 @@ const Blog = () => {
   return (
     <div>
     <NavbarHeader />
-    <div className="border-black mr-60 ">
+    <div className="border-black mr-72 ">
     <img src={imageBig} alt="img" />
     </div>
-    <Search/>
+    <div className='w-5/6 mx-auto'><Search/></div>
     <CardHolder />
-    <CustomButton/>
+    <div className='w-16 mx-auto text-black'><CustomButton> مشاهده ی بیشتر </CustomButton> </div>
     <Footer />
     </div>
   )

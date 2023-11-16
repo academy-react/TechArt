@@ -45,11 +45,7 @@
     const Card = () => {
         return (
         <div className="bg-white lg:px-40">
-            {/* <img
-            src={imageBig}
-            alt='ima'
-            className="m-auto"
-            /> */}
+        
             <div className="mx-auto max-w-xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
             <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-8"> اخبار و مقالات  </h2>
             

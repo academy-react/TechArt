@@ -1,10 +1,14 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Card } from './Card'
-import { CustomButton } from '../common/customElements/CustomButton'
 
 const CardHolder = () => {
+    const[newCard,setNewCard] = useState([]);
+
+
+
+
     return (
         <div className="CardHolder">
                 <Card />

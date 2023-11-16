@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 
 import { Card } from './Card'
 import axios from 'axios';
+import { baseUrl } from '../../config/url';
+
 
 const CardHolder = () => {
     const[newCard,setNewCard] = useState([]);
@@ -10,7 +12,7 @@ const CardHolder = () => {
     const getCardNews = async () => {
         console.log('fetching......');
         const result = await axios.get(
-            `${baseUrl}/News?PageNumber=1&RowsOfPage=10&SortingCol=InsertDate&SortType=DESC&Query=`
+            `${baseUrl}/News/GetListNewsCategory`
         );
     console.log(result.data);
     setNewCard(result.data.news);

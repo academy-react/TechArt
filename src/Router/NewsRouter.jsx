@@ -1,13 +1,14 @@
 
 
 import React from 'react'
-import { CardHolder } from '../components/News/CardHolder'
+import { Blog } from '../screens/Landing/Blog'
 
 const NewsRouter = [
 
     {
         path: "/New",
-        element: <CardHolder/>,
+        element: <Blog/>,
+        
     },
 
     

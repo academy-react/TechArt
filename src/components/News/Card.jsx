@@ -3,7 +3,7 @@
 
     import { Search } from '../Search/Search'
     
-    import imageBig from '../../assets/image/bigimage.png'
+    // import imageBig from '../../assets/image/bigimage.png'
     import images from '../../assets/image/new.png'
 
 
@@ -45,14 +45,14 @@
     const Card = () => {
         return (
         <div className="bg-white lg:px-40">
-            <img
+            {/* <img
             src={imageBig}
             alt='ima'
             className="m-auto"
-            />
+            /> */}
             <div className="mx-auto max-w-xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
             <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-8"> اخبار و مقالات  </h2>
-                <Search />
+            
     
             <div className="mt-10 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0 gap-y-20 ">
                 {categories.map((category) => (

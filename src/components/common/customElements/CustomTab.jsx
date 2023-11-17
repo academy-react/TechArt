@@ -6,17 +6,17 @@ export default function TabsComponent() {
   return (
     <div>
       <div className="container mx-auto mt-12">
-        <div className="flex flex-col items-start justify-center ">
+        <div className="flex flex-col  justify-start ">
           <ul className="flex space-x-2">
             <li>
               <a
                 href="#"
                 onClick={() => setOpenTab(1)}
                 className={` ${
-                  openTab === 1 ? "bg-purple-600 text-white" : ""
+                  openTab === 1 ? "bg-purple-600 text-blue" : ""
                 } inline-block px-4 py-2 text-gray-600 bg-white rounded shadow`}
               >
-                React Tabs 1
+                توضیحات دوره
               </a>
             </li>
             <li>
@@ -27,11 +27,11 @@ export default function TabsComponent() {
                   openTab === 2 ? "bg-purple-600 text-white" : ""
                 } inline-block px-4 py-2 text-gray-600 bg-white rounded shadow`}
               >
-                React Tabs 2
+                درج نظرات
               </a>
             </li>
           </ul>
-          <div className="p-3 mt-6 bg-white border">
+          <div className="p-3 mt-6 bg-white border text-justify">
             <div className={openTab === 1 ? "block" : "hidden"}>
               {" "}
               React js یکی از کتابخانه های جاوا اسکریپت است که open source است.
@@ -46,7 +46,7 @@ export default function TabsComponent() {
               های آماده، توابع و الگوهای از پیش تعیین شده هستند
             </div>
             <div className={openTab === 2 ? "block" : "hidden"}>
-              React JS with Tailwind CSS Tab 2 Content show
+              (custom form component)
             </div>
           </div>
         </div>

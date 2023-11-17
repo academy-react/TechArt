@@ -1,6 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
+import { BlogDetailsRouter } from "./BlogDetailsRouter";
+import { authRouter } from "./authRouter";
 import { CourseDetailsRouter } from "./CourseDetailsRouter";
-
-const router = createBrowserRouter([...CourseDetailsRouter]);
+import { Landing } from "../screens/Landing/Landing";
+const router = createBrowserRouter([
+  ...authRouter,
+  ...CourseDetailsRouter,
+  ...BlogDetailsRouter,
+  {
+    path: "/",
+    element: <Landing />,
+  },
+]);
 
 export { router };

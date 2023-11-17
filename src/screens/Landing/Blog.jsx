@@ -9,18 +9,27 @@ import { Footer } from '../../components/common/Footer/Footer'
 
 import imageBig from '../../assets/image/bigimage.png'
 
-
+const onClickBtn = () => {
+  return(
+    <CardHolder />
+  )
+}
 
 const Blog = () => {
   return (
     <div>
     <NavbarHeader />
     <div className="border-black mr-72 ">
-    <img src={imageBig} alt="img" />
+      <img src={imageBig} alt="img" />
     </div>
     <div className='w-5/6 mx-auto'><Search/></div>
+
     <CardHolder />
-    <div className='w-16 mx-auto text-black'><CustomButton> مشاهده ی بیشتر </CustomButton> </div>
+ 
+    <button className='w-24 mx-auto text-sm font-medium bg-indigo-600 flex justify-center rounded-md border border-transparent py-2 px-4font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ' 
+    onClick={onClickBtn}> مشاهده بیشتر 
+    </button>
+  
     <Footer />
     </div>
   )

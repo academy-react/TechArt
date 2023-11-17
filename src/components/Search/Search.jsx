@@ -1,10 +1,31 @@
 
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 
 import { FiSearch } from "react-icons/fi";
+import {baseUrl} from '../../config/url';
 
 
 const Search = () => {
+
+    const[SearchNews,setSearchNews] = useState([]);
+
+    const getSearchNews = async () => {
+        console.log('fetching......');
+        const result = await axios.get(
+            `${baseUrl}/News?PageNumber=1&RowsOfPage=10&SortingCol=InsertDate&SortType=DESC&Query=get All`
+        );
+    console.log(result.data);
+    setSearchNews(result.data);
+    };
+    useEffect(() =>{
+        getSearchNews();
+    }, []);
+
+    console.log(SearchNews);
+
+
+
         return (
         <div>
             <div className="mt-1 w-4/5 lg:w-2/5 m-auto relative ">

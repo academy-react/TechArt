@@ -2,10 +2,10 @@ import React from "react";
 // import image from "../../assets/image/CourseDetails/01.png";
 import { baseUrl } from "../../../config";
 import { axios } from "axios";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 const CourseTop = () => {
-  const [courseTop, setCourseTop] = useState;
+  const [courseTopList, setCourseTop] = useState;
   const getCourseList = async () => {
     const params = { count: 5 };
     const result = await axios.get(`${baseUrl}/Home/GetCoursesTop?Count=3`);
@@ -47,7 +47,7 @@ const CourseTop = () => {
       </div>
       <div className="w-full py-[10rem] px-4 bg-white">
         <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8">
-          {courseTop.map((card, index) => (
+          {courseTopList.map((result, index) => (
             <div
               key={index}
               className={`w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300`}

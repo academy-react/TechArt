@@ -30,7 +30,7 @@ import {
 
 import { CourseTeacher } from "./CourseDetailSidebar/CourseTeachr";
 import PricingCards from "./CourseDetailSidebar/CoursePrice";
-import TabsComponent from "../common/customElements/customTab";
+import CustomTab from "./../common/customElements/CustomTab";
 
 const navigation = [
   { name: "Home", href: "#", icon: HomeIcon, current: false },
@@ -187,7 +187,7 @@ export default function CourseDetailContent() {
                   <div className="rounded-xl overflow-hidden">
                     <img className="" src={image} alt="" />
                   </div>
-                  <TabsComponent />
+                  <CustomTab />
                 </div>
 
                 {/* Gallery */}

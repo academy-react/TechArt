@@ -1,27 +1,40 @@
 import React from "react";
-import image from "../../assets/image/CourseDetails/01.png";
+// import image from "../../assets/image/CourseDetails/01.png";
+import { baseUrl } from "../../../config";
+import { axios } from "axios";
+import { useEffect, useState } from "react";
 
-const CourseUlike = () => {
-  const cardData = [
-    {
-      imageUrl: "../../assets/image/CourseDetails/01.png",
-      title: "React js",
-      price: "۱۵۰۰۰ ریال",
-      features: ["دکتر محمدحسین بحرالعلومی"],
-    },
-    {
-      imageUrl: "../../assets/image/CourseDetails/01.png",
-      title: "next js",
-      price: "۱۵۰۰۰ ریال",
-      features: ["دکتر محمدحسین بحرالعلومی"],
-    },
-    {
-      imageUrl: "../../assets/image/CourseDetails/01.png",
-      title: "Html-css",
-      price: "۱۵۰۰۰ ریال",
-      features: ["دکتر محمدحسین بحرالعلومی"],
-    },
-  ];
+const CourseTop = () => {
+  const [courseTop, setCourseTop] = useState;
+  const getCourseList = async () => {
+    const params = { count: 5 };
+    const result = await axios.get(`${baseUrl}/Home/GetCoursesTop?Count=3`);
+    setCourseTop(result.data);
+  };
+  useEffect(() => {
+    getCourseList();
+  }, []);
+  ////
+  // const cardData = [
+  //   {
+  //     imageUrl: "../../assets/image/CourseDetails/01.png",
+  //     title: "React js",
+  //     price: "۱۵۰۰۰ ریال",
+  //     features: ["دکتر محمدحسین بحرالعلومی"],
+  //   },
+  //   {
+  //     imageUrl: "../../assets/image/CourseDetails/01.png",
+  //     title: "next js",
+  //     price: "۱۵۰۰۰ ریال",
+  //     features: ["دکتر محمدحسین بحرالعلومی"],
+  //   },
+  //   {
+  //     imageUrl: "../../assets/image/CourseDetails/01.png",
+  //     title: "Html-css",
+  //     price: "۱۵۰۰۰ ریال",
+  //     features: ["دکتر محمدحسین بحرالعلومی"],
+  //   },
+  // ];
   return (
     <>
       <div className="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
@@ -34,7 +47,7 @@ const CourseUlike = () => {
       </div>
       <div className="w-full py-[10rem] px-4 bg-white">
         <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8">
-          {cardData.map((card, index) => (
+          {courseTop.map((card, index) => (
             <div
               key={index}
               className={`w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300`}
@@ -73,4 +86,4 @@ const CourseUlike = () => {
   );
 };
 
-export default CourseUlike;
+export default CourseTop;

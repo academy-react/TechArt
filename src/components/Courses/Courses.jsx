@@ -4,6 +4,7 @@ import { BsFillGrid3X3GapFill, BsListUl } from "react-icons/bs";
 import { products } from "../../core/data/data";
 import { Filter } from "../CourseFilter/Filter";
 import { Pagination } from "../common/Pagination";
+import { getCourseList } from "../../core/services/api/course";
 
 const Courses = ({ product }) => {
   const [cardStyle, setCardStyle] = useState(0);
@@ -15,6 +16,7 @@ const Courses = ({ product }) => {
 
   const [sortCourse, setSortCourse] = useState("most-popular");
   const [searchQuery, setSearchQuery] = useState("");
+
   const sortItems = (c) => {
     let sortedItems = [...items];
     switch (c) {
@@ -37,6 +39,7 @@ const Courses = ({ product }) => {
     setItems(sortedItems);
     setSortCourse(c);
   };
+
   const handleSearch = (e) => {
     const query = e.target.value;
     setSearchQuery(query);
@@ -53,6 +56,7 @@ const Courses = ({ product }) => {
       setItems(filteredItems);
     }
   };
+
   // Function to handle sorting/filtering
   const handleSorting = (sortedItems) => {
     setFilteredItems(sortedItems);
@@ -66,6 +70,9 @@ const Courses = ({ product }) => {
     setItems(products.slice(startIndex, endIndex));
   };
 
+  useEffect(() => {
+    getCourseList();
+  }, []);
   return (
     <div className="main-div container mx-auto">
       <div className="hero"></div>
@@ -131,7 +138,7 @@ const Courses = ({ product }) => {
                 </div>
               </div>
             </div>
-            <Card product={items} cardStyle={cardStyle}/>
+            <Card product={items} cardStyle={cardStyle} />
           </div>
         </div>
       </div>

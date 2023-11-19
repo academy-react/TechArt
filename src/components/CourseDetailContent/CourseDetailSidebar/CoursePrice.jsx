@@ -1,6 +1,27 @@
 import { PaperClipIcon } from "@heroicons/react/20/solid";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+// import image from "../../assets/image/CourseDetails/01.png";
+import { baseUrl } from "./../../../config/index";
 
-export default function PricingCards() {
+const PricingCards = () => {
+  const [courseDetail, setCourseDetail] = useState({});
+
+  const getcourseDetail = async () => {
+    console.log("fetching...");
+    const result = await axios.get(
+      `${baseUrl}/Home/GetCourseDetails?CourseId=6c0a12ea-6a73-ee11-b6c7-ca6d3e095898`
+    );
+    console.log(result.data);
+    setCourseDetail(result.data);
+  };
+
+  useEffect(() => {
+    getcourseDetail();
+  }, []);
+
+  console.log(courseDetail);
+
   return (
     <div className="overflow-hidden bg-white shadow sm:rounded-lg">
       <div className="px-4 py-5 sm:px-6">
@@ -13,7 +34,7 @@ export default function PricingCards() {
           <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
             <dt className="text-sm font-medium text-gray-500">ظرفیت دوره</dt>
             <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-              15 نفر
+              {courseDetail?.capacity}
             </dd>
           </div>
           <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
@@ -25,7 +46,7 @@ export default function PricingCards() {
           <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
             <dt className="text-sm font-medium text-gray-500">قیمت دوره</dt>
             <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-              150000 تومان
+              {courseDetail?.cost}
             </dd>
           </div>
           <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
@@ -37,7 +58,7 @@ export default function PricingCards() {
           <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
             <dt className="text-sm font-medium text-gray-500">درباره ی دوره</dt>
             <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 text-justify sm:mt-0">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+              {courseDetail?.describe}
             </dd>
           </div>
           <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
@@ -92,4 +113,5 @@ export default function PricingCards() {
       </div>
     </div>
   );
-}
+};
+export default PricingCards;

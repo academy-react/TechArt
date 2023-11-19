@@ -1,21 +1,25 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 // import image from "../../assets/image/CourseDetails/01.png";
-import { baseUrl } from "../../../config";
-import { axios } from "axios";
-import { Fragment, useEffect, useState } from "react";
+import { baseUrl } from "./../../config/index";
 
-const CourseTop = () => {
-  const [courseTopList, setCourseTop] = useState;
-  const getCourseList = async () => {
-    const params = { count: 5 };
+const CourseUlike = () => {
+  const [coursetop, setCourseTop] = useState([]);
+
+  const getCourseTop = async () => {
+    console.log("fetching...");
     const result = await axios.get(`${baseUrl}/Home/GetCoursesTop?Count=3`);
+    console.log(result.data);
     setCourseTop(result.data);
   };
+
   useEffect(() => {
-    getCourseList();
+    getCourseTop();
   }, []);
-  ////
-  // const cardData = [
+
+  console.log(coursetop);
+
+  // const coursetop = [
   //   {
   //     imageUrl: "../../assets/image/CourseDetails/01.png",
   //     title: "React js",
@@ -47,31 +51,22 @@ const CourseTop = () => {
       </div>
       <div className="w-full py-[10rem] px-4 bg-white">
         <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8">
-          {courseTopList.map((result, index) => (
+          {coursetop.map((card, index) => (
             <div
               key={index}
               className={`w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300`}
             >
               <img
                 className="rounded-2xl		 mx-auto mt-[-3rem] bg-white"
-                src={image}
+                src={card.tumbImageAddress}
                 alt="/"
               />
               <h2 className="text-2xl font-bold text-center py-8">
                 {card.title}
               </h2>
-              <p className="text-center text-xl font-bold">{card.price}</p>
+              <p className="text-center text-xl font-bold">{card.statusName}</p>
               <div className="text-center font-medium">
-                {card.features.map((feature, index) => (
-                  <p
-                    key={index}
-                    className={`py-2 border-b mx-8 ${
-                      index === 0 ? "mt-8" : ""
-                    }`}
-                  >
-                    {feature}
-                  </p>
-                ))}
+                <p className="py-2 border-b mx-8"> {card.teacherName}</p>
               </div>
               <button
                 className={`bg-teal-500 hover:text-white	 hover:bg-blue-500 duration-150  rounded-md font-medium my-6 mx-auto px-6 py-3`}
@@ -86,4 +81,4 @@ const CourseTop = () => {
   );
 };
 
-export default CourseTop;
+export default CourseUlike;

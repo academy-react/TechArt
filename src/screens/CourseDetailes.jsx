@@ -6,7 +6,7 @@ import { CourseTeacher } from "../components/CourseDetailContent/CourseDetailSid
 
 import PricingCards from "../components/CourseDetailContent/CourseDetailSidebar/CoursePrice";
 import { CourseLayout } from "../components/CourseLayout";
-import CourseTop from "../components/CourseDetailContent/CourseTop";
+import CourseUlike from "../components/CourseDetailContent/CourseUlike";
 
 function CourseDetailes() {
   return (
@@ -20,7 +20,7 @@ function CourseDetailes() {
  */}
       <NavbarHeader />
       <CourseDetailContent />
-      <CourseTop />
+      <CourseUlike />
       <Footer />
     </CourseLayout>
   );

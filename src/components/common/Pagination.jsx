@@ -24,7 +24,7 @@ const Pagination = ({ handlePageClick, pageCount, currentPage }) => {
     <>
       <div className="flex flex-col sm:flex-row items-center sm:justify-between bg-white py-3 sm:px-8 ">
         <nav
-          class="isolate inline-flex -space-x-px rounded-md shadow-sm"
+          className="isolate inline-flex -space-x-px rounded-md shadow-sm"
           aria-label="Pagination"
         >
           <ReactPaginate
@@ -47,11 +47,11 @@ const Pagination = ({ handlePageClick, pageCount, currentPage }) => {
           />
         </nav>
         <div>
-          <p className="text-sm text-gray-700 pt-4 sm:py-0">
+          {/* <p className="text-sm text-gray-700 pt-4 sm:py-0">
             {"درحال نمایش"} <span className="font-medium">1</span> {"تا"}{" "}
             <span className="font-medium">10</span> {"از"}{" "}
             <span className="font-medium">97</span> {"نتیجه"}
-          </p>
+          </p> */}
         </div>
       </div>
     </>

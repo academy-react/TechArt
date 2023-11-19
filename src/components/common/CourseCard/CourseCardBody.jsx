@@ -16,7 +16,7 @@ const CardBody = ({ name, teacher, href, rate, price, desc }) => {
         <div className=" w-full  h-1/3 flex flex-row justify-right px-2 mt-2 ">
           <StarRating className="w-full" rate={rate} />
         </div>
-        <div className=" w-2/3   rounded-xl text-red-700 text-l font-bold  mb-3 p-1 mt-2">
+        <div className="    rounded-xl text-red-700 font-bold  mb-3 p-1 mt-2">
           {price} تومان
         </div>
         <div>

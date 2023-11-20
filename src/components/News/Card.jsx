@@ -52,13 +52,13 @@
 
                 {newCard && newCard.map((category) => (
 
-                    <div key={category.name} href={category.href} className="group block">
+                    <div key={category} href={category} className="group block">
                     <div 
                     aria-hidden="true"
                     className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6"
                     >
                     <img
-                        src={category.iconAddress}
+                        src={category}
                         alt= {category.image}
                         className="h-full w-full object-cover object-center"
                     />

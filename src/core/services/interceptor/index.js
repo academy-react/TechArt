@@ -19,4 +19,11 @@ const onError=((err)=>{
 
 instance.interceptors.response.use(onSuccess,onError)
 
+
+instance.interceptors.request.use((opt)=>{
+    
+    return opt
+})
+
+
 export default instance;

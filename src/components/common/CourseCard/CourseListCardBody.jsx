@@ -5,7 +5,7 @@ import { CourseCardCapacity } from "./CourseCardCapacity";
 const CourseListCardBody = ({
   name,
   desc,
-  duration,
+  situation,
   href,
   teacher,
   price,
@@ -17,7 +17,7 @@ const CourseListCardBody = ({
         <div className="  text-xl flex    justify-start  text-black  mr-2 font-bold ">
           {name}
         </div>
-        <div className="border mt-3 text-xl  flex overflow-x-hidden w-5/6   justify-start  text-black  mr-2 ">
+        <div className=" mt-3 text-l  flex overflow-x-hidden w-5/6   justify-start text-right  text-black  mr-2 ">
           {desc}
         </div>
         <div className="w-10 absolute left-0 top-0  "> <CourseCardCapacity/></div>
@@ -25,19 +25,19 @@ const CourseListCardBody = ({
 
 
       <div className=" w-full h-1/5 flex flex-row mt-10   font-bold  ">
-        <div className=" w-1/4 m-auto">
+        <div className=" w-1/3 m-auto">
           <h1 className="mt-2  w-full  h-1/3 text-sm text-gray-800 font-sans text-right  pr-2 ">
             مدرس: {teacher}
           </h1>
         </div>
 
-        <div className=" w-1/4 m-auto">
+        <div className=" w-1/3 m-auto">
           <h1 className="mt-2  w-full  text-sm text-gray-800 font-sans text-right  pr-2 ">
-            مدت زمان دوره: {duration}min
+            وضعیت دوره : {situation}
           </h1>
         </div>
 
-        <div className=" w-1/4 h-full   flex flex-row justify-center px-2 align-middle m-auto ">
+        <div className=" w-1/5 h-full   flex flex-row justify-center px-2 align-middle m-auto ">
             <StarRating  rate={rate} />
           
         </div>

@@ -1,12 +1,13 @@
 import React from "react";
 
-const CardHeader = ({ imageSrc, imageAlt, name }) => {
+
+const CardHeader = ({ imgSrc, imageAlt }) => {
   return (
     <div className="relative   ">
       <div className="  h-32 rounded-xl overflow-hidden">
         <img
-          src={imageSrc}
-          alt={imageAlt}
+          src={imgSrc}
+          alt="تصویر موجود نیست"
           className=" w-full h-full object-fill "
         />
       </div>

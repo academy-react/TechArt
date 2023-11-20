@@ -4,41 +4,46 @@ import { BsFillGrid3X3GapFill, BsListUl } from "react-icons/bs";
 
 import { Filter } from "../CourseFilter/Filter";
 import { Pagination } from "../common/Pagination";
-import { getCourseList } from "../../core/services/api/course";
+import { getCourseList,getCourseLength } from "../../core/services/api/course";
 import axios from "axios";
 
 const Courses = () => {
+  const [courseList, setCourseList] = useState([]);
   const [cardStyle, setCardStyle] = useState(0);
   const [currentPage, setCurrentPage] = useState(0); // Current page index
-  const itemsPerPage = 8; // Number of items per page
+  const itemsPerPage =10; // Number of items per page
   const [items, setItems] = useState(); // Example array of items for the first page
-  const [filteredItems, setFilteredItems] = useState([]); // State to hold filtered items
-  // const [items, setItems] = useState(product);
+  const [filteredItems, setFilteredItems] = useState(); // State to hold filtered items
+  const [listLenght, setListLenght] = useState(); 
+  
 
   const [sortCourse, setSortCourse] = useState("most-popular");
   const [searchQuery, setSearchQuery] = useState("");
 
   const sortItems = (c) => {
-    let sortedItems = [...items];
+    let sortedItems = [...courseList];
     switch (c) {
       case "cheapest":
-        sortedItems.sort((a, b) => a.price - b.price);
+        sortedItems.sort((a, b) => a.cost - b.cost);
         break;
       case "most-expensive":
-        sortedItems.sort((a, b) => b.price - a.price);
+        sortedItems.sort((a, b) => b.cost - a.cost);
         break;
       case "most-recent":
-        sortedItems.sort((a, b) => new Date(b.date) - new Date(a.date));
+        sortedItems.sort(
+          (a, b) => new Date(b.lastUpdate) - new Date(a.lastUpdate)
+        );
         break;
       case "most-popular":
-        sortedItems.sort((a, b) => b.rate - a.rate);
+        sortedItems.sort((a, b) => b.courseRate - a.courseRate);
 
         break;
       default:
         break;
     }
-    setItems(sortedItems);
+
     setSortCourse(c);
+    setCourseList(sortedItems);
   };
 
   const handleSearch = (e) => {
@@ -46,40 +51,49 @@ const Courses = () => {
     setSearchQuery(query);
 
     if (query.trim() === "") {
-      setItems(items); // Return all items if the search query is empty
+      getList(); // Return all items if the search query is empty
     } else {
       const filteredItems = searchQuery
-        ? items.filter((item) =>
-            item.name.toLowerCase().includes(searchQuery.toLowerCase())
+        ? courseList.filter((courseList) =>
+            courseList.title.toLowerCase().includes(searchQuery.toLowerCase())
           )
-        : items;
+        : courseList;
 
-      setItems(filteredItems);
+      setCourseList(filteredItems);
     }
   };
 
-  // Function to handle sorting/filtering
+  // // Function to handle sorting/filtering
   // const handleSorting = (sortedItems) => {
   //   setFilteredItems(sortedItems);
   //   // You can perform additional actions with the filtered items if needed
   // };
   // Function to handle page changes
   const handlePageClick = ({ selected }) => {
-    setCurrentPage(selected);
+ 
+       setCurrentPage(selected);
     const startIndex = selected * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    setItems(items.slice(startIndex, endIndex));
+    setItems(courseList.slice(startIndex, endIndex));
+   
+   
   };
 
   const getList = async () => {
-   
-     const courses = await getCourseList();
-    setItems(courses)
-    
+    const courses = await getCourseList(currentPage+1, itemsPerPage);
+    setCourseList(courses);
   };
+
+  const getListLenght = async () => {
+    const listLenght = await getCourseLength();
+    setListLenght(listLenght);
+  };
+
   useEffect(() => {
     getList();
-  }, []);
+    getListLenght();
+    console.log(courseList);
+  }, [currentPage]);
 
   return (
     <div className="main-div container mx-auto">
@@ -109,7 +123,7 @@ const Courses = () => {
 
       <div className="flex  flex-row  ">
         <div className=" border-2 course-filter w-1/6 h-3/5 mt-10 p-1">
-          <Filter />
+          <Filter courseList={courseList} />
         </div>
         <div
           className="course w-5/6 
@@ -146,16 +160,18 @@ const Courses = () => {
                 </div>
               </div>
             </div>
-            {/* <Card product={items} cardStyle={cardStyle}/> */}
+            <Card product={courseList} cardStyle={cardStyle} />
           </div>
         </div>
       </div>
       <div className="flex justify-center ">
-        {/* <Pagination
+        
+        <Pagination
           handlePageClick={handlePageClick}
-          pageCount={Math.ceil(items.length / itemsPerPage)}
+          pageCount={Math.ceil(listLenght / itemsPerPage)}
           currentPage={currentPage}
-        /> */}
+          
+        />
       </div>
     </div>
   );

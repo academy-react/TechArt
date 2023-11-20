@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "../common/CourseCard/CourseCard";
 import { BsFillGrid3X3GapFill, BsListUl } from "react-icons/bs";
-import { products } from "../../core/data/data";
+
 import { Filter } from "../CourseFilter/Filter";
 import { Pagination } from "../common/Pagination";
 import { getCourseList } from "../../core/services/api/course";
+import axios from "axios";
 
-const Courses = ({ product }) => {
+const Courses = () => {
   const [cardStyle, setCardStyle] = useState(0);
   const [currentPage, setCurrentPage] = useState(0); // Current page index
   const itemsPerPage = 8; // Number of items per page
-  const [items, setItems] = useState(products.slice(0, itemsPerPage)); // Example array of items for the first page
+  const [items, setItems] = useState(); // Example array of items for the first page
   const [filteredItems, setFilteredItems] = useState([]); // State to hold filtered items
   // const [items, setItems] = useState(product);
 
@@ -45,7 +46,7 @@ const Courses = ({ product }) => {
     setSearchQuery(query);
 
     if (query.trim() === "") {
-      setItems(product); // Return all items if the search query is empty
+      setItems(items); // Return all items if the search query is empty
     } else {
       const filteredItems = searchQuery
         ? items.filter((item) =>
@@ -58,21 +59,28 @@ const Courses = ({ product }) => {
   };
 
   // Function to handle sorting/filtering
-  const handleSorting = (sortedItems) => {
-    setFilteredItems(sortedItems);
-    // You can perform additional actions with the filtered items if needed
-  };
+  // const handleSorting = (sortedItems) => {
+  //   setFilteredItems(sortedItems);
+  //   // You can perform additional actions with the filtered items if needed
+  // };
   // Function to handle page changes
   const handlePageClick = ({ selected }) => {
     setCurrentPage(selected);
     const startIndex = selected * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    setItems(products.slice(startIndex, endIndex));
+    setItems(items.slice(startIndex, endIndex));
   };
 
+  const getList = async () => {
+   
+     const courses = await getCourseList();
+    setItems(courses)
+    
+  };
   useEffect(() => {
-    getCourseList();
+    getList();
   }, []);
+
   return (
     <div className="main-div container mx-auto">
       <div className="hero"></div>
@@ -138,16 +146,16 @@ const Courses = ({ product }) => {
                 </div>
               </div>
             </div>
-            <Card product={items} cardStyle={cardStyle} />
+            {/* <Card product={items} cardStyle={cardStyle}/> */}
           </div>
         </div>
       </div>
       <div className="flex justify-center ">
-        <Pagination
+        {/* <Pagination
           handlePageClick={handlePageClick}
-          pageCount={Math.ceil(products.length / itemsPerPage)}
+          pageCount={Math.ceil(items.length / itemsPerPage)}
           currentPage={currentPage}
-        />
+        /> */}
       </div>
     </div>
   );

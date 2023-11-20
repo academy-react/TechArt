@@ -1,48 +1,69 @@
-import { useState } from "react";
-import { CustomInput } from "../customElements/CustomInput";
+import React, { Children, useState } from "react";
 
-export default function TabsComponent() {
-  const [openTab, setOpenTab] = useState(1);
+const Tabs = () => {
+  const [currentTab, setCurrentTab] = useState("1");
+  const tabs = [
+    {
+      id: 1,
+      tabTitle: "درباره ی دوره ",
+      title: "Title 1",
+      content:
+        "Las tabs se generan automáticamente a partir de un array de objetos, el cual tiene las propiedades: id, tabTitle, title y content.",
+    },
+    {
+      id: 2,
+      tabTitle: "سوالات متداول",
+      title: "Title 2",
+      content: "Contenido de tab 2.",
+    },
+    {
+      id: 3,
+      tabTitle: "ثبت نظر",
+      title: "Title 3",
+      content: "Contenido de tab 3.",
+    },
+    {
+      id: 4,
+      tabTitle: "همه نظرات",
+      title: "Title 4",
+      content: "Contenido de tab 4.",
+    },
+  ];
+
+  const handleTabClick = (e) => {
+    setCurrentTab(e.target.id);
+  };
 
   return (
-    <div>
-      <div className="container mx-auto mt-12">
-        <div className="flex flex-col items-center justify-center max-w-xl">
-          <ul className="flex space-x-2">
-            <li>
-              <a
-                href="#"
-                onClick={() => setOpenTab(1)}
-                className={` ${
-                  openTab === 1 ? "bg-purple-600 text-blue" : ""
-                } inline-block px-4 py-2 text-gray-600 bg-white rounded shadow`}
-              >
-                نظرات
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                onClick={() => setOpenTab(2)}
-                className={` ${
-                  openTab === 2 ? "bg-purple-600 text-blue" : ""
-                } inline-block px-4 py-2 text-gray-600 bg-white rounded shadow`}
-              >
-                درج نظرات
-              </a>
-            </li>
-          </ul>
-          <div className="p-3 mt-6 bg-red border">
-            <div className={openTab === 1 ? "block" : "hidden"}>
-              {" "}
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
-            </div>
-            <div className={openTab === 2 ? "block" : "hidden"}>
-              React JS with Tailwind CSS Tab 2 Content show
-            </div>
+    <div className="container">
+      <div className="tabs flex justify-between">
+        {tabs.map((tab, i) => (
+          <button
+            className="width-full p-12"
+            key={i}
+            id={tab.id}
+            disabled={currentTab === `${tab.id}`}
+            onClick={handleTabClick}
+          >
+            {tab.tabTitle}
+          </button>
+        ))}
+      </div>
+      <div className="content">
+        {tabs.map((tab, i) => (
+          <div key={i}>
+            {currentTab === `${tab.id}` && (
+              <div>
+                <p className="title mb-12">{tab.title}</p>
+
+                <div className="TabContent">{tab.content}</div>
+              </div>
+            )}
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
-}
+};
+
+export default Tabs;

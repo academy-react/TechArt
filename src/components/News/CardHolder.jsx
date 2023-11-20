@@ -16,7 +16,7 @@ const CardHolder = () => {
             `${baseUrl}/News?PageNumber=1&RowsOfPage=10&SortingCol=InsertDate&SortType=DESC&Query=`
         );
     console.log(result.data);
-    setNewCard(result.data);
+    setNewCard(result.data.news);
     };
     useEffect(() =>{
         getCardNews();

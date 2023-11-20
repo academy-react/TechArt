@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { baseUrl } from "../../config/url,jsx";
 // const products = [
 //   {
 //     id: 1,
@@ -64,26 +65,26 @@ const ProfessorCard = () => {
 
         <div className="mt-8 grid grid-cols-1 mx-4 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8 ">
           {professorCard.map((product) => (
-            <div key={product.id}>
+            <div key={product.teacherId}>
               <div className="relative ">
                 <div className="relative h-52 w-full overflow-hidden rounded-lg border shadow-[-5px_-8px_15px_5px_rgba(0,0,0,0.1),_5px_8px_15px_5px_rgba(45,78,255,0.15)]   ">
                   <img
-                    src={product.imageSrc}
-                    alt={product.imageAlt}
+                    src={product.pictureAddress}
+                    alt={product.linkdinProfileLink}
                     className=" absolute w-[25%] left-5  m-2  rounded-full object-contain object-center "
                   />
                   <div className=" mt-4">
                     <h3 className="text-l  font-bold text-gray-800 drop-shadow-l   text-right p-2 ">
-                      {product.name}
+                      {product.fullName}
                     </h3>
                     <a
                       href="#"
                       className="relative flex items-center m-2  w-20  h-8 justify-center rounded-xl border border-transparent border-stone-500py-3  p-2 text-sm font-medium bg-amber-600 text-white"
                     >
-                      {product.ability}
+                      {product.newsCount}
                     </a>
                     <p className="mt-1 text-sm text-gray-500 justify-center text-right p-4">
-                      {product.desc}
+                      {product.courseCounts}
                     </p>
                   </div>
                 </div>

@@ -58,8 +58,8 @@
                     className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6"
                     >
                     <img
-                        src={category}
-                        alt= {category.image}
+                        src={category.currentImageAddressTumb}
+                        alt= {category}
                         className="h-full w-full object-cover object-center"
                     />
                     </div>

@@ -50,6 +50,7 @@ const CustomInput = ({ children, label, ...props }) => {
               setIsFocus(true);
             }}
             onBlur={handleLabelDeFocus}
+        
           />
 
           {meta.touched && meta.error && <CustomErrorMassage name={name} />}

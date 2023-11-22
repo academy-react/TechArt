@@ -11,6 +11,7 @@ const CustomButton = ({ message, width }) => {
             " " +
             (width ? width : "w-full")
           }
+         
         >
           {message}
         </button>

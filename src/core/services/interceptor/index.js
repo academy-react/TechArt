@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getItem } from "../common/storage.services";
+// import { getItem } from "../common/storage.services";
 
 
 const baseURL = import.meta.env.VITE_BASE_URL;
@@ -26,8 +26,8 @@ instance.interceptors.response.use(onSuccess, onError);
 
 
 instance.interceptors.request.use((opt) => {
- const token =getItem("token");
- opt.headers.Authorization="Bearer "+token;
+//  const token =getItem("token");
+//  opt.headers.Authorization="Bearer "+token;
   return opt;
 });
 

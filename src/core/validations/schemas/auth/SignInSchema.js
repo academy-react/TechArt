@@ -7,7 +7,7 @@ const signInSchema = yup.object().shape({
     .required("حاجی ایمیل وارد نکردی"),
   password: yup
     .string()
-    .min(8, "رمزت حد اقل ۸ کاراکتر هست")
+    .min(6, "رمزت حد اقل 6 کاراکتر هست")
     .required("بدون رمز آخه؟!"),
   rememberMe: yup.boolean().oneOf([true, false]),
 });

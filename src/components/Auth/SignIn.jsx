@@ -15,17 +15,46 @@ import {
 import { AuthHeading } from "./AuthHeading";
 
 import { IoMail, IoLockClosed } from "react-icons/io5";
+import { loginAPI } from "../../core/services/api/auth";
+import { useEffect } from "react";
+import { useState } from "react";
+import { setItem } from "../../core/services/common/storage.services";
 
 function SignIn() {
-  const onSubmit = () => {
-    console.log("submitted");
+  const [userObj, setUserObj] = useState();
+  const [signInData, setsignInData] = useState([]);
+
+  const onSubmit = (formData) => {
+    const { email, password, rememberMe } = formData;
+
+    const shouldRemember = !!rememberMe; // Convert to boolean
+    setUserObj({
+      phoneOrGmail: email,
+      password: password,
+      rememberMe: shouldRemember,
+    });
+
+    if (shouldRemember) {
+      // Store the password in local storage if Remember Me is checked
+      setItem("rememberedPassword", password);
+    }
+    SignInUser();
   };
+
+  const SignInUser = async () => {
+    const user = await loginAPI(userObj);
+    setItem("token", user.token);
+    console.log(user);
+    setsignInData(user);
+  };
+
+  useEffect(() => {}, []);
 
   return (
     <>
       <SVGSection SVGSrc={SignInSVG} alt={"Sign In SVG"}></SVGSection>
       <FormSection>
-        <AuthHeading message={"به اکانت کاربری خود وارد شوید "} />
+        <AuthHeading message={signInData.message} />
         <CustomForm
           initialValues={{ email: "", password: "" }}
           validationSchema={signInSchema}

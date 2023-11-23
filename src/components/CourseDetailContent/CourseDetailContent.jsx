@@ -30,7 +30,6 @@ import {
 
 import { CourseTeacher } from "./CourseDetailSidebar/CourseTeachr";
 import PricingCards from "./CourseDetailSidebar/CoursePrice";
-import TabsComponent from "../common/Tab/Tab";
 import Tabs from "../common/Tab/Tab";
 
 const navigation = [

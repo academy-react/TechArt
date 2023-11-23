@@ -1,4 +1,7 @@
-import React, { Children, useState } from "react";
+import React, { useState } from "react";
+import Accordion from "../Accordion";
+import ContactForm from "../ContactForm";
+import NewsTestimonial from "../NewsTestimonials";
 
 const Tabs = () => {
   const [currentTab, setCurrentTab] = useState("1");
@@ -6,27 +9,22 @@ const Tabs = () => {
     {
       id: 1,
       tabTitle: "درباره ی دوره ",
-      title: "Title 1",
-      content:
-        "Las tabs se generan automáticamente a partir de un array de objetos, el cual tiene las propiedades: id, tabTitle, title y content.",
+      content: "xxxx",
     },
     {
       id: 2,
       tabTitle: "سوالات متداول",
-      title: "Title 2",
-      content: "Contenido de tab 2.",
+      content: <Accordion />,
     },
     {
       id: 3,
       tabTitle: "ثبت نظر",
-      title: "Title 3",
-      content: "Contenido de tab 3.",
+      content: <ContactForm />,
     },
     {
       id: 4,
       tabTitle: "همه نظرات",
-      title: "Title 4",
-      content: "Contenido de tab 4.",
+      content: <NewsTestimonial />,
     },
   ];
 
@@ -39,7 +37,7 @@ const Tabs = () => {
       <div className="tabs flex justify-between">
         {tabs.map((tab, i) => (
           <button
-            className="width-full p-12"
+            className="width-full p-12 "
             key={i}
             id={tab.id}
             disabled={currentTab === `${tab.id}`}
@@ -54,8 +52,6 @@ const Tabs = () => {
           <div key={i}>
             {currentTab === `${tab.id}` && (
               <div>
-                <p className="title mb-12">{tab.title}</p>
-
                 <div className="TabContent">{tab.content}</div>
               </div>
             )}

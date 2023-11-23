@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Accordion from "../Accordion";
 import ContactForm from "../ContactForm";
-import NewsTestimonial from "../NewsTestimonials";
+import CourseTestimonial from "../CourseTestimonials";
 
 const Tabs = () => {
   const [currentTab, setCurrentTab] = useState("1");
@@ -24,7 +24,7 @@ const Tabs = () => {
     {
       id: 4,
       tabTitle: "همه نظرات",
-      content: <NewsTestimonial />,
+      content: <CourseTestimonial />,
     },
   ];
 

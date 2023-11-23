@@ -1,41 +1,52 @@
-import React, { useEffect, useState } from "react";
-import { FaArrowUp } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
 
-function App() {
-  const [showButton, setShowButton] = useState(true);
-  const onScroll = () => {
-    let pixelsFromTop = window.scrollY;
-    let documentHeight = document.body.clientHeight;
-    let windowHeight = window.innerHeight;
-    let difference = documentHeight - windowHeight;
-    let percentage = (100 * pixelsFromTop) / difference;
-    document.getElementById("bar").style.width = `${percentage}%`;
-
-    // Scroll to top button logic
-    window.scrollY > 500 ? setShowButton(true) : setShowButton(false);
-  };
+const ScrollTopButton = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  });
+    // Show/hide the button based on the user's scroll position
+    const handleScroll = () => {
+      const scrolled = document.documentElement.scrollTop;
+      setIsVisible(scrolled > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const scrollToTop = () => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
-    <div className="page">
-      <Navbar />
-      <div className="progress_wrapper">
-        <div className="progress_bar" id="bar"></div>
-      </div>
-      <FaArrowUp
-        className={showButton ? "showButton" : "hidden"}
-        onClick={scrollToTop}
-      />
-    </div>
+    <button
+      onClick={scrollToTop}
+      className={`fixed bottom-4 right-4 bg-blue-500 text-white py-2 px-4 rounded-full ${
+        isVisible ? "opacity-100" : "opacity-0"
+      } transition-opacity duration-300`}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        className="h-6 w-6"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        />
+      </svg>
+    </button>
   );
-}
+};
 
-export { App };
+export default ScrollTopButton;

@@ -5,6 +5,7 @@ import image from "../../../assets/image/logo/avatar-1.png";
 import { CustomSearchBox } from "../customElements/CustomSearchBox";
 import { CustomButton } from "../customElements/CustomButton";
 import { useNavigate } from "react-router-dom";
+import ProfileDropdown from "../customElements/ProfileDropDownMenu";
 const navigation = [
   { name: "صفحه اصلی", href: "/", current: true },
   { name: "دوره ها", href: "#", current: false },
@@ -76,7 +77,7 @@ function NavbarHeader() {
                   />
                 </div>
                 {/*View notifications button*/}
-
+                <ProfileDropdown />
                 {/* Profile dropdown */}
               </div>
             </div>

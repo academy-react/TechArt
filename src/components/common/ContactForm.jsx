@@ -31,7 +31,7 @@ export default function ContactForm() {
               htmlFor="first-name"
               className="block text-sm font-medium text-gray-700"
             >
-              First name
+              نام
             </label>
             <div className="mt-1">
               <input
@@ -48,7 +48,7 @@ export default function ContactForm() {
               htmlFor="last-name"
               className="block text-sm font-medium text-gray-700"
             >
-              Last name
+              نام خانوادگی
             </label>
             <div className="mt-1">
               <input
@@ -131,7 +131,7 @@ export default function ContactForm() {
               htmlFor="message"
               className="block text-sm font-medium text-gray-700"
             >
-              Message
+              پیام شما
             </label>
             <div className="mt-1">
               <textarea

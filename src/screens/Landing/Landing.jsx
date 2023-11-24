@@ -5,6 +5,7 @@ import { CourseSection } from "../../components/Landing/CourseSlider/CourseSecti
 import { CardHolder } from "../../components/Card/CardHolder";
 import { ProfessorCard } from "../../components/ProfessorCard/ProfessorCard";
 import ScrollTopButton from "../../components/common/customElements/ScrollTopButton";
+import { ContactSection } from "../../components/Landing/ContactSection";
 
 function Landing() {
   return (
@@ -14,6 +15,7 @@ function Landing() {
       <CourseSection />
       <ProfessorCard />
       <CardHolder />
+      <ContactSection />
       <Footer />
       <ScrollTopButton />
     </div>

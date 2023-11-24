@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ProfileDropdown = () => {
   const [user, setUser] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -35,7 +37,7 @@ const ProfileDropdown = () => {
             navigate("/auth/register");
           }}
         >
-          Login
+          ثبت نام
         </button>
       )}
 

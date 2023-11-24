@@ -19,10 +19,10 @@ const Blog = () => {
   return (
     <div>
     <NavbarHeader />
-    <div className="border-black mr-72 ">
+    <div className="border-black mr-auto md:mr-12 lg:mr-52 xl:mr-72 ">
       <img src={imageBig} alt="img" />
     </div>
-    <div className='w-5/6 mx-auto'><Search/></div>
+   
 
     <CardHolder />
  

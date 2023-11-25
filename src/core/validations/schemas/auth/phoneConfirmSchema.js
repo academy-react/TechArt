@@ -4,7 +4,7 @@ import { phoneConfirmCodeRules } from "../../../utils/auth";
 const phoneConfirmSchema = yup.object().shape({
   confirmCode: yup
     .string()
-    .matches(phoneConfirmCodeRules, "کد ارسال شده ترکیبی از ۶ عدد است")
+    .matches(phoneConfirmCodeRules, "کد ارسال شده ترکیبی از 5 عدد است")
     .required("حاجی کد رو وارد نکردی"),
 });
 

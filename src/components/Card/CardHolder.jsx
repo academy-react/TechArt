@@ -16,7 +16,7 @@ const CardHolder = () => {
     const getCard = async () => {
         console.log('fetching......');
         const result = await axios.get(
-            `${baseUrl}/News?PageNumber=1&RowsOfPage=10&SortingCol=InsertDate&SortType=DESC&Query=`
+            `${baseUrl}/News?PageNumber=1&RowsOfPage=10&Query=`
         );
     console.log(result.data);
      setCardList(result.data.news);

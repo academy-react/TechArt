@@ -19,7 +19,7 @@ import image from "../../assets/image/Annotation .png";
                 </div>
                 <div className="min-w-0 grid grid-cols-1 md:grid-cols-1 items-center">
                 <a href="#" className="focus:outline-none text-right ">
-                    {/* <span className="absolute inset-0" aria-hidden="true" /> */}
+                    <span className="absolute inset-0" aria-hidden="true" />
                     <p className=" text-gray-900 text-xs sm:text-sm ">{person.title}</p>
                     <p className="text-xs sm:text-sm">{person.keyword}</p>
                     {/* <p>{person.insertDate}</p>

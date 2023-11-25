@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Accordion from "../Accordion";
 import ContactForm from "../ContactForm";
 import CourseTestimonial from "../CourseTestimonials";
+import TextComponent from "./AboutCourse";
 
 const Tabs = () => {
   const [currentTab, setCurrentTab] = useState("1");
@@ -9,7 +10,7 @@ const Tabs = () => {
     {
       id: 1,
       tabTitle: "درباره ی دوره ",
-      content: "xxxx",
+      content: <TextComponent />,
     },
     {
       id: 2,

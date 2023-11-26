@@ -3,6 +3,7 @@ import { BlogDetailsRouter } from "./BlogDetailsRouter";
 import { authRouter } from "./authRouter";
 import { CourseDetailsRouter } from "./CourseDetailsRouter";
 import { Landing } from "../screens/Landing/Landing";
+import { EditProfile } from "../components/StudentPanel/EditProfile";
 const router = createBrowserRouter([
   ...authRouter,
   ...CourseDetailsRouter,
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Landing />,
+  },
+  {
+    path: "/edit",
+    element: <EditProfile />,
   },
 ]);
 

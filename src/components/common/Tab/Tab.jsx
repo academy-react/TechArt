@@ -34,26 +34,31 @@ const Tabs = () => {
   };
 
   return (
-    <div className="container">
-      <div className="tabs flex justify-between">
+    <div className="container mx-auto p-8">
+      <div className="tabs flex border-b-2 border-gray-300">
         {tabs.map((tab, i) => (
           <button
-            className="width-full p-12 "
+            className={`py-2 px-4 text-lg font-semibold ${
+              currentTab === `${tab.id}`
+                ? "bg-blue-500 text-white"
+                : "text-gray-700 hover:bg-gray-100"
+            }`}
             key={i}
             id={tab.id}
-            disabled={currentTab === `${tab.id}`}
             onClick={handleTabClick}
           >
             {tab.tabTitle}
           </button>
         ))}
       </div>
-      <div className="content">
+      <div className="content mt-4">
         {tabs.map((tab, i) => (
           <div key={i}>
             {currentTab === `${tab.id}` && (
               <div>
-                <div className="TabContent">{tab.content}</div>
+                <div className="TabContent p-4 border border-gray-300 rounded-md">
+                  {tab.content}
+                </div>
               </div>
             )}
           </div>

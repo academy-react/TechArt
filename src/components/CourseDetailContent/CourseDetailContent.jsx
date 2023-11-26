@@ -1,6 +1,7 @@
-import image from "../../assets/image/CourseDetails/01.png";
+import image from "../../assets/image/default/default-image.jpg";
+import React, { Fragment, useState, useEffect } from "react";
+import axios from "axios";
 
-import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   PlusIcon as PlusIconOutline,
@@ -11,10 +12,28 @@ import {
 import { CourseTeacher } from "./CourseDetailSidebar/CourseTeachr";
 import PricingCards from "./CourseDetailSidebar/CoursePrice";
 import Tabs from "../common/Tab/Tab";
+import { baseUrl } from "../../config";
+import LikeButton from "./Like";
+import BookmarkButton from "./Bookmark";
 
-export default function CourseDetailContent() {
+const CourseDetailContent = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [courseDetail, setCourseDetail] = useState({});
 
+  const getcourseDetail = async () => {
+    console.log("fetching...");
+    const result = await axios.get(
+      `${baseUrl}/Home/GetCourseDetails?CourseId=6c0a12ea-6a73-ee11-b6c7-ca6d3e095898`
+    );
+    console.log(result.data);
+    setCourseDetail(result.data);
+  };
+
+  useEffect(() => {
+    getcourseDetail();
+  }, []);
+
+  console.log(courseDetail);
   return (
     <>
       <div className="flex h-full">
@@ -85,7 +104,23 @@ export default function CourseDetailContent() {
               <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
                 <div className="flex-col ">
                   <div className="rounded-xl overflow-hidden">
-                    <img className="" src={image} alt="" />
+                    {courseDetail.imageAddress ? (
+                      <img
+                        className="w-full"
+                        src={courseDetail.imageAddress}
+                        alt=""
+                      />
+                    ) : (
+                      <img
+                        className="w-full h-80"
+                        src={image}
+                        alt="Placeholder Image"
+                      />
+                    )}
+                  </div>
+                  <div className="flex  px-2 py-3">
+                    <LikeButton />
+                    <BookmarkButton />
                   </div>
                   <Tabs />
                 </div>
@@ -115,4 +150,5 @@ export default function CourseDetailContent() {
       </div>
     </>
   );
-}
+};
+export default CourseDetailContent;

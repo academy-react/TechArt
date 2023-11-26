@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import { CoursePageRouter } from "./CoursePageRouter";
 
-const router = createBrowserRouter([...CoursePageRouter]);
+import { LandingPageRouter } from "./LandingPageRouter";
+
+const router = createBrowserRouter([...LandingPageRouter]);
 
 export { router };

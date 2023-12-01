@@ -15,17 +15,19 @@ import Tabs from "../common/Tab/Tab";
 import { baseUrl } from "../../config";
 import LikeButton from "./Like";
 import BookmarkButton from "./Bookmark";
+import { useParams } from "react-router-dom";
 
 const CourseDetailContent = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [courseDetail, setCourseDetail] = useState({});
+  const { courseId } = useParams();
 
   const getcourseDetail = async () => {
     console.log("fetching...");
     const result = await axios.get(
-      `${baseUrl}/Home/GetCourseDetails?CourseId=6c0a12ea-6a73-ee11-b6c7-ca6d3e095898`
+      `${baseUrl}/Home/GetCourseDetails?CourseId=${courseId}`
     );
-    console.log(result.data);
+    console.log("image", result.data);
     setCourseDetail(result.data);
   };
 
@@ -105,11 +107,14 @@ const CourseDetailContent = () => {
                 <div className="flex-col ">
                   <div className="rounded-xl overflow-hidden">
                     {courseDetail.imageAddress ? (
-                      <img
-                        className="w-full"
-                        src={courseDetail.imageAddress}
-                        alt=""
-                      />
+                      <>
+                        <div className=" border-2 border-black">
+                          <img
+                            src={courseDetail.imageAddress}
+                            alt="courseImage"
+                          />
+                        </div>
+                      </>
                     ) : (
                       <img
                         className="w-full h-80"

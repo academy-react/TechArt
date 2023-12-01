@@ -53,14 +53,16 @@ const Tabs = () => {
       </div>
       <div className="content mt-4">
         {tabs.map((tab, i) => (
-          <div key={i}>
-            {currentTab === `${tab.id}` && (
-              <div>
-                <div className="TabContent p-4 border border-gray-300 rounded-md">
-                  {tab.content}
-                </div>
-              </div>
-            )}
+          <div
+            key={i}
+            style={{ display: currentTab === `${tab.id}` ? "block" : "none" }}
+          >
+            <div
+              className="TabContent p-4 border border-gray-300 rounded-md overflow-y-auto"
+              style={{ maxHeight: "320px" }}
+            >
+              {tab.content}
+            </div>
           </div>
         ))}
       </div>

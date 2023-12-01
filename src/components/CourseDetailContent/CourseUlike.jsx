@@ -19,26 +19,6 @@ const CourseUlike = () => {
 
   console.log(coursetop);
 
-  // const coursetop = [
-  //   {
-  //     imageUrl: "../../assets/image/CourseDetails/01.png",
-  //     title: "React js",
-  //     price: "۱۵۰۰۰ ریال",
-  //     features: ["دکتر محمدحسین بحرالعلومی"],
-  //   },
-  //   {
-  //     imageUrl: "../../assets/image/CourseDetails/01.png",
-  //     title: "next js",
-  //     price: "۱۵۰۰۰ ریال",
-  //     features: ["دکتر محمدحسین بحرالعلومی"],
-  //   },
-  //   {
-  //     imageUrl: "../../assets/image/CourseDetails/01.png",
-  //     title: "Html-css",
-  //     price: "۱۵۰۰۰ ریال",
-  //     features: ["دکتر محمدحسین بحرالعلومی"],
-  //   },
-  // ];
   return (
     <>
       <div className="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
@@ -46,7 +26,7 @@ const CourseUlike = () => {
           دوره های برتر
         </h3>
         <p className="mt-1 text-sm text-gray-500">
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+          دوره هایی که بیشترین رضایت را داشته اند
         </p>
       </div>
       <div className="w-full py-[10rem] px-4 bg-white">

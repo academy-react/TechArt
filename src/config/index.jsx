@@ -1,1 +1,1 @@
-export const baseUrl = "https://acadapi.etacorealtime.ir/api"
+export const baseUrl = "https://acadapi.etacorealtime.ir/api";

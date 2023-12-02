@@ -4,23 +4,23 @@ import React, { useEffect, useState } from "react";
 // import image from "../../assets/image/CourseDetails/01.png";
 import { baseUrl } from "./../../../config/index";
 
-const PricingCards = () => {
-  const [courseDetail, setCourseDetail] = useState({});
+const PricingCards = ({ courseDetail }) => {
+  // const [courseDetail, setCourseDetail] = useState({});
 
-  const getcourseDetail = async () => {
-    console.log("fetching...");
-    const result = await axios.get(
-      `${baseUrl}/Home/GetCourseDetails?CourseId=6c0a12ea-6a73-ee11-b6c7-ca6d3e095898`
-    );
-    console.log(result.data);
-    setCourseDetail(result.data);
-  };
+  // const getcourseDetail = async () => {
+  //   console.log("fetching...");
+  //   const result = await axios.get(
+  //     `${baseUrl}/Home/GetCourseDetails?CourseId=6c0a12ea-6a73-ee11-b6c7-ca6d3e095898`
+  //   );
+  //   console.log(result.data);
+  //   setCourseDetail(result.data);
+  // };
 
-  useEffect(() => {
-    getcourseDetail();
-  }, []);
+  // useEffect(() => {
+  //   getcourseDetail();
+  // }, []);
 
-  console.log(courseDetail);
+  // console.log(courseDetail);
 
   return (
     <div className="overflow-hidden bg-white shadow sm:rounded-lg">

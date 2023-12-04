@@ -11,16 +11,9 @@ import CourseUlike from "../components/CourseDetailContent/CourseUlike";
 function CourseDetailes() {
   return (
     <CourseLayout>
-      {/* 
-      <CourseDetailContent />
-      <CourseTeacher />
-      <CoursInfo />
-      <PricingCards />
-
- */}
       <NavbarHeader />
       <CourseDetailContent />
-      <CourseUlike />
+      {/* <CourseUlike /> */}
       <Footer />
     </CourseLayout>
   );

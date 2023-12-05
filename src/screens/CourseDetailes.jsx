@@ -13,7 +13,7 @@ function CourseDetailes() {
     <CourseLayout>
       <NavbarHeader />
       <CourseDetailContent />
-      {/* <CourseUlike /> */}
+      <CourseUlike />
       <Footer />
     </CourseLayout>
   );

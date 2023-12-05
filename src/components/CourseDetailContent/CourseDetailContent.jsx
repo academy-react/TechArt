@@ -17,6 +17,7 @@ import LikeButton from "./Like";
 import BookmarkButton from "./Bookmark";
 import { useParams } from "react-router-dom";
 import PageFramework from "./CourseDetailLoading";
+import ReserveButton from "./CourseReserveButton";
 
 const CourseDetailContent = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,21 +27,22 @@ const CourseDetailContent = () => {
 
   const getcourseDetail = async () => {
     console.log("fetching...");
-    const result = await axios.get(
-      `${baseUrl}/Home/GetCourseDetails?CourseId=${courseId}`
-    );
-    console.log("image", result.data);
-    setCourseDetail(result.data);
-    setLoading(false);
+    try {
+      const result = await axios.get(
+        `${baseUrl}/Home/GetCourseDetails?CourseId=${courseId}`
+      );
+      console.log("image", result.data);
+      setCourseDetail(result.data);
+      setLoading(false);
+    } catch (err) {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      getcourseDetail();
-    }, 3000); // 3 seconds delay
+    getcourseDetail();
   }, []);
 
-  console.log(courseDetail);
   return (
     <>
       {loading ? (
@@ -149,12 +151,7 @@ const CourseDetailContent = () => {
                     <PricingCards />
                   </div>
                   <div className="flex">
-                    <button
-                      type="button"
-                      className="flex-1 rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                    >
-                      رزرو دوره
-                    </button>
+                    <ReserveButton />
                   </div>
                 </div>
               </aside>
@@ -162,7 +159,6 @@ const CourseDetailContent = () => {
           </div>
         </div>
       )}
-      ;
     </>
   );
 };

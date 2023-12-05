@@ -27,7 +27,7 @@ function SignIn() {
       <FormSection>
         <AuthHeading message={"به اکانت کاربری خود وارد شوید "} />
         <CustomForm
-          initialValues={{ email: "", password: "" }}
+          initialValues={{ email: "aaa", password: "" }}
           validationSchema={signInSchema}
           onSubmit={onSubmit}
         >

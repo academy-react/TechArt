@@ -25,7 +25,7 @@ const CustomInput = ({ children, label, ...props }) => {
           htmlFor={name}
           className={
             " absolute block text-sm font-medium text-gray-700 w-max px-2 bg-white transition-all duration-500 rounded-xl" +
-            (!isFocus
+            (!isFocus && field.value === ""
               ? " top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
               : " top-0 -translate-y-3/4 left-2/3 -translate-x-1/2")
           }

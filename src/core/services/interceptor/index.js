@@ -2,7 +2,9 @@ import axios from "axios";
 import { baseUrl } from "../../../config";
 import { getItem, removeItem } from "../common/storage.services";
 
-const instance = axios.create({ baseURL: baseUrl });
+const instance = axios.create({
+  baseURL: baseUrl,
+});
 
 const onSuccess = (response) => {
   return response.data;
@@ -27,6 +29,7 @@ instance.interceptors.response.use(onSuccess, onError);
 instance.interceptors.request.use((options) => {
   const token = getItem("token");
   if (token) options.headers.Authorization = "bearer " + token;
+  return options;
 });
 
 export default instance;

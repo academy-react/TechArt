@@ -5,15 +5,20 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
-const ReserveButton = ({ courseId, token }) => {
+// const ReserveButton = ({ courseId, token }) => {
+const ReserveButton = () => {
+  const courseId = "7b41aed7-2576-ee11-b6c7-ca6d3e095898"; //
+  const authToken =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3OTJkMjQ5My0yMjA3LTRkZGYtYTc4OS03MzE1YTBkMTFhZTIiLCJqdGkiOiJlY2QwNDI0MC1hZTBlLTQ0NTItYmI4Yi0xMzBiNGQ3NjcyNjMiLCJlbWFpbCI6Im1hc2cxMzc3QGdtYWlsLmNvbSIsIlVpZCI6IkM3Ui8vMTJMTEpORHMwVHJIcEZvWDg2RTJQbTdjUmJlam5wZlZmU0tnbkk9RXM3ODg5OGQ5NjllZWY2ZWNhZDNjMjlhM2E2MjkyODBlNjg2Y2YwYzNmNWQ1YTg2YWZmM2NhMTIwMjBjOTIzYWRjNmM5MiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6WyJTdHVkZW50IiwiQWRtaW5pc3RyYXRvciIsIlRlYWNoZXIiLCJSZWZlcmVlIiwiVG91cm5hbWVudE1lbnRvciJdLCJleHAiOjE3MDE5ODEwNTgsImlzcyI6IlNlcGVockFjYWRlbXkiLCJhdWQiOiJTZXBlaHJBY2FkZW15In0.xjJoVhQUVKMF4yVHVmToY3UuxfdU_hRD4o1cEgnApwg";
+
   const handleReserve = async () => {
     try {
       const response = await axios.post(
-        `${baseUrl}/CourseReserve/ReserveAdd/${courseId}`,
-        {},
+        `${baseUrl}/CourseReserve/ReserveAdd`,
+        { courseId: courseId },
         {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${authToken}`,
           },
         }
       );

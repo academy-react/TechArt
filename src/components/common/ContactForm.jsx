@@ -11,32 +11,54 @@ function classNames(...classes) {
 }
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    Title: "Titlleeeeee masg",
+  const initialFormData = {
+    Title: "",
     CourseId: "7b41aed7-2576-ee11-b6c7-ca6d3e095898",
-    Describe: "sadsasasadsadasdsadadsadaasd",
-  });
+    Describe: "",
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
+    }));
+  };
+
+  const onFormData = () => {
+    const data = new FormData();
+    Object.entries(formData).forEach(([key, value]) => {
+      data.append(key, value);
     });
+    return data;
   };
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
+    // Set your token manually here
+    const token =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3OTJkMjQ5My0yMjA3LTRkZGYtYTc4OS03MzE1YTBkMTFhZTIiLCJqdGkiOiJhZDcxYzE2NS1iODE0LTQyNWQtYThmOC1jMmQ4MzMxN2Y3MzMiLCJlbWFpbCI6Im1hc2cxMzc3QGdtYWlsLmNvbSIsIlVpZCI6IkgzNTVJYUQ3Smp4SmNzY2VnR0JoTHR6NzhxMUNPZVhxbEc1V1pQL09RYjg9RXM3ODg5OGQ5NjllZWY2ZWNhZDNjMjlhM2E2MjkyODBlNjg2Y2YwYzNmNWQ1YTg2YWZmM2NhMTIwMjBjOTIzYWRjNmM5MiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6WyJTdHVkZW50IiwiQWRtaW5pc3RyYXRvciIsIlRlYWNoZXIiLCJSZWZlcmVlIiwiVG91cm5hbWVudE1lbnRvciJdLCJleHAiOjE3MDIxNTQxMDYsImlzcyI6IlNlcGVockFjYWRlbXkiLCJhdWQiOiJTZXBlaHJBY2FkZW15In0.X1OXYOuxYijceLqsQGVyMkWOPabHMTGwRO2nVly5i9Q";
+
+    const data = onFormData();
+
     try {
-      await axios.post(`${baseUrl}/Course/AddCommentCourse`, formData);
+      await axios.post(`${baseUrl}/Course/AddCommentCourse`, data, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${token}`,
+        },
+      });
 
       // Show success message
       toast.success("Comment submitted successfully!", {
         position: "bottom-right",
       });
 
-      // You may add additional logic here after a successful API call
+      // Reset form data after successful submission
+      setFormData(initialFormData);
     } catch (error) {
       console.error("Error submitting comment:", error);
 

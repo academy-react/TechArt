@@ -19,9 +19,9 @@ const CardHolder = () => {
         !e.target.value && setRecords('')
     };
 
-    const change = (page) =>{
-        setNewCard(page);
-    }
+    // const change = (page) =>{
+    //     setNewCard(page);
+    // }
 
     const getCardNews = async () => {
         console.log('fetching......');

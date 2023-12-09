@@ -1,15 +1,14 @@
 
     import React, { Fragment } from 'react'
     import imgCard from "../../assets/image/new.png"
-
+    
+    import moment from 'moment-jalaali'
     
     const Card = ({newCard}) => {
 
-        // const handelImg = () =>{
-        //     if(category.currentImageAddressTumb === ''){
-        //         imgCard;
-        //     }
-        // };
+    // const receiveData = '2023-1127T12:00:00';
+    const gregorianData = '20231128';
+    const formattedDate = moment (gregorianData, 'YYYY-MM-DD').format('jYYYY/jMM/jDD');
 
         return (
         <Fragment>
@@ -28,14 +27,14 @@
                 <img
                     src={imgCard}
                     alt= "img"
-                    className="h-full w-full object-cover object-center"
+                    className="w-5/6 h-full object-cover object-center"
                 />
                 </div>
-                <h3 className="mt-4 text-base font-semibold text-gray-900">{category.title}</h3>
-                <p className="mt-2 text-sm text-gray-600">{category.miniDescribe}</p>
+                <h3 className="mt-4 text-base font-semibold text-gray-900 text-right">{category.title}</h3>
+                <p className="mt-2 text-sm text-gray-600 text-right">{category.miniDescribe}</p>
                 {/* <h3 className=" text-sm text-gray-500">{category.keyword}</h3> */}
-                <p className='text-xs text-gray-400'>{category.updateDate}</p>
-                <p className='text-xs text-gray-400'>{category.insertDate}</p>
+                {/* <p className='text-xs text-gray-400 text-right'>{gregorianData}</p> */}
+                <p className='text-xs text-gray-400 text-right' >{formattedDate}</p>
                 </div>
                 ))}
             </div>

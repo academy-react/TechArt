@@ -4,7 +4,7 @@ export default function BlogDetailContent() {
   return (
     <div className="flex-col ">
       <div className="rounded-xl overflow-hidden">
-        <img className="" src={image} alt="" />
+        <img className="w-full" src={image} alt="" />
       </div>
       <p className="mt-6  text-md leading-8 text-gray-600 text-justify">
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده

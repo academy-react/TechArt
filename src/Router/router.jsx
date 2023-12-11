@@ -10,6 +10,7 @@ const Error = () => {
 
   return <h1>Error occurred: {errors.message}</h1>;
 };
+import { EditProfile } from "../components/StudentPanel/EditProfile";
 const router = createBrowserRouter([
   ...authRouter,
   ...CourseDetailsRouter,
@@ -21,9 +22,10 @@ const router = createBrowserRouter([
     element: <Landing />,
     errorElement: <Error />,
   },
+  {
+    path: "/edit",
+    element: <EditProfile />,
+  },
 ]);
-
-
-
 
 export { router };

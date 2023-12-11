@@ -10,17 +10,17 @@ import { FilterByPrice } from "./FilterByPrice";
 
 const Filter = ({ courseList }) => {
   const initialItems = [
-    { id: 1, name: 'Item 1', price: 10 },
-    { id: 2, name: 'Item 2', price: 20 },
-    { id: 3, name: 'Item 3', price: 15 },
+    { id: 1, name: "Item 1", price: 10 },
+    { id: 2, name: "Item 2", price: 20 },
+    { id: 3, name: "Item 3", price: 15 },
     // Add more items with their respective prices
   ];
 
   const [open, setOpen] = useState(1);
   const [items, setItems] = useState(initialItems);
   const [filteredItems, setFilteredItems] = useState(initialItems);
-  const [minPrice, setMinPrice] = useState('');
-  const [maxPrice, setMaxPrice] = useState('');
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
 
   const handleMinPriceChange = (e) => {
     setMinPrice(e.target.value);
@@ -35,14 +35,13 @@ const Filter = ({ courseList }) => {
   const filterItems = (min, max) => {
     const filtered = items.filter((item) => {
       const itemPrice = item.price;
-      return (!min || itemPrice >= parseInt(min)) && (!max || itemPrice <= parseInt(max));
+      return (
+        (!min || itemPrice >= parseInt(min)) &&
+        (!max || itemPrice <= parseInt(max))
+      );
     });
     setFilteredItems(filtered);
   };
-
-
-
-
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 

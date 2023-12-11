@@ -4,6 +4,7 @@ import { authRouter } from "./authRouter";
 import { CourseDetailsRouter } from "./CourseDetailsRouter";
 import { Landing } from "../screens/Landing/Landing";
 import { NewsRouter } from "./NewsRouter";
+import { DashboardRouter } from "./DashboardRouter";
 const Error = () => {
   const errors = useRouteError();
 
@@ -14,11 +15,15 @@ const router = createBrowserRouter([
   ...CourseDetailsRouter,
   ...BlogDetailsRouter,
   ...NewsRouter,
+  ...DashboardRouter,
   {
     path: "/",
     element: <Landing />,
     errorElement: <Error />,
   },
 ]);
+
+
+
 
 export { router };

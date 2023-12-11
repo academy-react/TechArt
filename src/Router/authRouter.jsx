@@ -11,15 +11,15 @@ const authRouter = [
     element: <Auth />,
     children: [
       {
-        path: "/auth",
+        path: "/auth/login",
         element: <LoginPage />,
       },
       {
         path: "/auth/register",
         element: <RegisterPage />,
       },
-      { path: "forgetPass", element: <ForgetPassPage /> },
-      { path: "changePass", element: <ChangePassPage /> },
+      { path: "/auth/forgetPass", element: <ForgetPassPage /> },
+      { path: "/auth/changePass", element: <ChangePassPage /> },
     ],
   },
 ];

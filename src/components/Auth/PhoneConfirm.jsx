@@ -15,12 +15,28 @@ import {
 } from "../common/customElements";
 
 import PhoneConfirmSVG from "../../assets/image/PhoneConfirm.svg";
+import { verifyMessageAPI } from "../../core/services/api/auth";
 
 const PhoneConfirm = ({ handleStep, phoneNumber }) => {
-  const onSubmit = () => {
-    handleStep("PhoneConfirmed");
+  const onSubmit = (val) => {
     console.log("submitted");
+
+    verifyCode(val.confirmCode);
   };
+
+  const verifyCode = async (e) => {
+    const verifyData = await verifyMessageAPI(phoneNumber, e);
+    console.log(verifyData.message);
+
+    handleStep("PhoneConfirmed");
+
+    // if (verifyData.success) {
+    //   handleStep("PhoneConfirmed");
+    // } else {
+    //   alert(verifyData.message);
+    // }
+  };
+
   return (
     <>
       <SVGSection

@@ -18,8 +18,9 @@ const PhoneRegister = ({ handleStep, handlePhoneNumber }) => {
   const onSubmit = (val) => {
     handlePhoneNumber(val.phoneNumber);
     handleStep("PhoneConfirm");
-    console.log("phoneRegister submitted", val);
+    console.log("phoneRegister submitted", val.phoneNumber);
   };
+
   return (
     <>
       <SVGSection
@@ -29,7 +30,7 @@ const PhoneRegister = ({ handleStep, handlePhoneNumber }) => {
       <FormSection>
         <AuthHeading message={"شماره تماس خود را وارد کنید"} />
         <CustomForm
-          initialValues={{ phoneNumber: "" }}
+          initialValues={{ phoneNumber:"09111111111"}}
           validationSchema={phoneNumberSchema}
           onSubmit={onSubmit}
         >

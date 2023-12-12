@@ -15,12 +15,24 @@ import {
 import { AuthHeading } from "./AuthHeading";
 
 import { IoMail, IoLockClosed } from "react-icons/io5";
+import { signUpAPI } from "../../core/services/api/auth";
 
-const SignUp = () => {
-  const onSubmit = () => {
+const SignUp = ({phoneNumber}) => {
+
+  const onSubmit = (val) => {
     console.log("submitted");
+    console.log(val)
+    console.log(phoneNumber)
+    signUp(val)
   };
 
+  const signUp = async (e) => {
+     const regData = await signUpAPI(e.password,e.gmail,phoneNumber);
+     console.log(regData)
+  
+  };
+
+ 
   return (
     <>
       <SVGSection SVGSrc={SignUpSVG} alt={"Sign Up SVG"}></SVGSection>

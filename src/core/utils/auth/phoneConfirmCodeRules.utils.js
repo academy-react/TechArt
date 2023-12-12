@@ -1,3 +1,3 @@
-const phoneConfirmCodeRules = "^(?=.*[0-9]).{6}$";
+const phoneConfirmCodeRules = "^(?=.*[0-9]).{5}$";
 
 export { phoneConfirmCodeRules };

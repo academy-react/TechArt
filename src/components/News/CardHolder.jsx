@@ -3,6 +3,7 @@ import axios from "axios";
 import { FiSearch } from "react-icons/fi";
 
 import { Card } from "./Card";
+import { baseUrl } from "../../config";
 
 const CardHolder = () => {
   const [newCard, setNewCard] = useState([]);

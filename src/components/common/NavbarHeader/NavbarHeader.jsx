@@ -9,7 +9,7 @@ import ProfileDropdown from "../customElements/ProfileDropDownMenu";
 const navigation = [
   { name: "صفحه اصلی", href: "/", current: true },
   { name: "دوره ها", href: "#", current: false },
-  { name: "اخبار", href: "#", current: false },
+  { name: "اخبار", href: "/New", current: false },
   { name: "خدمات", href: "#", current: false },
   { name: "تماس با ما", href: "#", current: false },
 ];

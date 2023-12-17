@@ -59,11 +59,7 @@ function SignIn() {
     setSignInData(user);
   };
 
- 
-  useEffect(() => {
-   
-    
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <>
@@ -71,7 +67,7 @@ function SignIn() {
       <FormSection>
         <AuthHeading message={signInData.message} />
         <CustomForm
-          initialValues={{ email:"", password:"" }}
+          initialValues={{ email: "", password: "" }}
           validationSchema={signInSchema}
           onSubmit={onSubmit}
         >

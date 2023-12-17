@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
+    "@popperjs/core": "2.9.1",
     "async": "^3.2.5",
     "axios": "^1.6.1",
     "formik": "^2.4.5",

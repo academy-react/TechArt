@@ -6,6 +6,7 @@ import { CustomSearchBox } from "../customElements/CustomSearchBox";
 import { CustomButton } from "../customElements/CustomButton";
 import { useNavigate } from "react-router-dom";
 import ProfileDropdown from "../customElements/ProfileDropDownMenu";
+import DropDown from "./DropDown";
 const navigation = [
   { name: "صفحه اصلی", href: "/", current: true },
   { name: "دوره ها", href: "#", current: false },
@@ -68,17 +69,8 @@ function NavbarHeader() {
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <CustomSearchBox />
 
-                {/* <div className="px-3">
-                  <CustomButton
-                    onClick={() => {
-                      navigate("/auth/register");
-                    }}
-                    message={"ثبت نام"}
-                  />
-                </div> */}
-                {/*View notifications button*/}
                 <ProfileDropdown />
-                {/* Profile dropdown */}
+                <DropDown />
               </div>
             </div>
           </div>
